@@ -1,0 +1,46 @@
+body {
+    font-family: $font-primary;
+    background-color: $body;
+    overflow-x: hidden;
+}
+
+::selection {
+    background: $primary;
+    color: $primary-contrast;
+}
+p,
+ul,
+li {
+    font-family: $font-primary;
+    color: $text-light;
+}
+
+p {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 300;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: $primary;
+    transition: color 0.2s;
+    &:hover {
+        text-decoration: none;
+        color: $secondary;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $font-secondary;
+    color: $text-light;
+}
