@@ -5,14 +5,14 @@ body {
 }
 
 ::selection {
-    background: $primary;
-    color: $primary-contrast;
+    color: $primary;
+    background: $white;
 }
 p,
 ul,
 li {
     font-family: $font-primary;
-    color: $text-light;
+    color: $white;
 }
 
 p {
@@ -42,5 +42,5 @@ h3,
 h4,
 h5 {
     font-family: $font-secondary;
-    color: $text-light;
+    color: $white;
 }
