@@ -1,0 +1,121 @@
+.emoving-call-action {
+    padding: 100px 0;
+    &-text,
+    &-text * {
+        @extend %font-48;
+        font-weight: 800;
+        text-align: center;
+        margin-bottom: 30px;
+        mark {
+            background-color: transparent;
+            padding: 0;
+            color: $secondary_4;
+        }
+    }
+    &-btn {
+        margin: 30px 0;
+        @extend %btn-primary;
+    }
+}
+
+.service-list-01 {
+    padding: 100px 0;
+    &-title,
+    &-title * {
+        color: $white;
+        @extend %font-70;
+        font-weight: 800;
+        text-align: center;
+        mark {
+            background-color: transparent;
+            padding: 0;
+            color: $secondary_4;
+        }
+    }
+    &-text {
+        @extend %font-24;
+        color: $white;
+        text-align: center;
+    }
+    &-row {
+        margin-top: 80px;
+    }
+    &-box {
+        padding: 15px;
+        margin-bottom: 24px;
+        &-img {
+            text-align: center;
+            margin-bottom: 15px;
+            img {
+                height: 187px;
+                width: auto;
+                max-width: 100%;
+            }
+        }
+        &-title {
+            @extend %font-36;
+            font-weight: bold;
+            color: $white;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        &-text {
+            @extend %font-18;
+            color: $white;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.service-list-02 {
+    padding: 100px 0;
+    &-title,
+    &-title * {
+        color: $white;
+        font-weight: 800;
+        @extend %font-70;
+        text-align: center;
+        mark {
+            background-color: transparent;
+            padding: 0;
+            color: $secondary_4;
+        }
+    }
+    &-text {
+        @extend %font-24;
+        color: $white;
+        text-align: center;
+    }
+    &-row {
+        margin-top: 80px;
+    }
+    &-box {
+        background-color: $color_3F4077;
+        border-radius: 30px;
+        padding: 40px;
+        margin-bottom: 24px;
+        &-img {
+            text-align: center;
+            margin-bottom: 15px;
+            img {
+                max-width: 100%;
+                height: 187px;
+                width: auto;
+            }
+        }
+        &-title {
+            @extend %font-36;
+            font-weight: bold;
+            color: $white;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        &-text {
+            @extend %font-18;
+            color: $white;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+    }
+}
