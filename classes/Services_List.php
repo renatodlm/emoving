@@ -8,7 +8,7 @@ class Services_List
     {
         if (!empty($infos) && !empty($query)) :
 ?>
-            <section class="service-list-01">
+            <section id="<?= $infos['id'] ?>" class="service-list-01">
                 <div class="container">
                     <div class="row d-flex justify-content-center">
                         <div class="col-xl-6 col-md-10">
@@ -54,7 +54,7 @@ class Services_List
     {
         if (!empty($infos) && !empty($query)) :
         ?>
-            <section class="service-list-02">
+            <section id="<?= $infos['id'] ?>" class="service-list-02">
                 <div class="container">
                     <div class="row d-flex justify-content-center">
                         <div class="col-xl-7 col-md-10">
@@ -92,7 +92,7 @@ class Services_List
                                 </div>
                             </div>
                         </div>
-                        
+
                     <?php endif; ?>
                 </div>
             </section>

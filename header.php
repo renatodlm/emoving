@@ -11,57 +11,47 @@
     <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
     <!-- Main Style -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <nav class="navbar navbar-expand-lg navbar-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Brand</a>
+                    <a class="navbar-brand" href="#"><img src="./img/logo.svg" alt="E-moving"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="main_nav">
-
-
-                        <ul class="navbar-nav">
-                            <li class="nav-item active"> <a class="nav-link" href="#">Home </a> </li>
-                            <li class="nav-item"><a class="nav-link" href="#"> About </a></li>
+                        <ul class="navbar-nav ms-auto">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Treeview menu </a>
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> A E-MOVING </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#"> Dropdown item 1 </a></li>
-                                    <li><a class="dropdown-item" href="#"> Dropdown item 2 &raquo; </a>
+                                    <li><a class="dropdown-item" href="#"> Dropdown 1 </a></li>
+                                    <li><a class="dropdown-item dropdown-submenu" href="#"> Dropdown 2</a>
                                         <ul class="submenu dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Submenu item 1</a></li>
-                                            <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
-                                            <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+                                            <li><a class="dropdown-item" href="#">Submenu 1</a></li>
+                                            <li><a class="dropdown-item" href="#">Submenu 2</a></li>
+                                            <li><a class="dropdown-item dropdown-submenu" href="#">Submenu 3</a>
                                                 <ul class="submenu dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#">Multi level 1</a></li>
-                                                    <li><a class="dropdown-item" href="#">Multi level 2</a></li>
+                                                    <li><a class="dropdown-item" href="#">Multi 1</a></li>
+                                                    <li><a class="dropdown-item" href="#">Multi 2</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
-                                            <li><a class="dropdown-item" href="#">Submenu item 5</a></li>
+                                            <li><a class="dropdown-item" href="#">Submenu 4</a></li>
+                                            <li><a class="dropdown-item" href="#">Submenu 5</a></li>
                                         </ul>
                                     </li>
-                                    <li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
-                                    <li><a class="dropdown-item" href="#"> Dropdown item 4 </a>
+                                    <li><a class="dropdown-item" href="#"> Dropdown 3 </a></li>
+                                    <li><a class="dropdown-item" href="#"> Dropdown 4 </a>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> More items </a>
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Para sua empresa </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#"> Dropdown item 1 </a></li>
-                                    <li><a class="dropdown-item" href="#"> Dropdown item 2 &raquo; </a>
-                                        <ul class="submenu dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Submenu item 1</a></li>
-                                            <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
-                                            <li><a class="dropdown-item" href="#">Submenu item 3</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="dropdown-item" href="#"> Dropdown item 3 &raquo; </a>
+                                    <li><a class="dropdown-item" href="#"> E-Bike 4work</a></li>
+                                    <li><a class="dropdown-item dropdown-submenu" href="#">E-Bike Sharing</a>
                                         <ul class="submenu dropdown-menu">
                                             <li><a class="dropdown-item" href="#">Another submenu 1</a></li>
                                             <li><a class="dropdown-item" href="#">Another submenu 2</a></li>
@@ -69,7 +59,7 @@
                                             <li><a class="dropdown-item" href="#">Another submenu 4</a></li>
                                         </ul>
                                     </li>
-                                    <li><a class="dropdown-item" href="#"> Dropdown item 4 &raquo;</a>
+                                    <li><a class="dropdown-item dropdown-submenu" href="#">E-Bike Benefício</a>
                                         <ul class="submenu dropdown-menu">
                                             <li><a class="dropdown-item" href="#">Another submenu 1</a></li>
                                             <li><a class="dropdown-item" href="#">Another submenu 2</a></li>
@@ -77,33 +67,14 @@
                                             <li><a class="dropdown-item" href="#">Another submenu 4</a></li>
                                         </ul>
                                     </li>
-                                    <li><a class="dropdown-item" href="#"> Dropdown item 5 </a></li>
-                                    <li><a class="dropdown-item" href="#"> Dropdown item 6 </a></li>
                                 </ul>
                             </li>
+                            <li class="nav-item active"> <a class="nav-link" href="#">Blog </a> </li>
+                            <li class="nav-item"><a class="nav-link" href="#"> Contato </a></li>
                         </ul>
-
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item"><a class="nav-link" href="#"> Menu item </a></li>
-                            <li class="nav-item"><a class="nav-link" href="#"> Menu item </a></li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown"> Dropdown right </a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a class="dropdown-item" href="#"> Dropdown item 1</a></li>
-                                    <li><a class="dropdown-item" href="#"> Dropdown item 2 </a></li>
-                                    <li><a class="dropdown-item" href="#"> Dropdown item 3 &raquo; </a>
-                                        <ul class="submenu submenu-left dropdown-menu">
-                                            <li><a class="dropdown-item" href="">Submenu item 1</a></li>
-                                            <li><a class="dropdown-item" href="">Submenu item 2</a></li>
-                                            <li><a class="dropdown-item" href="">Submenu item 3</a></li>
-                                            <li><a class="dropdown-item" href="">Submenu item 4</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li>
-                                </ul>
-                            </li>
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="bt bt-secondary" href="#">Indique sua empresa</a></li>
                         </ul>
-
                     </div> <!-- navbar-collapse.// -->
                 </div> <!-- container-fluid.// -->
             </nav>

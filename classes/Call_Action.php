@@ -21,7 +21,7 @@ class Call_Action
                             ?>
                                 <div class="col-12 text-center">
                                     <?php
-                                    echo '<a class="emoving-call-action-btn" target="' . $btn['target'] . '" href="' . $btn['url'] . '">' . $btn['text'] . '</a>';
+                                    echo '<a class="bt bt-primary" target="' . $btn['target'] . '" href="' . $btn['url'] . '">' . $btn['text'] . '</a>';
                                     ?>
                                 </div>
                             <?php endif; ?>

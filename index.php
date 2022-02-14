@@ -1,16 +1,40 @@
 <?php
 
 use Classes\Call_Action;
+use Classes\Page_Hero;
 use Classes\Services_List;
 
 require __DIR__ . "/header.php";
+
+/**
+ * Hero
+ */
+
+$hero_obj = [
+    'title' => 'Unimos <mark>mobilidade</mark> e <mark>qualidade</mark> de vida',
+    'text' => 'O primeiro benefício corporativo de <mark>mobilidade sustentável</mark> pensado para os seus colaboradores.',
+    'image' => './img/bikes/bike-01.png',
+    'background-image' => './img/hero.png',
+    'background-color' => '#444580',
+    'before' => false,
+    'after' => false,
+];
+$button = [
+    'text' => 'Agende uma apresentação',
+    'link' => '#'
+];
+
+$hero = new Page_Hero;
+echo $hero::home($hero_obj, $button);
+
 
 /**
  * Como Funciona
  */
 $infos = [
     'title' => 'Como funciona a <p><mark>assinatura E-MOVING</mark></p>',
-    'text' => ''
+    'text' => '',
+    'id' => 'como-funciona'
 ];
 
 $query = [
@@ -106,6 +130,44 @@ $query2 = [
 $services_list2 = new Services_List;
 echo $services_list2::get_secondary_list($infos2, $query2);
 
+?>
 
+<section class="contact-form">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-8 col-md-10">
+                <div class="contact-form-content">
+                    <h4 class="contact-form-content-title">Quer utilizar nossa <mark>e-bike?</mark></h4>
+                    <p class="contact-form-content-text">Para ser nosso assinante, indique a melhor pessoa da sua empresa para apresentarmos nossa solução corporativa e mediante a contratação do nosso benefício, sua empresa disponibilizará para você uma e-bike</p>
+                </div>
+                <div class="contact-form-form">
+                    <form action="">
+                        <div class="mb-3">
+                            <input type="text" id="nome" placeholder="Seu nome completo">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" id="email" placeholder="Digite seu melhor email ( corporativo preferencialmente):">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" id="telefone" placeholder="Seu telefone/Whatsapp">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" id="nome-responsavel" placeholder="Nome do responsável da empresa ( o mais indicado para falarmos da implementação das -bikes):">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" id="email-responsavel" placeholder="Email corporativo do responsável:">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" id="telefone-responsavel" placeholder="Telefone/whatsapp corporativo do responsável:">
+                        </div>
+
+                        <input type="submit" class="bt bt-primary" value="Enviar agora">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<?php
 
 require __DIR__ . "/footer.php";

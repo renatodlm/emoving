@@ -1,3 +1,7 @@
+%font-13 {
+    font-size: 13px;
+    line-height: 1.2;
+}
 %font-18 {
     font-size: 18px;
     line-height: 24px;
@@ -100,6 +104,23 @@
     }
 }
 
+%font-72 {
+    font-size: 72px;
+    line-height: 80px;
+    @media (max-width: $xl) {
+        font-size: 48px;
+        line-height: 59px;
+    }
+    @media (max-width: $lg) {
+        font-size: 40px;
+        line-height: 51px;
+    }
+    @media (max-width: $sm) {
+        font-size: 28px;
+        line-height: 41px;
+    }
+}
+
 %font-70 {
     font-size: 70px;
     line-height: 80px;
@@ -136,12 +157,4 @@
         font-size: 32px;
         line-height: 43px;
     }
-}
-
-%btn-primary {
-    background-color: $secondary_4;
-    color: $primary;
-    @extend %font-18;
-    padding: 19px 34px;
-    border-radius: 90px;
 }

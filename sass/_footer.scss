@@ -1,0 +1,156 @@
+.footer {
+    padding: 120px 0 80px 0;
+    & > .container {
+        position: relative;
+        &::before {
+            content: " ";
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: #3a3b74;
+            margin-top: -120px;
+        }
+    }
+    &-about {
+        &-img {
+            width: 158.79px;
+            height: auto;
+        }
+        &-text {
+            max-width: 180px;
+            margin: 20px 0;
+            @extend %font-13;
+        }
+        &-social {
+            display: flex;
+            flex-wrap: wrap;
+            padding-inline-start: 0;
+            margin-bottom: 0;
+            &-item {
+                margin-right: 23px;
+                margin-bottom: 15px;
+                display: inline-block;
+                list-style: none;
+                &:last-child {
+                    margin-right: 0;
+                }
+                &-icon {
+                    height: 23px;
+                    width: auto;
+                    &.youtube {
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+    &-liks {
+        &-title {
+            color: #7a7cb9;
+            @extend %font-18;
+            margin-bottom: 28px;
+        }
+        &-menu {
+            columns: 2;
+            -webkit-columns: 2;
+            -moz-columns: 2;
+            padding-inline-start: 0;
+            margin-bottom: 0;
+            &-item {
+                margin-bottom: 20px;
+                list-style: none;
+                &-link {
+                    color: $white;
+                    position: relative;
+                    list-style: none;
+                    padding-left: 15px;
+                    @extend %font-18;
+                    display: flex;
+                    &::before {
+                        content: " ";
+                        position: absolute;
+                        background-image: url(../img/Icons/list.svg);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        width: 6px;
+                        height: 9px;
+                        top: calc(50% - 4.5px);
+                        left: 0;
+                    }
+                    &:hover,
+                    &:focus {
+                        &::before {
+                            background-image: url(../img/Icons/active-list.svg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-newsletter {
+        &-title {
+            color: #7a7cb9;
+            @extend %font-18;
+            margin-bottom: 28px;
+        }
+        &-form {
+            display: flex;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+            input[type="text"] {
+                width: calc(100% - 170px - 24px) !important;
+            }
+            input[type="submit"] {
+                width: 170px;
+                margin-left: 24px;
+            }
+        }
+        &-social {
+            &-item {
+                margin-bottom: 25px;
+                text-align: right;
+                &-link {
+                    &.whatsapp {
+                        position: relative;
+                        padding-left: 35px;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            background-image: url(../img/Icons/whatsapp.svg);
+                            background-size: contain;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            width: 25px;
+                            height: 25px;
+                            top: calc(50% - 12.5px);
+                            left: 0;
+                        }
+                    }
+                    &.email {
+                        position: relative;
+                        padding-left: 35px;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            background-image: url(../img/Icons/mail.svg);
+                            background-size: contain;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            width: 25px;
+                            height: 25px;
+                            top: calc(50% - 12.5px);
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+        &-cnpj {
+            @extend %font-18;
+            font-weight: bold;
+            color: $white;
+            text-align: right;
+        }
+    }
+}

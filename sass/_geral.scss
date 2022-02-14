@@ -2,17 +2,42 @@ body {
     font-family: $font-primary;
     background-color: $body;
     overflow-x: hidden;
+    color: $white;
 }
 
 ::selection {
     color: $primary;
     background: $white;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba($secondary, 0.5);
+}
+
+::-webkit-scrollbar-track {
+    background: rgba($secondary, 0.3);
+}
+
+mark {
+    background-color: transparent;
+    padding: 0;
+    color: $secondary_4;
+}
+
 p,
 ul,
 li {
     font-family: $font-primary;
     color: $white;
+    list-style: none;
+    padding-inline-start: 0;
+}
+* {
+    outline: none !important;
 }
 
 p {
@@ -28,11 +53,11 @@ img {
 
 a {
     text-decoration: none;
-    color: $primary;
+    color: $white;
     transition: color 0.2s;
     &:hover {
         text-decoration: none;
-        color: $secondary;
+        color: $secondary_4;
     }
 }
 
@@ -43,4 +68,23 @@ h4,
 h5 {
     font-family: $font-secondary;
     color: $white;
+}
+
+input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]) {
+    background-color: #7a7cb9;
+    border-radius: 8px;
+    @extend %font-18;
+    border: none;
+    padding: 15px;
+    outline: none !important;
+    width: 100%;
+    color: $white;
+    &::placeholder {
+        color: #c1c2ff;
+        @extend %font-18;
+    }
+    &:focus {
+        background-color: $white;
+        color: $primary;
+    }
 }

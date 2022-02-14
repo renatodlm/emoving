@@ -47,11 +47,23 @@ jQuery(document).ready(function ($) {
 
                     }
                 });
+
             })
+
         }
         // end if innerWidth
 
     });
     // DOMContentLoaded  end
+
+    $(".nav-item.dropdown").mouseover(function () {
+        $(this).find('a').addClass('show')
+        $(this).find('.dropdown-menu').addClass('show');
+    });
+
+    $(".nav-item.dropdown").mouseout(function () {
+        $(this).find('a').removeClass('show')
+        $(this).find('.dropdown-menu').removeClass('show');
+    });
 
 });
