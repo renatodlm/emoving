@@ -10,61 +10,71 @@ require __DIR__ . "/header.php";
  * Hero
  */
 
-$hero_obj = [
-    'title' => 'Unimos <mark>mobilidade</mark> e <mark>qualidade</mark> de vida',
-    'text' => 'O primeiro benefício corporativo de <mark>mobilidade sustentável</mark> pensado para os seus colaboradores.',
-    'image' => './img/bikes/bike-01.png',
-    'background-image' => './img/hero.png',
+$default_obj = [
+    'title' => 'E-Bike Sharing',
+    'text' => '<p><strong>Compartilhando qualidade de vida</strong></p>Um diferencial competitivo no mercado, a mobilidade compartilhada privada melhora o employer branding da empresa proporcionando mais agilidade nos deslocamentos.',
+    'background-image' => './img/sharing.png',
     'background-color' => '#444580',
     'before' => false,
-    'after' => false,
+    'after' => true,
+    'link' => '#junte-sua-energia'
 ];
-$button = [
-    'text' => 'Agende uma apresentação',
-    'link' => '#'
-];
+$text = 'Plano de assinatura mensal de bicicleta elétrica. Simples assim!
+Diversos benefícios em um só transporte.';
 
 $hero = new Page_Hero;
-echo $hero::home($hero_obj, $button);
+echo $hero::default($default_obj, $text);
 
 
 /**
- * Como Funciona
+ * Junte sua energia
  */
 $infos = [
-    'title' => 'Como funciona a <p><mark>assinatura E-MOVING</mark></p>',
+    'title' => '<p>Junte <mark>sua energia</mark> com a <mark>nossa!</mark></p>',
     'text' => '',
-    'id' => 'como-funciona'
+    'id' => 'junte-sua-energia'
 ];
 
 $query = [
     [
-        'img_url' => './img/elements/top-left.png',
+        'img_url' => './img/elements/calendar-tiem.png',
         'img_alt' => 'top-left',
-        'title' => 'ESCOLHA A MELHOR SOLUÇÃO',
+        'title' => 'TEMPO TODO COM VOCÊ',
         'text' => 'Oferecemos três soluções corporativas para encaixar na realidade da sua empresa.',
     ],
     [
-        'img_url' => './img/elements/calendar.png',
+        'img_url' => './img/elements/leva-e-traz.png',
         'img_alt' => 'top-left',
-        'title' => 'AGENDE UMA APRESENTAÇÃO',
-        'text' => 'Solicite uma proposta e contrate um plano de acordo com as suas necessidades.',
+        'title' => 'LEVA E TRAZ',
+        'text' => 'Entrega, retirada e substituição de e-bike na empresa, cobrando apenas o valor do frete.',
     ],
     [
-        'img_url' => './img/elements/top-right.png',
+        'img_url' => './img/elements/segurança.png',
         'img_alt' => 'top-left',
-        'title' => 'CONTRATE E IMPLEMENTE NA SUA EMPRESA',
-        'text' => 'Solicite uma proposta e contrate um plano de acordo com as suas necessidades.',
+        'title' => 'PROTEÇÃO CONTRA ROUBO',
+        'text' => 'O colaborador está protegido contra furto qualificado e/ou roubo da e-bike.',
+    ],
+    [
+        'img_url' => './img/elements/tools.png',
+        'img_alt' => 'top-left',
+        'title' => 'MANUTENÇÃO INCLUSA',
+        'text' => 'Nossa equipe fornece esse serviço diretamente na empresa, sem custo adicional.',
     ],
     [
         'img_url' => './img/elements/bike-02.png',
         'img_alt' => 'top-left',
-        'title' => 'COMECE A PEDALAR',
-        'text' => 'Agora é só aproveitar os benefícios de ter uma bike elétrica e os serviços exclusivos E-Moving!',
+        'title' => 'TRANSPORTE IDEAL',
+        'text' => 'Feita para deslocamentos diários, para last&first mile, rotas de vendedores e de abastecimento.',
+    ],
+    [
+        'img_url' => './img/elements/personaliza.png',
+        'img_alt' => 'top-left',
+        'title' => 'PERSONALIZAÇÃO',
+        'text' => 'A empresa recebe onboarding, treinamento de boas práticas e acesso a plataforma de controle.',
     ]
 ];
 $services_list = new Services_List;
-echo $services_list::get_primary_list($infos, $query);
+echo $services_list::get_primary_list3($infos, $query);
 
 
 /**
@@ -75,63 +85,6 @@ $button =  ['text' => 'Vamos conversar', 'url' => 'http://localhost/emoving/', '
 
 $call_action = new Call_Action;
 echo $call_action::get_call_action($text, $button);
-
-
-/**
- * Soluções
- */
-?>
-<section class="solutions">
-    <div class="solutions-container">
-        <h2 class="solutions-title">Nossa soluções corporativas</h2>
-        <div class="solutions-container-item">
-            <div class="row justify-content-between d-flex align-items-center">
-                <div class="col-md-5">
-                    <img class="solutions-container-item-img" src="./img/bikes/solution-01.png" alt="solutions">
-                </div>
-                <div class="col-md-6">
-                    <h4 class="solutions-container-item-title">
-                        E-BIKE 4 WORK
-                    </h4>
-                    <p class="solutions-container-item-text">Nessa modalidade as bikes elétricas podem ser utilizadas de maneira individual ou coletiva para uma finalidade em comum como rotas, last mile ou abastecimento. A implementação é feita dentro da empresa e contribui para a redução de custos operacionais, aumenta a produtividade e promove a sustentabilidade com as práticas ESG.</p>
-                    <a class="bt bt-secondary" href="#">Quero saber mais</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="solutions-container-item">
-            <div class="row justify-content-between d-flex align-items-center">
-                <div class="col-md-6">
-                    <h4 class="solutions-container-item-title">
-                        E-BIKE SHARING
-                    </h4>
-                    <p class="solutions-container-item-text">Nessa modalidade as bikes elétricas proporcionam aos funcionários da sua empresa uma mudança na qualidade de vida com acessos exclusivos à assinatura mensal de uma e-bike. Escolhendo essa solução, cada colaborador realiza o processo de contratação diretamente com a E-Moving.</p>
-                    <a class="bt bt-secondary" href="#">Quero saber mais</a>
-                </div>
-                <div class="col-md-5">
-                    <img class="solutions-container-item-img" src="./img/bikes/solution-02.png" alt="solutions">
-                </div>
-            </div>
-        </div>
-
-        <div class="solutions-container-item">
-            <div class="row justify-content-between d-flex align-items-center">
-                <div class="col-md-5">
-                    <img class="solutions-container-item-img" src="./img/bikes/solution-03.png" alt="solutions">
-                </div>
-                <div class="col-md-6">
-                    <h4 class="solutions-container-item-title">
-                        E-BIKE BENEFÍCIO
-                    </h4>
-                    <p class="solutions-container-item-text">Nessa modalidade as bikes elétricas serão utilizadas de maneira coletiva e ficarão disponíveis para compartilhamento interno. Uma solução muito comum em co-working, hotéis e empresas que visam facilitar o deslocamento de seus colaboradores promovendo sustentabilidade e praticidade.</p>
-                    <a class="bt bt-secondary" href="#">Quero saber mais</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<?php
 
 
 /**

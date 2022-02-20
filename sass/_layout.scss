@@ -124,6 +124,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
     &.before-true {
         &::before {
             content: " ";
@@ -148,8 +149,18 @@
             z-index: 1;
         }
     }
+    &-background-image {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        object-fit: cover;
+        object-position: top center;
+        max-width: 100%;
+    }
     &-content {
-        margin-top: 5vh;
+        margin-top: 15vh;
         position: relative;
         z-index: 2;
         text-align: center;
@@ -217,6 +228,7 @@
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
     &.before-true {
         &::before {
             content: " ";
@@ -240,6 +252,15 @@
             background-image: linear-gradient(to bottom, rgba($body, 0.5), $body);
             z-index: 1;
         }
+    }
+    &-background-image {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        object-fit: cover;
+        object-position: top center;
     }
     &-content {
         margin-top: 5vh;
@@ -298,6 +319,42 @@
     }
 }
 
+.solutions {
+    padding: 100px 0;
+    &-title {
+        @extend %font-70;
+        font-weight: 800;
+        color: $white;
+        margin-bottom: 200px;
+        text-align: center;
+    }
+    &-container {
+        width: 100%;
+        max-width: 1746px;
+        margin-left: auto;
+        margin-right: auto;
+        &-item {
+            margin-bottom: 100px;
+            &-img {
+                max-width: 100%;
+                height: auto;
+            }
+            &-title {
+                @extend %font-36;
+                font-weight: bold;
+                color: $white;
+                margin-bottom: 15px;
+            }
+            &-text {
+                @extend %font-24;
+                font-weight: 300;
+                color: $white;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
 .contact-form {
     padding: 100px 0 200px 0;
     text-align: center;
@@ -332,6 +389,113 @@
                 color: $primary;
                 border-color: #7374d8 !important;
             }
+        }
+    }
+}
+
+.e-bikes {
+    &-item {
+        margin-bottom: 150px;
+        &-title {
+            @extend %font-48;
+            font-weight: 800;
+            color: $secondary_4;
+            margin-bottom: 0px;
+        }
+        &-box {
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            &-img {
+                width: 100%;
+                height: auto;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+.video-thumb {
+    width: 100%;
+    padding-bottom: 56.25%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    cursor: pointer;
+    filter: saturate(0);
+    transition: filter 0.2s;
+    .overlay {
+        background-color: rgba($color: #000000, $alpha: 0.6);
+        transition: background-color 0.2s;
+    }
+    &:hover {
+        filter: saturate(1);
+        .play-button {
+            background-color: $secondary;
+            border-color: $secondary;
+            i {
+                color: $secondary_4;
+            }
+        }
+        .overlay {
+            background-color: rgba($color: #000000, $alpha: 0.3);
+        }
+    }
+}
+.video-embed {
+    display: none;
+    padding-bottom: 56.25%;
+    position: relative;
+    iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+}
+
+.video-embed {
+    display: none;
+    padding-bottom: 56.25%;
+    position: relative;
+    iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+}
+
+
+.play-button {
+    height: 80px;
+    width: 80px;
+    background-color: transparent;
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    border-radius: 50%;
+    border: 2px solid $secondary-contrast;
+    transition: background-color 0.2s, border 0.2s;
+    i {
+        color: $secondary-contrast;
+        position: absolute;
+        top: 50%;
+        left: 52%;
+        transform: translate(-50%, -50%);
+        font-size: 28px;
+        transition: color 0.2s;
+    }
+    &.audio-button {
+        i {
+            font-size: 41px;
         }
     }
 }

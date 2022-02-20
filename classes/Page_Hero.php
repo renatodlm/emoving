@@ -13,7 +13,15 @@ class Page_Hero
                                             }
                                             if (!empty($obj['before'])) {
                                                 echo ' before-true';
-                                            } ?>" style="background-color:<?= $obj['background-color'] ?>;background-image: url(<?= $obj['background-image'] ?>);">
+                                            } ?>" style="background-color:<?= $obj['background-color'] ?>;">
+                <?php if (!empty($obj['background-image'])) : ?>
+                    <picture>
+                        <?php if (empty($obj['background-image-mobile'])) : $obj['background-image-mobile'] = $obj['background-image'];
+                        endif; ?>
+                        <source srcset="<?= $obj['background-image-mobile'] ?>" media="(max-width: 1024px)">
+                        <img class="hero-default-background-image" src="<?= $obj['background-image'] ?>" alt="<?= $obj['title'] ?>">
+                    </picture>
+                <?php endif; ?>
                 <div class="container">
                     <?php if (!empty($obj)) : ?>
                         <div class="row justify-content-center">
@@ -49,15 +57,25 @@ class Page_Hero
                                         }
                                         if (!empty($obj['before'])) {
                                             echo ' before-true';
-                                        } ?>" style="background-color:<?= $obj['background-color'] ?>;background-image: url(<?= $obj['background-image'] ?>);">
+                                        } ?>" style="background-color:<?= $obj['background-color'] ?>;">
+                <?php if (!empty($obj['background-image'])) : ?>
+                    <picture>
+                        <?php if (empty($obj['background-image-mobile'])) : $obj['background-image-mobile'] = $obj['background-image'];
+                        endif; ?>
+                        <source srcset="<?= $obj['background-image-mobile'] ?>" media="(max-width: 1024px)">
+                        <img class="hero-home-background-image" src="<?= $obj['background-image'] ?>" alt="<?= $obj['title'] ?>">
+                    </picture>
+                <?php endif; ?>
                 <div class="container">
                     <?php if (!empty($obj)) : ?>
                         <div class="row justify-content-center">
                             <div class="col-xl-6 col-lg-8 col-md-10">
                                 <div class="hero-home-content">
-                                    <div class="hero-home-content-img">
-                                        <img src="<?= $obj['image'] ?>" alt="<?= $obj['title'] ?>">
-                                    </div>
+                                    <?php if (!empty($obj['image'])) : ?>
+                                        <div class="hero-home-content-img">
+                                            <img src="<?= $obj['image'] ?>" alt="<?= $obj['title'] ?>">
+                                        </div>
+                                    <?php endif; ?>
                                     <h1 class="hero-home-content-title"><?= $obj['title'] ?></h1>
                                     <p class="hero-home-content-text"><?= $obj['text'] ?></p>
                                     <?php if (!empty($button)) : ?>

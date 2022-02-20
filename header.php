@@ -19,7 +19,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#"><img src="./img/logo.svg" alt="E-moving"></a>
+                    <a class="navbar-brand" href="./index.php"><img src="./img/logo.svg" alt="E-moving"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -50,8 +50,8 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Para sua empresa </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#"> E-Bike 4work</a></li>
-                                    <li><a class="dropdown-item dropdown-submenu" href="#">E-Bike Sharing</a>
+                                    <li><a class="dropdown-item" href="./4work.php"> E-Bike 4work</a></li>
+                                    <li><a class="dropdown-item dropdown-submenu" href="./sharing.php">E-Bike Sharing</a>
                                         <ul class="submenu dropdown-menu">
                                             <li><a class="dropdown-item" href="#">Another submenu 1</a></li>
                                             <li><a class="dropdown-item" href="#">Another submenu 2</a></li>
@@ -59,7 +59,7 @@
                                             <li><a class="dropdown-item" href="#">Another submenu 4</a></li>
                                         </ul>
                                     </li>
-                                    <li><a class="dropdown-item dropdown-submenu" href="#">E-Bike Benefício</a>
+                                    <li><a class="dropdown-item dropdown-submenu" href="./beneficio.php">E-Bike Benefício</a>
                                         <ul class="submenu dropdown-menu">
                                             <li><a class="dropdown-item" href="#">Another submenu 1</a></li>
                                             <li><a class="dropdown-item" href="#">Another submenu 2</a></li>
