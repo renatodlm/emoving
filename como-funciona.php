@@ -213,6 +213,25 @@ echo $call_action::get_call_action($text, $button);
 ?>
 
 
+<section class="my-account">
+    <div class="container">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-6">
+                <div class="my-account-content">
+                    <h3 class="my-account-content-title">Você no <mark>controle</mark> da sua <mark>assinatura!</mark></h3>
+                    <p class="my-account-content-text">Ao se cadastrar e receber a e-bike você terá 100% de acesso à sua assinatura na área MINHA CONTA! Acesse nosso atendimento e nossos serviços por lá! É muito prático!</p>
+                    <a class="bt bt-primary" href="#">Minha conta</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="my-account-img">
+                    <img src="./img/mobile.png" alt="minha conta">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <?php
 
 require __DIR__ . "/footer.php";

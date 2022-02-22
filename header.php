@@ -28,7 +28,7 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> A E-MOVING </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#"> Dropdown 1 </a></li>
+                                    <li><a class="dropdown-item" href="./como-funciona.php"> Como Funciona </a></li>
                                     <li><a class="dropdown-item dropdown-submenu" href="#"> Dropdown 2</a>
                                         <ul class="submenu dropdown-menu">
                                             <li><a class="dropdown-item" href="#">Submenu 1</a></li>
