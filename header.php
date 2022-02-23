@@ -29,7 +29,8 @@
                                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> A E-MOVING </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="./como-funciona.php"> Como Funciona </a></li>
-                                    <li><a class="dropdown-item dropdown-submenu" href="#"> Dropdown 2</a>
+                                    <li><a class="dropdown-item" href="./quem-somos.php"> Quem somos </a></li>
+                                    <li><a class="dropdown-item dropdown-submenu" href="#"> Dropdown</a>
                                         <ul class="submenu dropdown-menu">
                                             <li><a class="dropdown-item" href="#">Submenu 1</a></li>
                                             <li><a class="dropdown-item" href="#">Submenu 2</a></li>
@@ -43,34 +44,22 @@
                                             <li><a class="dropdown-item" href="#">Submenu 5</a></li>
                                         </ul>
                                     </li>
-                                    <li><a class="dropdown-item" href="#"> Dropdown 3 </a></li>
-                                    <li><a class="dropdown-item" href="#"> Dropdown 4 </a>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Para sua empresa </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="./4work.php"> E-Bike 4work</a></li>
-                                    <li><a class="dropdown-item dropdown-submenu" href="./sharing.php">E-Bike Sharing</a>
-                                        <ul class="submenu dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Another submenu 1</a></li>
-                                            <li><a class="dropdown-item" href="#">Another submenu 2</a></li>
-                                            <li><a class="dropdown-item" href="#">Another submenu 3</a></li>
-                                            <li><a class="dropdown-item" href="#">Another submenu 4</a></li>
-                                        </ul>
+                                    <li><a class="dropdown-item" href="./sharing.php">E-Bike Sharing</a>
+                                       
                                     </li>
-                                    <li><a class="dropdown-item dropdown-submenu" href="./beneficio.php">E-Bike Benefício</a>
-                                        <ul class="submenu dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Another submenu 1</a></li>
-                                            <li><a class="dropdown-item" href="#">Another submenu 2</a></li>
-                                            <li><a class="dropdown-item" href="#">Another submenu 3</a></li>
-                                            <li><a class="dropdown-item" href="#">Another submenu 4</a></li>
-                                        </ul>
+                                    <li><a class="dropdown-item" href="./beneficio.php">E-Bike Benefício</a>
+                                       
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item active"> <a class="nav-link" href="#">Blog </a> </li>
-                            <li class="nav-item"><a class="nav-link" href="#"> Contato </a></li>
+                            <li class="nav-item"><a class="nav-link" href="./contato.php"> Contato </a></li>
                         </ul>
                         <ul class="navbar-nav">
                             <li class="nav-item"><a class="bt bt-secondary" href="#">Indique sua empresa</a></li>

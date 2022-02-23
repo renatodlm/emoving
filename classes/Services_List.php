@@ -121,10 +121,10 @@ class Services_List
                     ?>
                         <div class="row justify-content-center">
                             <div class="col-xl-11">
-                                <div class="row service-list-02-row">
+                                <div class="row service-list-02-row justify-content-center">
                                     <?php foreach ($query as $item) : ?>
 
-                                        <div class="col-xl-4 col-md-6">
+                                        <div class="col-xl-4 col-md-6 mb-4">
                                             <div class="service-list-02-box">
                                                 <div class="service-list-02-box-img">
                                                     <img src="<?= $item['img_url'] ?>" alt="<?= $item['img_alt'] ?>">

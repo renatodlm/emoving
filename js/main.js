@@ -66,4 +66,19 @@ jQuery(document).ready(function ($) {
         $(this).find('.dropdown-menu').removeClass('show');
     });
 
+    
+    $(".videos-thumb").on("click", function () {
+        var $videoThumb = $(this);
+         var $videoContainer = $videoThumb.next();
+        // var $videoPlayer = $videoContainer.children();
+        // $videoPlayer.attr('src', $videoPlayer.attr('data-src'));
+        $videoThumb.fadeOut("slow", function () {
+            $videoContainer.fadeIn();
+            //$videoPlayer[0].src += "&autoplay=1";
+        });
+    });
+
+
+    
+
 });

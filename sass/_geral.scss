@@ -70,11 +70,13 @@ h5 {
     color: $white;
 }
 
-input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]) {
+input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]),
+select,
+textarea {
     background-color: #7a7cb9;
     border-radius: 8px;
     @extend %font-18;
-    border: none;
+    border: 3px solid #7a7cb9 !important;
     padding: 15px;
     outline: none !important;
     width: 100%;

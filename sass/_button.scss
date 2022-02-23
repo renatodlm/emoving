@@ -36,4 +36,10 @@
     color: $secondary_4;
     background-color: transparent;
     border-color: $secondary_4;
+    &:hover,
+    &:focus {
+        background-color: rgba(220, 204, 255, 0.5);
+        color: $white;
+        border-color: rgba(220, 204, 255, 0.5);
+    }
 }

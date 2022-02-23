@@ -48,7 +48,7 @@ class Page_Hero
         endif;
     }
 
-    public static function home($obj, $button)
+     public static function home($obj, $button)
     {
         if (!empty($obj)) :
         ?>
@@ -80,6 +80,49 @@ class Page_Hero
                                     <p class="hero-home-content-text"><?= $obj['text'] ?></p>
                                     <?php if (!empty($button)) : ?>
                                         <a class="hero-home-content-button bt bt-primary" href="<?= $button['link'] ?>"><?= $button['text'] ?></a>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        </div>
+                    <?php
+                    endif; ?>
+                </div>
+            </section>
+<?php
+        endif;
+    }
+    public static function quemsomos($obj, $button)
+    {
+        if (!empty($obj)) :
+        ?>
+            <section class="hero-quemsomos <?php if (!empty($obj['after'])) {
+                                            echo ' after-true';
+                                        }
+                                        if (!empty($obj['before'])) {
+                                            echo ' before-true';
+                                        } ?>" style="background-color:<?= $obj['background-color'] ?>;">
+                <?php if (!empty($obj['background-image'])) : ?>
+                    <picture>
+                        <?php if (empty($obj['background-image-mobile'])) : $obj['background-image-mobile'] = $obj['background-image'];
+                        endif; ?>
+                        <source srcset="<?= $obj['background-image-mobile'] ?>" media="(max-width: 1024px)">
+                        <img class="hero-quemsomos-background-image" src="<?= $obj['background-image'] ?>" alt="<?= $obj['title'] ?>">
+                    </picture>
+                <?php endif; ?>
+                <div class="container">
+                    <?php if (!empty($obj)) : ?>
+                        <div class="row justify-content-center">
+                            <div class="col-xl-8 px-xl-5 col-lg-8 col-md-10">
+                                <div class="hero-quemsomos-content">
+                                    <?php if (!empty($obj['image'])) : ?>
+                                        <div class="hero-quemsomos-content-img">
+                                            <img src="<?= $obj['image'] ?>" alt="<?= $obj['title'] ?>">
+                                        </div>
+                                    <?php endif; ?>
+                                    <h1 class="hero-quemsomos-content-title"><?= $obj['title'] ?></h1>
+                                    <p class="hero-quemsomos-content-text"><?= $obj['text'] ?></p>
+                                    <?php if (!empty($button)) : ?>
+                                        <a class="hero-quemsomos-content-button bt bt-primary" href="<?= $button['link'] ?>"><?= $button['text'] ?></a>
                                     <?php endif; ?>
                                 </div>
                             </div>

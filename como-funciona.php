@@ -32,27 +32,34 @@ echo $hero::home($hero_obj, $button);
     <div class="container">
         <div class="row d-flex justify-content-center">
             <?php
-            $video = 'https://www.youtube.com/watch?v=raV0IvfCGyg';
+            $video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/raV0IvfCGyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
             preg_match('/src="(.+?)"/', $video, $matches_url);
             $src = $matches_url[1];
             preg_match('/embed(.*?)?feature/', $src, $matches_id);
             $id = $matches_id[1];
             $id = str_replace(str_split('?/'), '', $id);
-            $video = preg_replace('~<iframe[^>]*\K(?=src)~i', 'data-', $video);
-            $video = str_replace('youtube.com/embed/', 'youtube-nocookie.com/embed/', $video);
+            $id = 'raV0IvfCGyg';
+            $video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/raV0IvfCGyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            // $video = preg_replace('~<iframe[^>]*\K(?=src)~i', 'data-', $video);
+            // $video = str_replace('youtube.com/embed/', 'youtube-nocookie.com/embed/', $video);
+            // $video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/raV0IvfCGyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+
             ?>
-            <div class="col-lg-4 col-md-6 coluna-video" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="<?= $n; ?>00">
-                <div class="video-thumb" style="background-image: url(https://img.youtube.com/vi/<?= $id; ?>/hqdefault.jpg)">
-                    <div class="play-button">
-                        <i class="flaticon-play fi"></i>
+            <div class="col-lg-8 col-md-10 coluna-video" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="<?= '1'; ?>00">
+                <div class="videos-box">
+                    <div class="videos-thumb shadow-lg" style="background-image: url(https://img.youtube.com/vi/<?= $id; ?>/maxresdefault.jpg)">
+                        <div class="videos-thumb-play-button">
+                        </div>
+                        <div class="videos-thumb-overlay"></div>
                     </div>
-                    <div class="overlay"></div>
+                    <div class="videos-embed">
+                        <?= $video; ?>
+                    </div>
+                    <h3 class="videos-title">Olá, nós somos a<br>
+                        <mark>E-Moving!</mark>
+                    </h3>
+                    <p class="videos-text">A primeira empresa de assinatura de bicicletas elétricas do Brasil! Nascemos em 2015 para transformar a mobilidade urbana e levar mais qualidade de vida para as pessoas. Junte-se a nós!</p>
                 </div>
-                <div class="video-embed">
-                    <?= $video; ?>
-                </div>
-                <h3 class="titulo-video">Olá, nós somos a
-                    E-Moving!</h3>
             </div>
         </div>
 
