@@ -56,6 +56,7 @@
 <script src="./vendor/jquery/jquery-3.6.0.min.js"></script>
 <!-- Boostrap JS Bundle -->
 <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <!-- Main JavaScript -->
 <script src="./js/main.js"></script>
 

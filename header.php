@@ -12,6 +12,8 @@
     <!-- Main Style -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
 </head>
 
 <body>
@@ -51,14 +53,14 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="./4work.php"> E-Bike 4work</a></li>
                                     <li><a class="dropdown-item" href="./sharing.php">E-Bike Sharing</a>
-                                       
+
                                     </li>
                                     <li><a class="dropdown-item" href="./beneficio.php">E-Bike Benefício</a>
-                                       
+
                                     </li>
                                 </ul>
                             </li>
-                            <li class="nav-item active"> <a class="nav-link" href="#">Blog </a> </li>
+                            <li class="nav-item active"> <a class="nav-link" href="./blog.php">Blog </a> </li>
                             <li class="nav-item"><a class="nav-link" href="./contato.php"> Contato </a></li>
                         </ul>
                         <ul class="navbar-nav">

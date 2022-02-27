@@ -66,10 +66,10 @@ jQuery(document).ready(function ($) {
         $(this).find('.dropdown-menu').removeClass('show');
     });
 
-    
+
     $(".videos-thumb").on("click", function () {
         var $videoThumb = $(this);
-         var $videoContainer = $videoThumb.next();
+        var $videoContainer = $videoThumb.next();
         // var $videoPlayer = $videoContainer.children();
         // $videoPlayer.attr('src', $videoPlayer.attr('data-src'));
         $videoThumb.fadeOut("slow", function () {
@@ -78,7 +78,27 @@ jQuery(document).ready(function ($) {
         });
     });
 
-
-    
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        //direction: 'vertical',
+        loop: true,
+      
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      
+        // And if we need scrollbar
+        // scrollbar: {
+        //   el: '.swiper-scrollbar',
+        // },
+      });
 
 });

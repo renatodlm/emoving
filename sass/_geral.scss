@@ -27,6 +27,10 @@ mark {
     padding: 0;
     color: $secondary_4;
 }
+ul {
+    padding-inline-start: 0;
+    margin-bottom: 0;
+}
 
 p,
 ul,
@@ -34,7 +38,6 @@ li {
     font-family: $font-primary;
     color: $white;
     list-style: none;
-    padding-inline-start: 0;
 }
 * {
     outline: none !important;
@@ -88,5 +91,27 @@ textarea {
     &:focus {
         background-color: $white;
         color: $primary;
+    }
+}
+
+.sidebar {
+    padding: 50px;
+    border-radius: 30px;
+    background-color: $color_3F4077;
+    &-item:not(:last-of-type) {
+        margin-bottom: 50px;
+    }
+}
+.blog-header {
+    padding: 100px 0;
+}
+.swiper-pagination {
+    margin-bottom: -15px;
+    .swiper-pagination-bullet {
+        width: 15px;
+        height: 15px;
+        &.swiper-pagination-bullet-active {
+            background-color: $secondary_4;
+        }
     }
 }

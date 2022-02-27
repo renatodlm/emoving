@@ -24,11 +24,15 @@ class Page_Hero
                 <?php endif; ?>
                 <div class="container">
                     <?php if (!empty($obj)) : ?>
-                        <div class="row justify-content-center">
-                            <div class="col-xl-4 col-lg-6 col-md-8">
-                                <div class="hero-default-content">
+                        <div class="hero-default-content">
+                            <div class="row justify-content-center">
+                                <div class="col-xl-5 col-lg-6 col-md-8">
                                     <h1 class="hero-default-content-title"><?= $obj['title'] ?></h1>
-                                    <p class="hero-default-content-text"><?= $obj['text'] ?></p>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-xl-4 col-lg-6 col-md-8">
+                                    <div class="hero-default-content-text"><?= $obj['text'] ?></div>
                                     <a class="hero-default-content-link" href="<?= $obj['link'] ?>"><i class="hero-default-content-link-icon"></i></a>
                                 </div>
                             </div>
@@ -48,7 +52,7 @@ class Page_Hero
         endif;
     }
 
-     public static function home($obj, $button)
+    public static function home($obj, $button)
     {
         if (!empty($obj)) :
         ?>
@@ -88,7 +92,7 @@ class Page_Hero
                     endif; ?>
                 </div>
             </section>
-<?php
+        <?php
         endif;
     }
     public static function quemsomos($obj, $button)
@@ -96,11 +100,11 @@ class Page_Hero
         if (!empty($obj)) :
         ?>
             <section class="hero-quemsomos <?php if (!empty($obj['after'])) {
-                                            echo ' after-true';
-                                        }
-                                        if (!empty($obj['before'])) {
-                                            echo ' before-true';
-                                        } ?>" style="background-color:<?= $obj['background-color'] ?>;">
+                                                echo ' after-true';
+                                            }
+                                            if (!empty($obj['before'])) {
+                                                echo ' before-true';
+                                            } ?>" style="background-color:<?= $obj['background-color'] ?>;">
                 <?php if (!empty($obj['background-image'])) : ?>
                     <picture>
                         <?php if (empty($obj['background-image-mobile'])) : $obj['background-image-mobile'] = $obj['background-image'];

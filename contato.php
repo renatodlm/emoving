@@ -66,6 +66,21 @@ echo $hero::default($default_obj, $text);
         </div>
     </div>
 </section>
+<section class="imprensa">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-8">
+                <div class="imprensa-box">
+                    <div class="imprensa-box-title">Flávia Saraiva</div>
+                    <ul class="imprensa-box-contato">
+                        <li class="imprensa-box-contato-item"><a href="mailto:flavia@e-moving.com.br">flavia@e-moving.com.br</a></li>
+                        <li class="imprensa-box-contato-item"><a href="mailto:ola@e-moving.com.br">ola@e-moving.com.br</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <?php
 
 require __DIR__ . "/footer.php";
