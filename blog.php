@@ -34,7 +34,7 @@ $hero = new Page_Hero;
 
 <section id="blog-header" class="blog-header">
     <div class="container">
-        <div class="swiper">
+        <div class="swiper blog-swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
@@ -42,14 +42,14 @@ $hero = new Page_Hero;
                     <div class="swiper-slide">
                         <div class="swiper-slide">
                             <div class="blog-header-slider-swiper-item">
-                                <a href="#">
+                                <a href="./single.php">
                                     <div class="blog-header-slider-swiper-item-image-box">
                                         <picture>
                                             <img class="blog-header-slider-swiper-item-image-box-thumbnail" src="./img/blog-destaque.png" alt="blog item">
                                         </picture>
                                     </div>
                                 </a>
-                                <h2 class="blog-header-slider-swiper-item-title"><a href="#">Ciclismo seguro: tudo o que você precisa para pedalar em segurança</a></h2>
+                                <h2 class="blog-header-slider-swiper-item-title"><a href="./single.php">Ciclismo seguro: tudo o que você precisa para pedalar em segurança</a></h2>
                                 <div class="blog-header-slider-swiper-item-post-info">
                                     <ul class="blog-header-slider-swiper-item-post-info-tags">
                                         <li><a href="#">Mobilidade urbana</a></li>
@@ -67,14 +67,14 @@ $hero = new Page_Hero;
                     <div class="swiper-slide">
                         <div class="swiper-slide">
                             <div class="blog-header-slider-swiper-item">
-                                <a href="#">
+                                <a href="./single.php">
                                     <div class="blog-header-slider-swiper-item-image-box">
                                         <picture>
                                             <img class="blog-header-slider-swiper-item-image-box-thumbnail" src="./img/blog-destaque.png" alt="blog item">
                                         </picture>
                                     </div>
                                 </a>
-                                <h2 class="blog-header-slider-swiper-item-title"><a href="#">Ciclismo seguro: tudo o que você precisa para pedalar em segurança</a></h2>
+                                <h2 class="blog-header-slider-swiper-item-title"><a href="./single.php">Ciclismo seguro: tudo o que você precisa para pedalar em segurança</a></h2>
                                 <div class="blog-header-slider-swiper-item-post-info">
                                     <ul class="blog-header-slider-swiper-item-post-info-tags">
                                         <li><a href="#">Mobilidade urbana</a></li>
@@ -92,14 +92,14 @@ $hero = new Page_Hero;
                     <div class="swiper-slide">
                         <div class="swiper-slide">
                             <div class="blog-header-slider-swiper-item">
-                                <a href="#">
+                                <a href="./single.php">
                                     <div class="blog-header-slider-swiper-item-image-box">
                                         <picture>
                                             <img class="blog-header-slider-swiper-item-image-box-thumbnail" src="./img/blog-destaque.png" alt="blog item">
                                         </picture>
                                     </div>
                                 </a>
-                                <h2 class="blog-header-slider-swiper-item-title"><a href="#">Ciclismo seguro: tudo o que você precisa para pedalar em segurança</a></h2>
+                                <h2 class="blog-header-slider-swiper-item-title"><a href="./single.php">Ciclismo seguro: tudo o que você precisa para pedalar em segurança</a></h2>
                                 <div class="blog-header-slider-swiper-item-post-info">
                                     <ul class="blog-header-slider-swiper-item-post-info-tags">
                                         <li><a href="#">Mobilidade urbana</a></li>
@@ -117,14 +117,14 @@ $hero = new Page_Hero;
                     <div class="swiper-slide">
                         <div class="swiper-slide">
                             <div class="blog-header-slider-swiper-item">
-                                <a href="#">
+                                <a href="./single.php">
                                     <div class="blog-header-slider-swiper-item-image-box">
                                         <picture>
                                             <img class="blog-header-slider-swiper-item-image-box-thumbnail" src="./img/blog-destaque.png" alt="blog item">
                                         </picture>
                                     </div>
                                 </a>
-                                <h2 class="blog-header-slider-swiper-item-title"><a href="#">Ciclismo seguro: tudo o que você precisa para pedalar em segurança</a></h2>
+                                <h2 class="blog-header-slider-swiper-item-title"><a href="./single.php">Ciclismo seguro: tudo o que você precisa para pedalar em segurança</a></h2>
                                 <div class="blog-header-slider-swiper-item-post-info">
                                     <ul class="blog-header-slider-swiper-item-post-info-tags">
                                         <li><a href="#">Mobilidade urbana</a></li>
@@ -153,14 +153,14 @@ $hero = new Page_Hero;
             <div class="col-lg-8">
                 <div class="blog-item">
                     <article title="title">
-                        <a href="#">
+                        <a href="./single.php">
                             <div class="blog-item-image-box">
                                 <picture>
                                     <img class="blog-item-image-box-thumbnail" src="./img//blog-item.png" alt="blog item">
                                 </picture>
                             </div>
                         </a>
-                        <h2 class="blog-item-title"><a href="#">Ciclismo seguro: tudo o que você precisa para pedalar em segurança</a></h2>
+                        <h2 class="blog-item-title"><a href="./single.php">Ciclismo seguro: tudo o que você precisa para pedalar em segurança</a></h2>
                         <div class="blog-item-post-info">
                             <ul class="blog-item-post-info-tags">
                                 <li><a href="#">Mobilidade urbana</a></li>
@@ -174,14 +174,14 @@ $hero = new Page_Hero;
                 </div>
                 <div class="blog-item">
                     <article title="title">
-                        <a href="#">
+                        <a href="./single.php">
                             <div class="blog-item-image-box">
                                 <picture>
                                     <img class="blog-item-image-box-thumbnail" src="./img//blog-item.png" alt="blog item">
                                 </picture>
                             </div>
                         </a>
-                        <h2 class="blog-item-title"><a href="#">Ciclismo seguro: tudo o que você precisa para pedalar em segurança</a></h2>
+                        <h2 class="blog-item-title"><a href="./single.php">Ciclismo seguro: tudo o que você precisa para pedalar em segurança</a></h2>
                         <div class="blog-item-post-info">
                             <ul class="blog-item-post-info-tags">
                                 <li><a href="#">Mobilidade urbana</a></li>
@@ -193,6 +193,14 @@ $hero = new Page_Hero;
                         </div>
                     </article>
                 </div>
+                <ul class="blog-pagination">
+                    <li class="blog-pagination-item"><a href="#"><i class="blog-pagination-item-prev disabled"></i></a></li>
+                    <li class="blog-pagination-item active"><a href="#">1</a></li>
+                    <li class="blog-pagination-item"><a href="#">2</a></li>
+                    <li class="blog-pagination-item">...</li>
+                    <li class="blog-pagination-item"><a href="#">12</a></li>
+                    <li class="blog-pagination-item"><a href="#"><i class="blog-pagination-item-next"></i></a></li>
+                </ul>
             </div>
             <div class="col-lg-4">
                 <div class="sidebar">

@@ -52,6 +52,62 @@ class Page_Hero
         endif;
     }
 
+    public static function post($obj, $text)
+    {
+        if (!empty($obj) || !empty($text)) :
+        ?>
+            <section class="hero-default <?php if (!empty($obj['after'])) {
+                                                echo ' after-true';
+                                            }
+                                            if (!empty($obj['before'])) {
+                                                echo ' before-true';
+                                            } ?>" style="background-color:<?= $obj['background-color'] ?>;">
+                <?php if (!empty($obj['background-image'])) : ?>
+                    <picture>
+                        <?php if (empty($obj['background-image-mobile'])) : $obj['background-image-mobile'] = $obj['background-image'];
+                        endif; ?>
+                        <source srcset="<?= $obj['background-image-mobile'] ?>" media="(max-width: 1024px)">
+                        <img class="hero-default-background-image" src="<?= $obj['background-image'] ?>" alt="<?= $obj['title'] ?>">
+                    </picture>
+                <?php endif; ?>
+                <div class="container">
+                    <?php if (!empty($obj)) : ?>
+                        <div class="hero-default-content">
+                            <div class="row justify-content-center">
+                                <div class="col-xl-12 col-lg-12 col-md-12">
+                                    <h1 class="hero-default-content-title"><?= $obj['title'] ?></h1>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-xl-4 col-lg-6 col-md-8 my-5">
+                                    <div class="hero-default-content-text"><?= $obj['text'] ?></div>
+                                    <a class="hero-default-content-link" href="<?= $obj['link'] ?>"><i class="hero-default-content-link-icon"></i></a>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-xl-4 col-lg-6 col-md-8 mt-5">
+                                    <ul class="blog-item-post-info-tags">
+                                        <li><a href="#">Mobilidade urbana</a></li>
+                                        <li><a href="#">Na cidade</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    <?php
+                    endif;
+                    if (!empty($text)) : ?>
+                        <div class="row justify-content-center">
+                            <div class="col-xl-6 col-lg-8 col-md-10">
+                                <p class="hero-default-text"><?= $text ?></p>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </section>
+        <?php
+        endif;
+    }
+
     public static function home($obj, $button)
     {
         if (!empty($obj)) :

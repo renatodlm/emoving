@@ -158,6 +158,7 @@
         object-fit: cover;
         object-position: top center;
         max-width: 100%;
+        height: 100%;
     }
     &-content {
         margin-top: 15vh;
@@ -974,6 +975,233 @@
             &-date {
                 @extend %font-18;
                 color: $white;
+            }
+        }
+    }
+}
+
+.related-posts {
+    padding: 100px 0 200px 0;
+    &-title {
+        @extend %font-36;
+        color: $white;
+        margin-bottom: 50px;
+        font-weight: bold;
+    }
+    &-slider-swiper-item {
+        padding: 24px;
+        border-radius: 30px;
+        background-color: $color_3F4077;
+        transition: 0.3s ease background-color;
+        margin-bottom: 50px;
+        &-image-box {
+            overflow: hidden;
+            border-radius: 8px;
+            &-thumbnail {
+                width: 100%;
+                height: auto;
+                object-position: top center;
+                object-fit: cover;
+                transition: ease 0.3s transform;
+            }
+        }
+        &:hover,
+        &:focus {
+            background-color: #7374d8;
+            .blog-item-image-box-thumbnail {
+                transform: scale(1.04);
+            }
+        }
+        &-title {
+            margin-top: 27px;
+            a {
+                @extend %font-36;
+                color: $white;
+                font-weight: bold;
+                &:hover,
+                &:focus {
+                    color: $white;
+                }
+            }
+        }
+        &-post-info {
+            margin-top: 47px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            &-tags {
+                li {
+                    @extend %font-13;
+                    background-color: #6667ae;
+                    border-radius: 90px;
+                    color: $white;
+                    padding: 8px 10px;
+                    display: inline-block;
+                    &:not(:last-child) {
+                        margin-right: 14px;
+                    }
+                    a {
+                        &:hover,
+                        &:focus {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+            &-date {
+                @extend %font-18;
+                color: $white;
+            }
+        }
+    }
+}
+
+.post-content {
+    padding-bottom: 50px;
+    h1 {
+        @extend %font-52;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    h2 {
+        @extend %font-42;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    h3 {
+        @extend %font-36;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    p {
+        @extend %font-18;
+        margin-bottom: 20px;
+    }
+}
+
+.reviews {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    &-title {
+        @extend %font-36;
+        font-weight: bold;
+        color: $white;
+        max-width: 100%;
+        width: 433px;
+        margin-bottom: 30px;
+    }
+    &-starts {
+        &-item {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-image: url(../img/Icons/start-line.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-color: transparent;
+            &:not(:last-child) {
+                margin-right: 8px;
+            }
+            &.mark {
+                background-image: url(../img/Icons/start.svg);
+            }
+        }
+    }
+}
+
+.share {
+    margin-bottom: 50px;
+    &-title {
+        @extend %font-36;
+        font-weight: bold;
+        color: $white;
+        max-width: 100%;
+        width: 433px;
+        margin-bottom: 30px;
+    }
+    &-list {
+        &-item {
+            display: inline-block;
+            &:not(:last-child) {
+                margin-right: 25px;
+            }
+            &-link {
+                &-icon {
+                    width: 40px;
+                    height: 40px;
+                    display: block;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    &.share-instagram {
+                        background-image: url(../img/Icons/instagram-line.svg);
+                    }
+                    &.share-tiktok {
+                        background-image: url(../img/Icons/tiktok.svg);
+                    }
+                    &.share-facebook {
+                        background-image: url(../img/Icons/facebook.svg);
+                    }
+                    &.share-twitter {
+                        background-image: url(../img/Icons/twitter.svg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.blog-pagination {
+    margin-left: auto;
+    padding-top: 50px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+    width: fit-content;
+    &-item {
+        width: 22px;
+        height: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: inline-flex;
+        a {
+            @extend %font-24;
+            color: $white;
+            font-weight: bold;
+        }
+        &:not(:last-child) {
+            margin-right: 11px;
+        }
+        &-prev {
+            width: 17px;
+            height: 10px;
+            margin: auto;
+            background-image: url(../img/Icons/left.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: block;
+            &.disabled {
+                background-image: url(../img/Icons/left-disabled.svg);
+            }
+        }
+        &-next {
+            width: 17px;
+            height: 10px;
+            margin: auto;
+            background-image: url(../img/Icons/right.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: block;
+            &.disabled {
+                background-image: url(../img/Icons/right-disabled.svg);
+            }
+        }
+        &.active {
+            a {
+                color: $secondary_4;
             }
         }
     }

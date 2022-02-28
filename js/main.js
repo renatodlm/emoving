@@ -78,27 +78,62 @@ jQuery(document).ready(function ($) {
         });
     });
 
-    const swiper = new Swiper('.swiper', {
+    const blog_swiper = new Swiper('.blog-swiper', {
         // Optional parameters
         //direction: 'vertical',
         loop: true,
-      
+
         // If we need pagination
         pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
+            el: '.swiper-pagination',
+            clickable: true,
         },
-      
+
         // Navigation arrows
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
-      
+
         // And if we need scrollbar
         // scrollbar: {
         //   el: '.swiper-scrollbar',
         // },
-      });
+    });
+
+    const related_posts_swiper = new Swiper('.related-posts-swiper', {
+        loop: false,
+        spaceBetween: 30,
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+            },
+        },
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        // scrollbar: {
+        //   el: '.swiper-scrollbar',
+        // },
+    });
 
 });
