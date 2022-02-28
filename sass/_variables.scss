@@ -1,18 +1,18 @@
-$primary: #47494f;
-$primary-contrast: #ffffff;
+$primary: #444591;
 $white: #ffffff;
-$secondary: #171616;
-$secondary-contrast: #ffffff;
+$secondary: #5ca1d8;
+$scondary_2: #0064a3;
+$secondary_3: #80bbdc;
+$secondary_4: #00dcf0;
+$secondary_4_light: #a9f8ff;
+$color_3F4077: #3f4077;
+$purple_dark: #3a3b75;
 
-$primary-gradient: linear-gradient(to right, #004f9a 0%, #007eb3 100%);
-$primary-gradient-invert: linear-gradient(to right, #007eb3 0%, #004f9a 100%);
+$gradient_image: linear-gradient(to top, #444580, transparent);
 
-$secondary-gradient: linear-gradient(to right, #e67a10 0%, #f9b706 100%);
-$secondary-gradient-invert: linear-gradient(to right, #f9b706 0%, #e67a10 100%);
+$ice: #fcfdfc;
 
-$text: #47494f;
-$text-light: #64666b;
-$body: #ffffff;
+$body: #444580;
 
 $background-light: #eaf0f7;
 $background-dark: #e4e9ee;
@@ -28,7 +28,7 @@ $lg: 992px;
 $md: 768px;
 $sm: 576px;
 
-$font-primary: "Exo", sans-serif;
-$font-secondary: "Exo", sans-serif;
+$font-primary: "Fira Sans", sans-serif;
+$font-secondary: "Fira Sans", sans-serif;
 
 $border-radius: 5px;

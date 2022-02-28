@@ -1,3 +1,7 @@
+%font-13 {
+    font-size: 13px;
+    line-height: 1.2;
+}
 %font-18 {
     font-size: 18px;
     line-height: 24px;
@@ -16,9 +20,9 @@
     }
 }
 
-%font-25 {
-    font-size: 25px;
-    line-height: 40px;
+%font-24 {
+    font-size: 24px;
+    line-height: 29px;
     @media (max-width: $xxl) {
         font-size: 16px;
         line-height: 22px;
@@ -43,8 +47,8 @@
     }
 }
 
-%font-35 {
-    font-size: 35px;
+%font-36 {
+    font-size: 36px;
     line-height: 46px;
     @media (max-width: $lg) {
         font-size: 28px;
@@ -69,9 +73,9 @@
     }
 }
 
-%font-50 {
-    font-size: 50px;
-    line-height: 60px;
+%font-48 {
+    font-size: 48px;
+    line-height: 1.2;
     @media (max-width: $lg) {
         font-size: 40px;
         line-height: 51px;
@@ -100,8 +104,25 @@
     }
 }
 
-%font-69 {
-    font-size: 69px;
+%font-72 {
+    font-size: 72px;
+    line-height: 80px;
+    @media (max-width: $xl) {
+        font-size: 48px;
+        line-height: 59px;
+    }
+    @media (max-width: $lg) {
+        font-size: 40px;
+        line-height: 51px;
+    }
+    @media (max-width: $sm) {
+        font-size: 28px;
+        line-height: 41px;
+    }
+}
+
+%font-70 {
+    font-size: 70px;
     line-height: 80px;
     @media (max-width: $xl) {
         font-size: 48px;

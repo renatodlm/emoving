@@ -1,0 +1,16 @@
+{
+    "name": "php/autoload",
+    "description": "E-moving",
+    "authors": [
+        {
+            "name": "emoving",
+            "email": "contato@e-moving.com.br"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Classes\\": "classes/"
+        }
+    },
+    "require": {}
+}

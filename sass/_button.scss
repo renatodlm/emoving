@@ -1,0 +1,45 @@
+.bt {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $purple_dark;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 8px 21px;
+    font-size: 1rem;
+    border-radius: 90px;
+    transition: all ease 0.3s !important;
+}
+
+.bt-primary {
+    padding: 19px 34px;
+    color: $primary;
+    background-color: $secondary_4;
+
+    border-color: $secondary_4;
+    font-weight: bold;
+    &:hover,
+    &:focus {
+        background-color: rgba(220, 204, 255, 0.5);
+        color: $white;
+        border-color: rgba(220, 204, 255, 0.5);
+    }
+}
+
+.bt-secondary {
+    padding: 8px 21px;
+    color: $secondary_4;
+    background-color: transparent;
+    border-color: $secondary_4;
+    &:hover,
+    &:focus {
+        background-color: rgba(220, 204, 255, 0.5);
+        color: $white;
+        border-color: rgba(220, 204, 255, 0.5);
+    }
+}

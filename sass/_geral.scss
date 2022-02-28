@@ -2,17 +2,45 @@ body {
     font-family: $font-primary;
     background-color: $body;
     overflow-x: hidden;
+    color: $white;
 }
 
 ::selection {
-    background: $primary;
-    color: $primary-contrast;
+    color: $primary;
+    background: $white;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba($secondary, 0.5);
+}
+
+::-webkit-scrollbar-track {
+    background: rgba($secondary, 0.3);
+}
+
+mark {
+    background-color: transparent;
+    padding: 0;
+    color: $secondary_4;
+}
+ul {
+    padding-inline-start: 0;
+    margin-bottom: 0;
+}
+
 p,
 ul,
 li {
     font-family: $font-primary;
-    color: $text-light;
+    color: $white;
+    list-style: none;
+}
+* {
+    outline: none !important;
 }
 
 p {
@@ -28,11 +56,11 @@ img {
 
 a {
     text-decoration: none;
-    color: $primary;
+    color: $white;
     transition: color 0.2s;
     &:hover {
         text-decoration: none;
-        color: $secondary;
+        color: $secondary_4;
     }
 }
 
@@ -42,5 +70,53 @@ h3,
 h4,
 h5 {
     font-family: $font-secondary;
-    color: $text-light;
+    color: $white;
+}
+
+input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]),
+select,
+textarea {
+    background-color: #7a7cb9;
+    border-radius: 8px;
+    @extend %font-18;
+    border: 3px solid #7a7cb9 !important;
+    padding: 15px;
+    outline: none !important;
+    width: 100%;
+    color: $white;
+    &::placeholder {
+        color: #c1c2ff;
+        @extend %font-18;
+    }
+    &:focus {
+        background-color: $white;
+        color: $primary;
+    }
+}
+
+.sidebar {
+    padding: 50px;
+    border-radius: 30px;
+    background-color: $color_3F4077;
+    &-item:not(:last-of-type) {
+        margin-bottom: 50px;
+    }
+}
+.blog-header {
+    padding: 100px 0;
+}
+.swiper-pagination {
+    margin-bottom: -15px;
+    .swiper-pagination-bullet {
+        width: 15px;
+        height: 15px;
+        &.swiper-pagination-bullet-active {
+            background-color: $secondary_4;
+        }
+    }
+}
+
+.swiper {
+    width: 100%;
+    height: auto;
 }
