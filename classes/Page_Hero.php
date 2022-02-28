@@ -8,12 +8,12 @@ class Page_Hero
     {
         if (!empty($obj) || !empty($text)) :
 ?>
-            <section class="hero-default <?php if (!empty($obj['after'])) {
-                                                echo ' after-true';
-                                            }
-                                            if (!empty($obj['before'])) {
-                                                echo ' before-true';
-                                            } ?>" style="background-color:<?= $obj['background-color'] ?>;">
+            <section class="hero-default rellax <?php if (!empty($obj['after'])) {
+                                                    echo ' after-true';
+                                                }
+                                                if (!empty($obj['before'])) {
+                                                    echo ' before-true';
+                                                } ?>" style="background-color:<?= $obj['background-color'] ?>;" data-rellax-speed="-2">
                 <?php if (!empty($obj['background-image'])) : ?>
                     <picture>
                         <?php if (empty($obj['background-image-mobile'])) : $obj['background-image-mobile'] = $obj['background-image'];
@@ -56,12 +56,12 @@ class Page_Hero
     {
         if (!empty($obj) || !empty($text)) :
         ?>
-            <section class="hero-default <?php if (!empty($obj['after'])) {
-                                                echo ' after-true';
-                                            }
-                                            if (!empty($obj['before'])) {
-                                                echo ' before-true';
-                                            } ?>" style="background-color:<?= $obj['background-color'] ?>;">
+            <section class="hero-default rellax <?php if (!empty($obj['after'])) {
+                                                    echo ' after-true';
+                                                }
+                                                if (!empty($obj['before'])) {
+                                                    echo ' before-true';
+                                                } ?>" style="background-color:<?= $obj['background-color'] ?>;" data-rellax-speed="-2">
                 <?php if (!empty($obj['background-image'])) : ?>
                     <picture>
                         <?php if (empty($obj['background-image-mobile'])) : $obj['background-image-mobile'] = $obj['background-image'];
@@ -112,12 +112,12 @@ class Page_Hero
     {
         if (!empty($obj)) :
         ?>
-            <section class="hero-home <?php if (!empty($obj['after'])) {
-                                            echo ' after-true';
-                                        }
-                                        if (!empty($obj['before'])) {
-                                            echo ' before-true';
-                                        } ?>" style="background-color:<?= $obj['background-color'] ?>;">
+            <section class="hero-home rellax <?php if (!empty($obj['after'])) {
+                                                    echo ' after-true';
+                                                }
+                                                if (!empty($obj['before'])) {
+                                                    echo ' before-true';
+                                                } ?>" style="background-color:<?= $obj['background-color'] ?>;" data-rellax-speed="-2">
                 <?php if (!empty($obj['background-image'])) : ?>
                     <picture>
                         <?php if (empty($obj['background-image-mobile'])) : $obj['background-image-mobile'] = $obj['background-image'];
@@ -133,7 +133,7 @@ class Page_Hero
                                 <div class="hero-home-content">
                                     <?php if (!empty($obj['image'])) : ?>
                                         <div class="hero-home-content-img">
-                                            <img src="<?= $obj['image'] ?>" alt="<?= $obj['title'] ?>">
+                                            <img data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000" src="<?= $obj['image'] ?>" alt="<?= $obj['title'] ?>">
                                         </div>
                                     <?php endif; ?>
                                     <h1 class="hero-home-content-title"><?= $obj['title'] ?></h1>
@@ -155,12 +155,12 @@ class Page_Hero
     {
         if (!empty($obj)) :
         ?>
-            <section class="hero-quemsomos <?php if (!empty($obj['after'])) {
-                                                echo ' after-true';
-                                            }
-                                            if (!empty($obj['before'])) {
-                                                echo ' before-true';
-                                            } ?>" style="background-color:<?= $obj['background-color'] ?>;">
+            <section class="hero-quemsomos rellax<?php if (!empty($obj['after'])) {
+                                                        echo ' after-true';
+                                                    }
+                                                    if (!empty($obj['before'])) {
+                                                        echo ' before-true';
+                                                    } ?>" style="background-color:<?= $obj['background-color'] ?>;" data-rellax-speed="-2">
                 <?php if (!empty($obj['background-image'])) : ?>
                     <picture>
                         <?php if (empty($obj['background-image-mobile'])) : $obj['background-image-mobile'] = $obj['background-image'];

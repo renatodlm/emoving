@@ -8,10 +8,11 @@ class Services_List
     {
         if (!empty($infos) && !empty($query)) :
 ?>
-            <section id="<?= $infos['id'] ?>" class="service-list-01">
+            <section id="<?= $infos['id'] ?>" class="service-list-01 rellax" data-rellax-speed="1">
+                <div class="element-float el-08 rellax" data-rellax-speed="-3" style="margin-left: -50px;"></div>
                 <div class="container">
                     <div class="row d-flex justify-content-center">
-                        <div class="col-xl-8 col-md-10">
+                        <div class="col-xl-8 col-md-10 rellax" data-rellax-speed="1">
                             <?php if (!empty($infos['title'])) : ?>
                                 <h3 class="service-list-01-title">
                                     <?= $infos['title'] ?>
@@ -53,11 +54,11 @@ class Services_List
     public static function get_primary_list3($infos, $query)
     {
         if (!empty($infos) && !empty($query)) :
-?>
-            <section id="<?= $infos['id'] ?>" class="service-list-01">
+        ?>
+            <section id="<?= $infos['id'] ?>" class="service-list-01 rellax" data-rellax-speed="1">
                 <div class="container">
                     <div class="row d-flex justify-content-center">
-                        <div class="col-xl-6 col-md-10">
+                        <div class="col-xl-6 col-md-10 rellax" data-rellax-speed="1">
                             <?php if (!empty($infos['title'])) : ?>
                                 <h3 class="service-list-01-title">
                                     <?= $infos['title'] ?>
@@ -100,10 +101,10 @@ class Services_List
     {
         if (!empty($infos) && !empty($query)) :
         ?>
-            <section id="<?= $infos['id'] ?>" class="service-list-02">
+            <section id="<?= $infos['id'] ?>" class="service-list-02 rellax" data-rellax-speed="1">
                 <div class="container">
                     <div class="row d-flex justify-content-center">
-                        <div class="col-xl-7 col-md-10">
+                        <div class="col-xl-7 col-md-10 rellax" data-rellax-speed="1">
                             <?php if (!empty($infos['title'])) : ?>
                                 <h3 class="service-list-02-title">
                                     <?= $infos['title'] ?>

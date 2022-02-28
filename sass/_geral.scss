@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: $font-primary;
     background-color: $body;
@@ -120,3 +123,31 @@ textarea {
     width: 100%;
     height: auto;
 }
+
+.box {
+}
+
+.el-08 {
+    width: 338px;
+    height: 193px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/elements/el-08.png);
+}
+
+// .box::before {
+//     content: attr(data-timing);
+// }
+// .easeBox {
+//     transform: translateY(var(--ty));
+// }
+// .rotateBox {
+//     transform: rotate(var(--r));
+// }
+// .fadeBox {
+//     opacity: var(--o);
+// }
+// .directBox {
+//     opacity: var(--o);
+// }

@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer rellax" data-rellax-speed="-2">
     <div class="container">
         <div class="row">
             <div class="col-xl-3">
@@ -57,7 +57,19 @@
 <!-- Boostrap JS Bundle -->
 <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="./vendor/rellax/rellax.min.js"></script>
+<script src="./vendor/aos/aos.js"></script>
+<!-- <script src="https://s.electerious.com/basicScroll/dist/basicScroll.min.js"></script> -->
 <!-- Main JavaScript -->
 <script src="./js/main.js"></script>
 
 </html>
+
+<!-- <div class="d-flex">
+    <div class="box easeBox" data-timing="sineInOut"></div>
+    <div class="box easeBox" data-timing="backInOut"></div>
+    <div class="box easeBox" data-timing="circIn"></div>
+    <div class="box easeBox" data-timing="quintOut"></div>
+    <div class="box easeBox" data-timing="expoIn"></div>
+    <div class="box fadeBox">fade</div>
+</div> -->

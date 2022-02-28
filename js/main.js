@@ -136,4 +136,37 @@ jQuery(document).ready(function ($) {
         // },
     });
 
+
+    // const easeBoxes = []
+
+    // // Create an animation for each ease box. Each with a different timing.
+    // document.querySelectorAll('.easeBox').forEach((elem, i) => {
+
+    //     // Get the timing from the data attribute.
+    //     // You can also hard-code the timing, but for the demo it's easier this way.
+    //     const timing = elem.getAttribute('data-timing')
+
+    //     // Crate an instance for the current element and store the instance in an array.
+    //     // We start the animation later using the instances from the array.
+    //     easeBoxes.push(basicScroll.create({
+    //         elem: elem,
+    //         from: 'middle-bottom',
+    //         to: 'bottom-top',
+    //         direct: true,
+    //         props: {
+    //             '--ty': {
+    //                 from: '0',
+    //                 to: '100px',
+    //                 timing: timing
+    //             }
+    //         }
+    //     }))
+
+    // })
+
+    // easeBoxes.forEach((easeBox) => easeBox.start())
+    $(function () { AOS.init({ offset: 100, duration: 300, easing: "ease-out-quad", once: !0 }); window.addEventListener('load', AOS.refresh); });
+    var rellax = new Rellax('.rellax', {
+        center: true
+    });
 });

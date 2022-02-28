@@ -81,12 +81,12 @@ echo $call_action::get_call_action($text, $button);
  * Soluções
  */
 ?>
-<section class="solutions">
+<section class="solutions rellax" data-rellax-speed="1">
     <div class="solutions-container">
         <h2 class="solutions-title">Nossa soluções corporativas</h2>
-        <div class="solutions-container-item">
+        <div class="solutions-container-item rellax" data-rellax-speed="0">
             <div class="row justify-content-between d-flex align-items-center">
-                <div class="col-md-5">
+                <div class="col-md-5 rellax" data-rellax-speed="2">
                     <img class="solutions-container-item-img" src="./img/bikes/solution-01.png" alt="solutions">
                 </div>
                 <div class="col-md-6">
@@ -99,7 +99,7 @@ echo $call_action::get_call_action($text, $button);
             </div>
         </div>
 
-        <div class="solutions-container-item">
+        <div class="solutions-container-item rellax" data-rellax-speed="1">
             <div class="row justify-content-between d-flex align-items-center">
                 <div class="col-md-6">
                     <h4 class="solutions-container-item-title">
@@ -108,15 +108,15 @@ echo $call_action::get_call_action($text, $button);
                     <p class="solutions-container-item-text">Nessa modalidade as bikes elétricas proporcionam aos funcionários da sua empresa uma mudança na qualidade de vida com acessos exclusivos à assinatura mensal de uma e-bike. Escolhendo essa solução, cada colaborador realiza o processo de contratação diretamente com a E-Moving.</p>
                     <a class="bt bt-secondary" href="#">Quero saber mais</a>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-5 rellax" data-rellax-speed="2">
                     <img class="solutions-container-item-img" src="./img/bikes/solution-02.png" alt="solutions">
                 </div>
             </div>
         </div>
 
-        <div class="solutions-container-item">
+        <div class="solutions-container-item rellax" data-rellax-speed="2">
             <div class="row justify-content-between d-flex align-items-center">
-                <div class="col-md-5">
+                <div class="col-md-5 rellax" data-rellax-speed="2">
                     <img class="solutions-container-item-img" src="./img/bikes/solution-03.png" alt="solutions">
                 </div>
                 <div class="col-md-6">
@@ -189,15 +189,15 @@ echo $services_list2::get_secondary_list($infos2, $query2);
 
 ?>
 
-<section class="contact-form">
+<section class="contact-form rellax" data-rellax-speed="-2">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-8 col-md-10">
-                <div class="contact-form-content">
+                <div class="contact-form-content rellax" data-rellax-speed="2">
                     <h4 class="contact-form-content-title">Quer utilizar nossa <mark>e-bike?</mark></h4>
                     <p class="contact-form-content-text">Para ser nosso assinante, indique a melhor pessoa da sua empresa para apresentarmos nossa solução corporativa e mediante a contratação do nosso benefício, sua empresa disponibilizará para você uma e-bike</p>
                 </div>
-                <div class="contact-form-form">
+                <div class="contact-form-form rellax" data-rellax-speed="1">
                     <form action="">
                         <div class="mb-3">
                             <input type="text" id="nome" placeholder="Seu nome completo">
