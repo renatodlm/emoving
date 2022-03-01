@@ -1,4 +1,4 @@
-<footer class="footer rellax" data-rellax-speed="-2">
+<footer class="footer">
     <div class="container">
         <div class="row">
             <div class="col-xl-3">

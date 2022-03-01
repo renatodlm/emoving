@@ -26,43 +26,46 @@ $button = [
 $hero = new Page_Hero;
 echo $hero::home($hero_obj, $button);
 
-
 ?>
-<div id="videos" class="videos">
-    <div class="container">
-        <div class="row d-flex justify-content-center">
-            <?php
-            $video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/raV0IvfCGyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-            preg_match('/src="(.+?)"/', $video, $matches_url);
-            $src = $matches_url[1];
-            preg_match('/embed(.*?)?feature/', $src, $matches_id);
-            $id = $matches_id[1];
-            $id = str_replace(str_split('?/'), '', $id);
-            $id = 'raV0IvfCGyg';
-            $video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/raV0IvfCGyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-            // $video = preg_replace('~<iframe[^>]*\K(?=src)~i', 'data-', $video);
-            // $video = str_replace('youtube.com/embed/', 'youtube-nocookie.com/embed/', $video);
-            // $video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/raV0IvfCGyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+<div class="element-float-box">
+    <div class="element-float-box-item el-010 rellax" data-rellax-speed="-2" style="top:0px;right:0;margin-top:200px;margin-right: 0;" data-aos="zoom-out" data-aos-duration="500"></div>
+    <div class="element-float-box-item el-08 rellax" data-rellax-speed="-2" style="left:0;bottom:0;margin-left:-50px;margin-bottom:200px" data-aos="zoom-out" data-aos-duration="500"></div>
+    <div id="videos" class="videos">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <?php
+                $video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/raV0IvfCGyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                preg_match('/src="(.+?)"/', $video, $matches_url);
+                $src = $matches_url[1];
+                preg_match('/embed(.*?)?feature/', $src, $matches_id);
+                $id = $matches_id[1];
+                $id = str_replace(str_split('?/'), '', $id);
+                $id = 'raV0IvfCGyg';
+                $video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/raV0IvfCGyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                // $video = preg_replace('~<iframe[^>]*\K(?=src)~i', 'data-', $video);
+                // $video = str_replace('youtube.com/embed/', 'youtube-nocookie.com/embed/', $video);
+                // $video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/raV0IvfCGyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 
-            ?>
-            <div class="col-lg-8 col-md-10 coluna-video" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="<?= '1'; ?>00">
-                <div class="videos-box">
-                    <div class="videos-thumb shadow-lg" style="background-image: url(https://img.youtube.com/vi/<?= $id; ?>/maxresdefault.jpg)">
-                        <div class="videos-thumb-play-button">
+                ?>
+                <div class="col-lg-8 col-md-10 coluna-video" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="<?= '1'; ?>00">
+                    <div class="videos-box">
+                        <div class="videos-thumb shadow-lg" style="background-image: url(https://img.youtube.com/vi/<?= $id; ?>/maxresdefault.jpg)">
+                            <div class="videos-thumb-play-button">
+                            </div>
+                            <div class="videos-thumb-overlay"></div>
                         </div>
-                        <div class="videos-thumb-overlay"></div>
+                        <div class="videos-embed">
+                            <?= $video; ?>
+                        </div>
+                        <h3 class="videos-title">Olá, nós somos a<br>
+                            <mark>E-Moving!</mark>
+                        </h3>
+                        <p class="videos-text">A primeira empresa de assinatura de bicicletas elétricas do Brasil! Nascemos em 2015 para transformar a mobilidade urbana e levar mais qualidade de vida para as pessoas. Junte-se a nós!</p>
                     </div>
-                    <div class="videos-embed">
-                        <?= $video; ?>
-                    </div>
-                    <h3 class="videos-title">Olá, nós somos a<br>
-                        <mark>E-Moving!</mark>
-                    </h3>
-                    <p class="videos-text">A primeira empresa de assinatura de bicicletas elétricas do Brasil! Nascemos em 2015 para transformar a mobilidade urbana e levar mais qualidade de vida para as pessoas. Junte-se a nós!</p>
                 </div>
             </div>
-        </div>
 
+        </div>
     </div>
 </div>
 <?php
@@ -113,7 +116,14 @@ $text = 'Quer implementar uma <mark>mobilidade sustentável e inteligente na sua
 $button =  ['text' => 'Vamos conversar', 'url' => 'http://localhost/emoving/', 'target' => 'blank'];
 
 $call_action = new Call_Action;
-echo $call_action::get_call_action($text, $button);
+?>
+<div class="element-float-box">
+    <div class="element-float-box-item el-011 rellax" data-rellax-speed="2" style="top:0px;right:0;margin-top:100px;margin-right: 0px;" data-aos="zoom-out" data-aos-duration="500"></div>
+    <?php
+    echo $call_action::get_call_action($text, $button);
+    ?>
+</div>
+<?php
 
 
 /**
@@ -125,21 +135,28 @@ echo $call_action::get_call_action($text, $button);
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-10">
-                <div class="e-bikes-item">
-                    <div class="e-bikes-item-title">Bolt</div>
-                    <div class="e-bikes-item-box">
-                        <div class="row justify-content-center">
-                            <div class="col-xl-10 px-xl-0">
-                                <img class="e-bikes-item-box-img" src="./img/bikes/Bike-Bolt.png" alt="Bolt">
+                <div class="element-float-box">
+                    <div class="element-float-box-item el-010 rellax" data-rellax-speed="2" style="left:0;bottom:0;margin-left:-300px;margin-bottom:300px" data-aos="zoom-out" data-aos-duration="500"></div>
+                    <div class="element-float-box-item el-03 rellax" data-rellax-speed="2" style="right:0;bottom:0;margin-bottom:-50px;margin-right:-400px" data-aos="zoom-out" data-aos-duration="500"></div>
+                    <div class="e-bikes-item">
+                        <div class="e-bikes-item-title" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">Bolt</div>
+                        <div class="e-bikes-item-box">
+                            <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
+                                <div class="col-xl-10 px-xl-0">
+                                    <img class="e-bikes-item-box-img" src="./img/bikes/Bike-Bolt.png" alt="Bolt">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="element-float-box">
+                <div class="element-float-box-item el-04 rellax" data-rellax-speed="2" style="left:0;bottom:0;margin-left:-300px;margin-bottom:-200px" data-aos="zoom-out" data-aos-duration="500"></div>
                 <div class="e-bikes-item mb-5">
-                    <div class="e-bikes-item-title">Comfort</div>
+                    <div class="e-bikes-item-title" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">Comfort</div>
                     <div class="e-bikes-item-box">
-                        <div class="row justify-content-center">
-                            <div class="col-xl-10 px-xl-0">
+                        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000">
+                            <div class="col-xl-9 px-xl-0">
                                 <img class="e-bikes-item-box-img" src="./img/bikes/Bike-comfort.png" alt="Comfort">
                             </div>
                         </div>
@@ -147,6 +164,7 @@ echo $call_action::get_call_action($text, $button);
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </section>
 
@@ -204,40 +222,55 @@ $query2 = [
 ];
 
 $services_list2 = new Services_List;
-echo $services_list2::get_secondary_list($infos2, $query2);
+?>
+<div class="container">
+    <div class="element-float-box">
+        <div class="element-float-box-item el-06 rellax" data-rellax-speed="2" style="top:0px;left:0;margin-top:300px;margin-right: 0px;" data-aos="zoom-out" data-aos-duration="500"></div>
+        <div class="element-float-box-item el-07 rellax" data-rellax-speed="1" style="right:0;bottom:0;margin-left:-200px;margin-bottom:0px" data-aos="zoom-out" data-aos-duration="500"></div>
+        <?php
+        echo $services_list2::get_secondary_list($infos2, $query2);
 
-
+        ?>
+    </div>
+</div>
+<?php
 
 /**
  * Call Action
  */
 $text = 'Quer implementar uma <mark>mobilidade sustentável e inteligente na sua empresa?</mark> Entre em contato com a nossa equipe!';
-$button =  ['text' => 'Vamos conversar', 'url' => 'http://localhost/emoving/', 'target' => 'blank'];
+$button = ['text' => 'Vamos conversar', 'url' => 'http://localhost/emoving/', 'target' => 'blank'];
 
 $call_action = new Call_Action;
-echo $call_action::get_call_action($text, $button);
-
 ?>
+<div class="element-float-box">
+    <div class="element-float-box-item el-05 rellax" data-rellax-speed="-2" style="left:0;bottom:0;margin-left:-100px;margin-bottom:-100px" data-aos="zoom-out" data-aos-duration="500"></div>
+    <?php
+    echo $call_action::get_call_action($text, $button);
+    ?>
+</div>
 
-
-<section class="my-account">
-    <div class="container">
-        <div class="row d-flex align-items-center">
-            <div class="col-md-6">
-                <div class="my-account-content">
-                    <h3 class="my-account-content-title">Você no <mark>controle</mark> da sua <mark>assinatura!</mark></h3>
-                    <p class="my-account-content-text">Ao se cadastrar e receber a e-bike você terá 100% de acesso à sua assinatura na área MINHA CONTA! Acesse nosso atendimento e nossos serviços por lá! É muito prático!</p>
-                    <a class="bt bt-primary" href="#">Minha conta</a>
+<div class="element-float-box">
+    <div class="element-float-box-item el-02 rellax" data-rellax-speed="2" style="right:0;bottom:0;margin-right:50px;margin-bottom:300px" data-aos="zoom-out" data-aos-duration="500"></div>
+    <section class="my-account">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-md-6">
+                    <div class="my-account-content" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+                        <h3 class="my-account-content-title">Você no <mark>controle</mark> da sua <mark>assinatura!</mark></h3>
+                        <p class="my-account-content-text">Ao se cadastrar e receber a e-bike você terá 100% de acesso à sua assinatura na área MINHA CONTA! Acesse nosso atendimento e nossos serviços por lá! É muito prático!</p>
+                        <a class="bt bt-primary" href="#">Minha conta</a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="my-account-img">
-                    <img src="./img/mobile.png" alt="minha conta">
+                <div class="col-md-5">
+                    <div class="my-account-img" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
+                        <img src="./img/mobile.png" alt="minha conta" style="margin-left: -100px;">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 
 <?php
 

@@ -1,5 +1,6 @@
 .emoving-call-action {
     padding: 100px 0;
+    position: relative;
     &-text,
     &-text * {
         @extend %font-48;
@@ -16,6 +17,7 @@
 
 .service-list-01 {
     padding: 100px 0;
+    position: relative;
     &-title,
     &-title * {
         color: $white;
@@ -66,6 +68,7 @@
 
 .service-list-02 {
     padding: 100px 0;
+    position: relative;
     &-title,
     &-title * {
         color: $white;
@@ -125,6 +128,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 2160px;
+    max-height: 1080px;
     &.before-true {
         &::before {
             content: " ";
@@ -161,7 +169,7 @@
         height: 100%;
     }
     &-content {
-        margin-top: 15vh;
+        margin-top: 200px;
         position: relative;
         z-index: 2;
         text-align: center;
@@ -202,7 +210,7 @@
     &-text {
         position: relative;
         z-index: 2;
-        margin-top: 15vh;
+        margin-top: 180px;
         text-align: center;
         @extend %font-24;
     }
@@ -230,6 +238,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+    width: 100%;
+    margin: auto;
+    max-width: 2160px;
+    max-height: 1080px;
     &.before-true {
         &::before {
             content: " ";
@@ -264,7 +276,7 @@
         object-position: top center;
     }
     &-content {
-        margin-top: 5vh;
+        margin-top: 100px;
         position: relative;
         z-index: 2;
         text-align: center;
@@ -276,6 +288,7 @@
                 top: 0;
                 margin-top: -50px;
                 height: 65vh;
+                max-height: 706px;
                 width: auto;
             }
         }
@@ -316,6 +329,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+    width: 100%;
+    margin: auto;
+    max-width: 2160px;
+    max-height: 1080px;
     &.before-true {
         &::before {
             content: " ";
@@ -350,7 +367,7 @@
         object-position: top center;
     }
     &-content {
-        margin-top: 20vh;
+        margin-top: 180px;
         position: relative;
         z-index: 2;
         text-align: center;
@@ -406,7 +423,8 @@
 }
 
 .solutions {
-    padding: 100px 0;
+    padding: 200px 0 0 0;
+    position: relative;
     &-title {
         @extend %font-70;
         font-weight: 800;
@@ -419,6 +437,34 @@
         max-width: 1746px;
         margin-left: auto;
         margin-right: auto;
+        @media (min-width: 576px) {
+            max-width: 540px;
+        }
+        @media (min-width: 768px) {
+            max-width: 720px;
+        }
+        @media (min-width: 992px) {
+            max-width: 960px;
+        }
+        @media (min-width: 1200px) {
+            max-width: 1140px;
+        }
+        @media (min-width: 1400px) {
+            max-width: 1300px;
+        }
+        @media (min-width: 1600px) {
+            max-width: 1400px;
+        }
+        @media (min-width: 1600px) {
+            max-width: 1500px;
+        }
+        @media (min-width: 1700px) {
+            max-width: 1600px;
+        }
+        @media (min-width: 1800px) {
+            max-width: 1700px;
+        }
+
         &-item {
             margin-bottom: 100px;
             &-img {
@@ -442,8 +488,9 @@
 }
 
 .contact-form {
-    padding: 100px 0 200px 0;
+    padding: 200px 0 200px 0;
     text-align: center;
+    position: relative;
     &-content {
         text-align: center;
         &-title {
@@ -480,6 +527,7 @@
 }
 
 .e-bikes {
+    position: relative;
     &-item {
         margin-bottom: 150px;
         &-title {
@@ -503,6 +551,7 @@
 
 .videos {
     padding: 50px 0;
+    position: relative;
     &-box {
         background-color: $color_3F4077;
         padding: 50px;
@@ -582,6 +631,7 @@
 }
 
 .my-account {
+    position: relative;
     &-content {
         &-title {
             @extend %font-70;
@@ -606,6 +656,7 @@
 
 .history {
     padding: 100px 0;
+    position: relative;
     &-title {
         @extend %font-70;
         font-weight: 800;
@@ -769,6 +820,7 @@
 
 .imprensa {
     padding: 0px 0 200px 0;
+    position: relative;
     &-box {
         &-title {
             @extend %font-70;
@@ -803,6 +855,7 @@
 }
 
 .blog-hero {
+    position: relative;
     .hero-default {
         height: 70vh;
     }
@@ -810,6 +863,7 @@
 
 .blog {
     padding-bottom: 100px;
+    position: relative;
     &-item {
         padding: 50px;
         border-radius: 30px;
@@ -912,6 +966,7 @@
 }
 
 .blog-header {
+    position: relative;
     &-slider-swiper-item {
         padding: 50px;
         border-radius: 30px;
@@ -982,6 +1037,7 @@
 
 .related-posts {
     padding: 100px 0 200px 0;
+    position: relative;
     &-title {
         @extend %font-36;
         color: $white;
@@ -1058,6 +1114,7 @@
 
 .post-content {
     padding-bottom: 50px;
+    position: relative;
     h1 {
         @extend %font-52;
         font-weight: bold;
@@ -1082,6 +1139,7 @@
 .reviews {
     margin-top: 50px;
     margin-bottom: 50px;
+    position: relative;
     &-title {
         @extend %font-36;
         font-weight: bold;
@@ -1112,6 +1170,7 @@
 
 .share {
     margin-bottom: 50px;
+    position: relative;
     &-title {
         @extend %font-36;
         font-weight: bold;
@@ -1158,6 +1217,7 @@
     margin-right: 100px;
     margin-bottom: 50px;
     width: fit-content;
+    position: relative;
     &-item {
         width: 22px;
         height: 22px;

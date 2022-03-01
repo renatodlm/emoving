@@ -127,27 +127,88 @@ textarea {
 .box {
 }
 
-.el-08 {
-    width: 338px;
-    height: 193px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(../img/elements/el-08.png);
+.element-float-box {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+    position: relative;
+    &-item {
+        position: absolute;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -2 !important;
+        &.el-01 {
+            width: 326px;
+            height: 510px;
+            background-image: url(../img/elements/el-01.png);
+            @media (min-width: 1800px) {
+                margin-left: 180px;
+            }
+            @media (max-width: 1600px) {
+                margin-left: -60px;
+            }
+        }
+        &.el-02 {
+            width: 412px;
+            height: 188px;
+            background-image: url(../img/elements/el-02.png);
+        }
+        &.el-03 {
+            width: 589px;
+            height: 269px;
+            background-image: url(../img/elements/el-03.png);
+        }
+        &.el-04 {
+            width: 514px;
+            height: 555px;
+            background-image: url(../img/elements/el-04.png);
+        }
+        &.el-05 {
+            width: 391px;
+            height: 510px;
+            background-image: url(../img/elements/el-05.png);
+        }
+        &.el-06 {
+            width: 406px;
+            height: 349px;
+            background-image: url(../img/elements/el-06.png);
+        }
+        &.el-07 {
+            width: 382px;
+            height: 238px;
+            background-image: url(../img/elements/el-07.png);
+        }
+        &.el-08 {
+            width: 338px;
+            height: 193px;
+            background-image: url(../img/elements/el-08.png);
+        }
+        &.el-09 {
+            width: 501px;
+            height: 286px;
+            background-image: url(../img/elements/el-09.png);
+        }
+        &.el-010 {
+            width: 278px;
+            height: 428px;
+            background-image: url(../img/elements/el-010.png);
+        }
+        &.el-011 {
+            width: 431px;
+            height: 256px;
+            background-image: url(../img/elements/el-011.png);
+        }
+        &.el-012 {
+            width: 470px;
+            height: 403px;
+            background-image: url(../img/elements/el-012.png);
+        }
+        &.el-013 {
+            width: 594px;
+            height: 370px;
+            background-image: url(../img/elements/el-013.png);
+        }
+    }
 }
-
-// .box::before {
-//     content: attr(data-timing);
-// }
-// .easeBox {
-//     transform: translateY(var(--ty));
-// }
-// .rotateBox {
-//     transform: rotate(var(--r));
-// }
-// .fadeBox {
-//     opacity: var(--o);
-// }
-// .directBox {
-//     opacity: var(--o);
-// }

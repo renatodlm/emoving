@@ -63,9 +63,17 @@ $query = [
         'text' => 'Agora é só aproveitar os benefícios de ter uma bike elétrica e os serviços exclusivos E-Moving!',
     ]
 ];
-$services_list = new Services_List;
-echo $services_list::get_primary_list($infos, $query);
 
+?>
+<div class="element-float-box">
+    <?php
+    $services_list = new Services_List;
+    echo $services_list::get_primary_list($infos, $query);
+    ?>
+    <div class="element-float-box-item el-08 rellax" data-rellax-speed="-1" style="bottom:0;margin-left: -50px;" data-aos="zoom-out" data-aos-duration="500"></div>
+    <div class="element-float-box-item el-010 rellax" data-rellax-speed="-3" style="right:0;bottom:0;margin-bottom:-300px" data-aos="zoom-out" data-aos-duration="500"></div>
+</div>
+<?php
 
 /**
  * Call Action
@@ -81,50 +89,65 @@ echo $call_action::get_call_action($text, $button);
  * Soluções
  */
 ?>
-<section class="solutions rellax" data-rellax-speed="1">
+<section class="solutions">
     <div class="solutions-container">
-        <h2 class="solutions-title">Nossa soluções corporativas</h2>
-        <div class="solutions-container-item rellax" data-rellax-speed="0">
-            <div class="row justify-content-between d-flex align-items-center">
-                <div class="col-md-5 rellax" data-rellax-speed="2">
-                    <img class="solutions-container-item-img" src="./img/bikes/solution-01.png" alt="solutions">
-                </div>
-                <div class="col-md-6">
-                    <h4 class="solutions-container-item-title">
-                        E-BIKE 4 WORK
-                    </h4>
-                    <p class="solutions-container-item-text">Nessa modalidade as bikes elétricas podem ser utilizadas de maneira individual ou coletiva para uma finalidade em comum como rotas, last mile ou abastecimento. A implementação é feita dentro da empresa e contribui para a redução de custos operacionais, aumenta a produtividade e promove a sustentabilidade com as práticas ESG.</p>
-                    <a class="bt bt-secondary" href="#">Quero saber mais</a>
+        <h2 class="solutions-title" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Nossa soluções corporativas</h2>
+
+        <div class="solutions-container-item rellax" data-rellax-speed="1" style="z-index: 3;position:relative">
+            <div class="element-float-box">
+                <div class="element-float-box-item el-04 rellax" data-rellax-speed="3" style="top:-190px;margin-left: 0px;" data-aos="zoom-out" data-aos-duration="500"></div>
+                <div class="element-float-box-item el-011 rellax" data-rellax-speed="-3" style="right:0;top:0;margin-top:-100px" data-aos="zoom-out" data-aos-duration="500"></div>
+
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-5 rellax" data-rellax-speed="2">
+                        <img class="solutions-container-item-img" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" src="./img/bikes/solution-03.png" alt="solutions">
+                    </div>
+                    <div class="col-md-5 offset-md-1" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
+                        <h4 class="solutions-container-item-title">
+                            E-BIKE BENEFÍCIO
+                        </h4>
+                        <p class="solutions-container-item-text">Nessa modalidade as bikes elétricas serão utilizadas de maneira coletiva e ficarão disponíveis para compartilhamento interno. Uma solução muito comum em co-working, hotéis e empresas que visam facilitar o deslocamento de seus colaboradores promovendo sustentabilidade e praticidade.</p>
+                        <a class="bt bt-secondary" href="#">Quero saber mais</a>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="solutions-container-item rellax" data-rellax-speed="1">
-            <div class="row justify-content-between d-flex align-items-center">
-                <div class="col-md-6">
-                    <h4 class="solutions-container-item-title">
-                        E-BIKE SHARING
-                    </h4>
-                    <p class="solutions-container-item-text">Nessa modalidade as bikes elétricas proporcionam aos funcionários da sua empresa uma mudança na qualidade de vida com acessos exclusivos à assinatura mensal de uma e-bike. Escolhendo essa solução, cada colaborador realiza o processo de contratação diretamente com a E-Moving.</p>
-                    <a class="bt bt-secondary" href="#">Quero saber mais</a>
-                </div>
-                <div class="col-md-5 rellax" data-rellax-speed="2">
-                    <img class="solutions-container-item-img" src="./img/bikes/solution-02.png" alt="solutions">
+        <div class="solutions-container-item rellax" data-rellax-speed="1" style="z-index: 2;position:relative">
+            <div class="element-float-box">
+                <div class="element-float-box-item el-07 rellax" data-rellax-speed="3" style="right:500px;top:0;margin-top:-30px" data-aos="zoom-out" data-aos-duration="500"></div>
+
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-5 offset-md-1" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+                        <h4 class="solutions-container-item-title">
+                            E-BIKE SHARING
+                        </h4>
+                        <p class="solutions-container-item-text">Nessa modalidade as bikes elétricas proporcionam aos funcionários da sua empresa uma mudança na qualidade de vida com acessos exclusivos à assinatura mensal de uma e-bike. Escolhendo essa solução, cada colaborador realiza o processo de contratação diretamente com a E-Moving.</p>
+                        <a class="bt bt-secondary" href="#">Quero saber mais</a>
+                    </div>
+                    <div class="col-md-5 offset-md-1 rellax" data-rellax-speed="2">
+                        <img class="solutions-container-item-img" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000" src="./img/bikes/solution-02.png" alt="solutions">
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="solutions-container-item rellax" data-rellax-speed="2">
-            <div class="row justify-content-between d-flex align-items-center">
-                <div class="col-md-5 rellax" data-rellax-speed="2">
-                    <img class="solutions-container-item-img" src="./img/bikes/solution-03.png" alt="solutions">
-                </div>
-                <div class="col-md-6">
-                    <h4 class="solutions-container-item-title">
-                        E-BIKE BENEFÍCIO
-                    </h4>
-                    <p class="solutions-container-item-text">Nessa modalidade as bikes elétricas serão utilizadas de maneira coletiva e ficarão disponíveis para compartilhamento interno. Uma solução muito comum em co-working, hotéis e empresas que visam facilitar o deslocamento de seus colaboradores promovendo sustentabilidade e praticidade.</p>
-                    <a class="bt bt-secondary" href="#">Quero saber mais</a>
+        <div class="solutions-container-item rellax" data-rellax-speed="2" style="z-index: 1;position:relative">
+            <div class="element-float-box">
+                <div class="element-float-box-item el-05 rellax" data-rellax-speed="3" style="top:0px;margin-top:-300px;margin-left: -100px;" data-aos="zoom-out" data-aos-duration="500"></div>
+                <div class="element-float-box-item el-02 rellax" data-rellax-speed="-3" style="right:0;top:0;margin-top:0px" data-aos="zoom-out" data-aos-duration="500"></div>
+
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-5 rellax" data-rellax-speed="2">
+                        <img class="solutions-container-item-img" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" src="./img/bikes/solution-01.png" alt="solutions">
+                    </div>
+                    <div class="col-md-5 offset-md-1" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
+                        <h4 class="solutions-container-item-title">
+                            E-BIKE 4 WORK
+                        </h4>
+                        <p class="solutions-container-item-text">Nessa modalidade as bikes elétricas podem ser utilizadas de maneira individual ou coletiva para uma finalidade em comum como rotas, last mile ou abastecimento. A implementação é feita dentro da empresa e contribui para a redução de custos operacionais, aumenta a produtividade e promove a sustentabilidade com as práticas ESG.</p>
+                        <a class="bt bt-secondary" href="#">Quero saber mais</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -183,43 +206,54 @@ $query2 = [
         'text' => 'Economia com combustível, multas, estacionamento e outras despesas.',
     ]
 ];
-
-$services_list2 = new Services_List;
-echo $services_list2::get_secondary_list($infos2, $query2);
-
 ?>
+<div class="element-float-box">
+    <div class="element-float-box-item el-08 rellax" data-rellax-speed="-1" style="top:0;right:0;margin-top:350px;margin-right:100px" data-aos="zoom-out" data-aos-duration="500"></div>
+    <div class="element-float-box-item el-01 rellax" data-rellax-speed="2" style="left:0;bottom:0;margin-bottom:-200px" data-aos="zoom-out" data-aos-duration="500"></div>
+    <?php
+    $services_list2 = new Services_List;
+    echo $services_list2::get_secondary_list($infos2, $query2);
+    ?>
+</div>
 
-<section class="contact-form rellax" data-rellax-speed="-2">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-xl-8 col-md-10">
-                <div class="contact-form-content rellax" data-rellax-speed="2">
-                    <h4 class="contact-form-content-title">Quer utilizar nossa <mark>e-bike?</mark></h4>
-                    <p class="contact-form-content-text">Para ser nosso assinante, indique a melhor pessoa da sua empresa para apresentarmos nossa solução corporativa e mediante a contratação do nosso benefício, sua empresa disponibilizará para você uma e-bike</p>
-                </div>
-                <div class="contact-form-form rellax" data-rellax-speed="1">
-                    <form action="">
-                        <div class="mb-3">
-                            <input type="text" id="nome" placeholder="Seu nome completo">
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" id="email" placeholder="Digite seu melhor email ( corporativo preferencialmente):">
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" id="telefone" placeholder="Seu telefone/Whatsapp">
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" id="nome-responsavel" placeholder="Nome do responsável da empresa ( o mais indicado para falarmos da implementação das -bikes):">
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" id="email-responsavel" placeholder="Email corporativo do responsável:">
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" id="telefone-responsavel" placeholder="Telefone/whatsapp corporativo do responsável:">
-                        </div>
-
-                        <input type="submit" class="bt bt-primary" value="Enviar agora">
-                    </form>
+<section class="contact-form">
+    <div class="element-float-box">
+        <div class="element-float-box-item el-012 rellax" data-rellax-speed="-2" style="top:0px;right:0;margin-top:0px;margin-right: -100px;" data-aos="zoom-out" data-aos-duration="500"></div>
+        <div class="element-float-box-item el-013 rellax" data-rellax-speed="2" style="left:0;bottom:0;margin-left:-300px;margin-bottom:-200px" data-aos="zoom-out" data-aos-duration="500"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-md-10">
+                    <div class="contact-form-content rellax" data-rellax-speed="0">
+                        <h4 class="contact-form-content-title" data-aos="zoom-out" data-aos-delay="100" data-aos-duration="1000">Quer utilizar nossa <mark>e-bike?</mark></h4>
+                        <p class="contact-form-content-text" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000">Para ser nosso assinante, indique a melhor pessoa da sua empresa para apresentarmos nossa solução corporativa e mediante a contratação do nosso benefício, sua empresa disponibilizará para você uma e-bike</p>
+                    </div>
+                    <div class="contact-form-form">
+                        <form action="">
+                            <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                                <div class="mb-3">
+                                    <input type="text" id="nome" placeholder="Seu nome completo">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" id="email" placeholder="Digite seu melhor email ( corporativo preferencialmente):">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" id="telefone" placeholder="Seu telefone/Whatsapp">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" id="nome-responsavel" placeholder="Nome do responsável da empresa ( o mais indicado para falarmos da implementação das -bikes):">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" id="email-responsavel" placeholder="Email corporativo do responsável:">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" id="telefone-responsavel" placeholder="Telefone/whatsapp corporativo do responsável:">
+                                </div>
+                            </div>
+                            <div data-aos="zoom-out" data-aos-delay="500" data-aos-duration="1000">
+                                <input type="submit" class="bt bt-primary" value="Enviar agora">
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

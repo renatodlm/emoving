@@ -166,7 +166,11 @@ jQuery(document).ready(function ($) {
 
     // easeBoxes.forEach((easeBox) => easeBox.start())
     $(function () { AOS.init({ offset: 100, duration: 300, easing: "ease-out-quad", once: !0 }); window.addEventListener('load', AOS.refresh); });
+
     var rellax = new Rellax('.rellax', {
-        center: true
+        center: true,
+        horizontal: true,
     });
+
+
 });

@@ -1,6 +1,5 @@
 <?php
 
-use Classes\Call_Action;
 use Classes\Page_Hero;
 use Classes\Services_List;
 
@@ -25,79 +24,91 @@ echo $hero::quemsomos($hero_obj, $button);
 
 
 ?>
-<div id="videos" class="videos">
-    <div class="container">
-        <div class="row d-flex justify-content-center">
-            <?php
-            $video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/raV0IvfCGyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-            preg_match('/src="(.+?)"/', $video, $matches_url);
-            $src = $matches_url[1];
-            preg_match('/embed(.*?)?feature/', $src, $matches_id);
-            $id = $matches_id[1];
-            $id = str_replace(str_split('?/'), '', $id);
-            $id = 'raV0IvfCGyg';
-            $video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/raV0IvfCGyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-            // $video = preg_replace('~<iframe[^>]*\K(?=src)~i', 'data-', $video);
-            // $video = str_replace('youtube.com/embed/', 'youtube-nocookie.com/embed/', $video);
-            // $video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/raV0IvfCGyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 
-            ?>
-            <div class="col-lg-8 col-md-10 coluna-video" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="<?= '1'; ?>00">
-                <div class="videos-box">
-                    <div class="videos-thumb shadow-lg" style="background-image: url(https://img.youtube.com/vi/<?= $id; ?>/maxresdefault.jpg)">
-                        <div class="videos-thumb-play-button">
+<div class="element-float-box">
+    <div class="element-float-box-item el-010 rellax" data-rellax-speed="-2" style="top:0px;right:0;margin-top:200px;margin-right: 0;" data-aos="zoom-out" data-aos-duration="500"></div>
+    <div class="element-float-box-item el-08 rellax" data-rellax-speed="-2" style="left:0;bottom:0;margin-left:-50px;margin-bottom:200px" data-aos="zoom-out" data-aos-duration="500"></div>
+    <div id="videos" class="videos">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <?php
+                $video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/raV0IvfCGyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                preg_match('/src="(.+?)"/', $video, $matches_url);
+                $src = $matches_url[1];
+                preg_match('/embed(.*?)?feature/', $src, $matches_id);
+                $id = $matches_id[1];
+                $id = str_replace(str_split('?/'), '', $id);
+                $id = 'raV0IvfCGyg';
+                $video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/raV0IvfCGyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                // $video = preg_replace('~<iframe[^>]*\K(?=src)~i', 'data-', $video);
+                // $video = str_replace('youtube.com/embed/', 'youtube-nocookie.com/embed/', $video);
+                // $video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/raV0IvfCGyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+
+                ?>
+                <div class="col-lg-8 col-md-10 coluna-video" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="<?= '1'; ?>00">
+                    <div class="videos-box">
+                        <div class="videos-thumb shadow-lg" style="background-image: url(https://img.youtube.com/vi/<?= $id; ?>/maxresdefault.jpg)">
+                            <div class="videos-thumb-play-button">
+                            </div>
+                            <div class="videos-thumb-overlay"></div>
                         </div>
-                        <div class="videos-thumb-overlay"></div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     </div>
-    <?php
+</div>
+<?php
 
 
-    /**
-     * Porque escolher
-     */
+/**
+ * Porque escolher
+ */
 
-    $infos2 = [
-        'title' => 'Nossos <mark>planos</mark> <p><mark>oferecem</mark>:</p>',
-        'text' => 'Serviços exclusivos para não te deixar na mão!'
-    ];
+$infos2 = [
+    'title' => 'Nossos <mark>planos</mark> <p><mark>oferecem</mark>:</p>',
+    'text' => 'Serviços exclusivos para não te deixar na mão!'
+];
 
-    $query2 = [
-        [
-            'img_url' => './img/elements/02.svg',
-            'img_alt' => 'E-bike o Tempo Todo com Você',
-            'title' => 'E-bike o Tempo Todo com Você',
-        ],
-        [
-            'img_url' => './img/elements/010.svg',
-            'img_alt' => 'Atendimento Exclusivo',
-            'title' => 'Atendimento Exclusivo',
-        ],
-        [
-            'img_url' => './img/elements/09.svg',
-            'img_alt' => 'SOS para Emergências',
-            'title' => 'SOS para Emergências',
-        ],
-        [
-            'img_url' => './img/elements/08.svg',
-            'img_alt' => 'Manutenção',
-            'title' => 'Manutenção',
-        ],
-        [
-            'img_url' => './img/elements/07.svg',
-            'img_alt' => 'Proteção contra Roubo',
-            'title' => 'Proteção contra Roubo',
-        ]
-    ];
+$query2 = [
+    [
+        'img_url' => './img/elements/02.svg',
+        'img_alt' => 'E-bike o Tempo Todo com Você',
+        'title' => 'E-bike o Tempo Todo com Você',
+    ],
+    [
+        'img_url' => './img/elements/010.svg',
+        'img_alt' => 'Atendimento Exclusivo',
+        'title' => 'Atendimento Exclusivo',
+    ],
+    [
+        'img_url' => './img/elements/09.svg',
+        'img_alt' => 'SOS para Emergências',
+        'title' => 'SOS para Emergências',
+    ],
+    [
+        'img_url' => './img/elements/08.svg',
+        'img_alt' => 'Manutenção',
+        'title' => 'Manutenção',
+    ],
+    [
+        'img_url' => './img/elements/07.svg',
+        'img_alt' => 'Proteção contra Roubo',
+        'title' => 'Proteção contra Roubo',
+    ]
+];
 
-    $services_list2 = new Services_List;
-    echo $services_list2::get_secondary_list($infos2, $query2);
+$services_list2 = new Services_List;
+echo $services_list2::get_secondary_list($infos2, $query2);
 
-    ?>
+?>
+<div class="element-float-box">
+    <div class="element-float-box-item el-010 rellax" data-rellax-speed="-1" style="top:0px;left:0;margin-top:100px;margin-left:0px" data-aos="zoom-out" data-aos-duration="500"></div>
+    <div class="element-float-box-item el-03 rellax" data-rellax-speed="2" style="right:0;top:0;margin-right:-50px;margin-top:100px" data-aos="zoom-out" data-aos-duration="500"></div>
+    <div class="element-float-box-item el-05 rellax" data-rellax-speed="1" style="left:0;top:0;margin-left:-50px;margin-top:90%" data-aos="zoom-out" data-aos-duration="500"></div>
+    <div class="element-float-box-item el-03 rellax" data-rellax-speed="-2" style="right:0;top:0;margin-right:-100px;margin-top:95%" data-aos="zoom-out" data-aos-duration="500"></div>
+    <div class="element-float-box-item el-06 rellax" data-rellax-speed="2" style="right:0;bottom:0;margin-right:50px;margin-bottom:50px" data-aos="zoom-out" data-aos-duration="500"></div>
     <section class="history">
         <div class="container">
             <h3 class="history-title">Nossos história</h3>
@@ -183,6 +194,7 @@ echo $hero::quemsomos($hero_obj, $button);
             </div>
         </div>
     </section>
+</div>
 
-    <?php
-    require __DIR__ . "/footer.php";
+<?php
+require __DIR__ . "/footer.php";
