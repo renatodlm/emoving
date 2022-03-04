@@ -86,7 +86,7 @@ class Page_Hero
                             </div>
                             <div class="row justify-content-center">
                                 <div class="col-xl-4 col-lg-6 col-md-8 mt-5">
-                                    <ul class="blog-item-post-info-tags" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                                    <ul class="blog-item-post-info-tags single-post" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
                                         <li><a href="#">Mobilidade urbana</a></li>
                                         <li><a href="#">Na cidade</a></li>
                                     </ul>
@@ -128,8 +128,8 @@ class Page_Hero
                 <?php endif; ?>
                 <div class="container">
                     <?php if (!empty($obj)) : ?>
-                        <div class="row justify-content-center">
-                            <div class="col-xl-6 col-lg-8 col-md-10">
+                        <div class="row justify-content-md-center justify-content-end">
+                            <div class="col-xxl-6 col-lg-7 col-md-10 <?php  if (!empty($obj['image'])): ?>col-9<?php endif; ?>">
                                 <div class="hero-home-content rellax" data-rellax-speed="1">
                                     <?php if (!empty($obj['image'])) : ?>
                                         <div class="hero-home-content-img rellax" data-rellax-horizontal-speed="7   " data-rellax-vertical-scroll-axis="x" data-aos-delay="300" data-aos-duration="1000">

@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-xl-3">
+            <div class="col-xl-3 order-1">
                 <div class="footer-about">
                     <img class="footer-about-img" src="./img/logo-footer.svg" style="width:158.79px;max-width:100%;height:auto" alt="E-mooving">
                     <p class="footer-about-text">Venha com a E-Moving revolucionar a mobilidade urbana e-reinventar a roda.</p>
@@ -14,7 +14,7 @@
                 </div>
             </div>
 
-            <div class="col-xl-4">
+            <div class="col-xl-4 order-xl-2 order-3">
                 <div class="footer-liks">
                     <h4 class="footer-liks-title">Links úteis</h4>
                     <ul class="footer-liks-menu">
@@ -32,7 +32,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-xl-4 offset-1">
+            <div class="col-xl-4 offset-xl-1 order-xl-3 order-2">
                 <div class="footer-newsletter">
                     <h4 class="footer-newsletter-title">inscreva-se agora!</h4>
                     <form action="" class="footer-newsletter-form">

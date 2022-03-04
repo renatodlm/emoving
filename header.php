@@ -20,7 +20,7 @@
 <body>
     <header class="header">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark">
+            <nav class="navbar navbar-expand-xl navbar-dark">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="./index.php"><img src="./img/logo.svg" alt="E-moving"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">

@@ -11,7 +11,7 @@ class Services_List
             <section id="<?= $infos['id'] ?>" class="service-list-01">
                 <div class="container">
                     <div class="row d-flex justify-content-center">
-                        <div class="col-xl-8 col-md-10 rellax" data-rellax-speed="1">
+                        <div class="col-xxl-7 col-md-10 rellax" data-rellax-speed="1">
                             <?php if (!empty($infos['title'])) : ?>
                                 <h3 class="service-list-01-title" data-aos="zoom-out" data-aos-delay="100" data-aos-duration="1000">
                                     <?= $infos['title'] ?>
@@ -32,7 +32,7 @@ class Services_List
                             $i = 0;
                             foreach ($query as $item) : ?>
 
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3 col-6">
                                     <div class="service-list-01-box" data-aos="fade-up" data-aos-delay="<?= $i ?>00" data-aos-duration="500">
                                         <div class="service-list-01-box-img">
                                             <img src="<?= $item['img_url'] ?>" alt="<?= $item['img_alt'] ?>">
@@ -83,7 +83,7 @@ class Services_List
                                     $i = 0;
                                     foreach ($query as $item) : ?>
 
-                                        <div class="col-xl-4 col-md-6">
+                                        <div class="col-xl-4 col-6">
                                             <div class="service-list-01-box" data-aos="fade-up" data-aos-delay="<?= $i ?>00" data-aos-duration="500">
                                                 <div class="service-list-01-box-img">
                                                     <img src="<?= $item['img_url'] ?>" alt="<?= $item['img_alt'] ?>">
@@ -116,7 +116,7 @@ class Services_List
                     <div class="row justify-content-center">
                         <div class="col-xl-11">
                             <div class="row d-flex justify-content-center">
-                                <div class="col-xl-7 col-md-10 rellax" data-rellax-speed="2">
+                                <div class="col-xxl-7 col-md-10 rellax" data-rellax-speed="-1">
                                     <?php if (!empty($infos['title'])) : ?>
                                         <h3 class="service-list-02-title" data-aos="zoom-out" data-aos-delay="100" data-aos-duration="1000">
                                             <?= $infos['title'] ?>
@@ -138,7 +138,7 @@ class Services_List
                                             <?php $i = 0;
                                             foreach ($query as $item) : ?>
 
-                                                <div class="col-xl-4 col-md-6 mb-4">
+                                                <div class="col-xl-4 col-6 mb-4">
                                                     <div class="service-list-02-box" data-aos="fade-up" data-aos-delay="<?= $i ?>00" data-aos-duration="500">
                                                         <div class="service-list-02-box-img">
                                                             <img src="<?= $item['img_url'] ?>" alt="<?= $item['img_alt'] ?>">

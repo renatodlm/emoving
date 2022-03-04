@@ -7,7 +7,7 @@ class Call_Action
     public static function get_call_action($text, $btn)
     {
 ?>
-        <section class="emoving-call-action rellax" data-rellax-speed="1">
+        <section class="emoving-call-action rellax" data-rellax-speed="-1">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-9 col-md-10">

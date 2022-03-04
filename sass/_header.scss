@@ -30,6 +30,7 @@
                 @extend %font-18;
                 display: flex;
                 transition: all ease 0.3s;
+                align-items: center;
             }
             &:hover,
             &:focus {
@@ -139,4 +140,8 @@
     width: 24px;
     height: 6.01px;
     transform: rotate(-90deg);
+}
+
+.navbar-brand{
+    max-width: 60%;
 }
