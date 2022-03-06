@@ -87,14 +87,13 @@
                 margin-left: auto;
                 margin-right: auto;
             }
-            &-item {
-                margin-bottom: 20px;
+            li {
                 list-style: none;
                 @media (max-width: $md) {
                     padding-left: 15px;
                     padding-right: 15px;
                 }
-                &-link {
+                a {
                     color: $white;
                     position: relative;
                     list-style: none;
@@ -115,6 +114,7 @@
                     }
                     &:hover,
                     &:focus {
+                        color: $secondary_4;
                         &::before {
                             background-image: url(../img/Icons/active-list.svg);
                         }

@@ -13,7 +13,7 @@ require __DIR__ . "/header.php";
     $default_obj = [
         'title' => 'Ciclismo seguro: tudo o que você precisa para pedalar em segurança',
         'text' => 'sexta-feira, janeiro 21st, 2022',
-        'background-image' => './img/blog-item.png',
+        'background-image' =>  get_template_directory_uri() . '/img/blog-item.png',
         'background-color' => '#444580',
         'before' => false,
         'after' => true,
@@ -169,7 +169,7 @@ require __DIR__ . "/header.php";
                                     <a href="./single.php">
                                         <div class="related-posts-slider-swiper-item-image-box">
                                             <picture>
-                                                <img class="related-posts-slider-swiper-item-image-box-thumbnail" src="./img/blog-item.png" alt="blog item">
+                                                <img class="related-posts-slider-swiper-item-image-box-thumbnail" src="<?= get_template_directory_uri() ?>/img/blog-item.png" alt="blog item">
                                             </picture>
                                         </div>
                                     </a>
@@ -194,7 +194,7 @@ require __DIR__ . "/header.php";
                                     <a href="./single.php">
                                         <div class="related-posts-slider-swiper-item-image-box">
                                             <picture>
-                                                <img class="related-posts-slider-swiper-item-image-box-thumbnail" src="./img/blog-item.png" alt="blog item">
+                                                <img class="related-posts-slider-swiper-item-image-box-thumbnail" src="<?= get_template_directory_uri() ?>/img/blog-item.png" alt="blog item">
                                             </picture>
                                         </div>
                                     </a>
@@ -219,7 +219,7 @@ require __DIR__ . "/header.php";
                                     <a href="./single.php">
                                         <div class="related-posts-slider-swiper-item-image-box">
                                             <picture>
-                                                <img class="related-posts-slider-swiper-item-image-box-thumbnail" src="./img/blog-item.png" alt="blog item">
+                                                <img class="related-posts-slider-swiper-item-image-box-thumbnail" src="<?= get_template_directory_uri() ?>/img/blog-item.png" alt="blog item">
                                             </picture>
                                         </div>
                                     </a>

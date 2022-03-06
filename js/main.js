@@ -4,6 +4,9 @@ jQuery(document).ready(function ($) {
     //		"use strict"; window.location.reload(); 
     //	});
 
+    if ($('#wpadminbar')) {
+        $('.header').css('margin-top', '32px');
+    }
 
     document.addEventListener("DOMContentLoaded", function () {
 
@@ -67,14 +70,15 @@ jQuery(document).ready(function ($) {
     });
 
 
+
     $(".videos-thumb").on("click", function () {
         var $videoThumb = $(this);
         var $videoContainer = $videoThumb.next();
-        // var $videoPlayer = $videoContainer.children();
-        // $videoPlayer.attr('src', $videoPlayer.attr('data-src'));
+        var $videoPlayer = $videoContainer.children();
+        $videoPlayer.attr('src', $videoPlayer.attr('data-src'));
         $videoThumb.fadeOut("slow", function () {
             $videoContainer.fadeIn();
-            //$videoPlayer[0].src += "&autoplay=1";
+            $videoPlayer[0].src += "&autoplay=1";
         });
     });
 
@@ -135,34 +139,6 @@ jQuery(document).ready(function ($) {
         //   el: '.swiper-scrollbar',
         // },
     });
-
-
-    // const easeBoxes = []
-
-    // // Create an animation for each ease box. Each with a different timing.
-    // document.querySelectorAll('.easeBox').forEach((elem, i) => {
-
-    //     // Get the timing from the data attribute.
-    //     // You can also hard-code the timing, but for the demo it's easier this way.
-    //     const timing = elem.getAttribute('data-timing')
-
-    //     // Crate an instance for the current element and store the instance in an array.
-    //     // We start the animation later using the instances from the array.
-    //     easeBoxes.push(basicScroll.create({
-    //         elem: elem,
-    //         from: 'middle-bottom',
-    //         to: 'bottom-top',
-    //         direct: true,
-    //         props: {
-    //             '--ty': {
-    //                 from: '0',
-    //                 to: '100px',
-    //                 timing: timing
-    //             }
-    //         }
-    //     }))
-
-    // })
 
     // easeBoxes.forEach((easeBox) => easeBox.start())
     $(function () { AOS.init({ offset: 100, duration: 300, easing: "ease-out-quad", once: !0 }); window.addEventListener('load', AOS.refresh); });

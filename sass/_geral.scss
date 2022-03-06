@@ -127,5 +127,14 @@ textarea {
     height: auto;
 }
 
-.box {
+.wpcf7-spinner {
+    position: absolute;
+    top: calc(50% + 12px);
+}
+.contact-form-form {
+    text-align: left;
+}
+
+.wpcf7-response-output{
+    border-radius: 15px;
 }
