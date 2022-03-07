@@ -12,8 +12,8 @@ function new_pagination($post_type_collection, $paged)
         'format' => '?paged=%#%',
         'current' => max(1, $paged),
         'type' => 'plain',
-        'prev_text' => '',
-        'next_text' => '',
+        'prev_text' => ' ',
+        'next_text' => ' ',
         'total' => $post_type_collection->max_num_pages
     ));
 

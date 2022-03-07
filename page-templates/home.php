@@ -34,7 +34,7 @@ get_header();
     ];
     $button = [
         'text' => 'Agende uma apresentação',
-        'link' => get_home_url() . '#indique'
+        'link' => get_home_url() . '/#indique'
     ];
 
     $hero = new Page_Hero;
@@ -67,7 +67,7 @@ get_header();
             'img_url' =>  get_template_directory_uri() . '/img/elements/top-right.png',
             'img_alt' => 'top-left',
             'title' => 'CONTRATE E IMPLEMENTE NA SUA EMPRESA',
-            'text' => 'Solicite uma proposta e contrate um plano de acordo com as suas necessidades.',
+            'text' => 'Uma vez contratado uma de nossas soluções, nós nos responsabilizamos pela divulgação e implementação da nova mobilidade na empresa.',
         ],
         [
             'img_url' =>  get_template_directory_uri() . '/img/elements/bike-02.png',
@@ -102,72 +102,126 @@ get_header();
      * Soluções
      */
     ?>
-    <section class="solutions">
-        <div class="solutions-container">
-            <h2 class="solutions-title" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Nossa soluções corporativas</h2>
+    <?php if (have_rows('solucoes')) :
+        while (have_rows('solucoes')) : the_row();
+    ?>
+            <section class="solutions">
+                <div class="solutions-container">
+                    <h2 class="solutions-title" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Nossa soluções corporativas</h2>
 
-            <div class="solutions-container-item rellax" data-rellax-speed="1" style="z-index: 3;position:relative">
-                <div class="element-float-box home-2">
+                    <?php if (have_rows('beneficio')) :
+                        while (have_rows('beneficio')) : the_row();
+                            $titulo = get_sub_field('titulo');
+                            $texto = get_sub_field('texto');
+                            $imagem = get_sub_field('imagem');
+                            $src_img = $imagem['sizes']['crop-512'];
+                            $botao = get_sub_field('botao');
+                    ?>
+                            <div class="solutions-container-item rellax" data-rellax-speed="1" style="z-index: 3;position:relative">
+                                <div class="element-float-box home-2">
 
-                    <div class="element-float-box-item el-04 rellax" data-rellax-speed="3" style="" data-aos="zoom-out" data-aos-duration="500"></div>
-                    <div class="element-float-box-item el-011 rellax" data-rellax-speed="-3" style="" data-aos="zoom-out" data-aos-duration="500"></div>
+                                    <div class="element-float-box-item el-04 rellax" data-rellax-speed="3" style="" data-aos="zoom-out" data-aos-duration="500"></div>
+                                    <div class="element-float-box-item el-011 rellax" data-rellax-speed="-3" style="" data-aos="zoom-out" data-aos-duration="500"></div>
 
-                    <div class="row d-flex align-items-center">
-                        <div class="col-md-5 d-flex mb-md-0 mb-4">
-                            <img class="solutions-container-item-img" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" src="<?= get_template_directory_uri() ?>/img/bikes/solution-03.png" alt="solutions">
-                        </div>
-                        <div class="col-md-5 offset-md-1" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
-                            <h4 class="solutions-container-item-title">
-                                E-BIKE BENEFÍCIO
-                            </h4>
-                            <p class="solutions-container-item-text">Nessa modalidade as bikes elétricas serão utilizadas de maneira coletiva e ficarão disponíveis para compartilhamento interno. Uma solução muito comum em co-working, hotéis e empresas que visam facilitar o deslocamento de seus colaboradores promovendo sustentabilidade e praticidade.</p>
-                            <a class="bt bt-secondary" href="./beneficio.php">Quero saber mais</a>
-                        </div>
-                    </div>
+                                    <div class="row d-flex align-items-center">
+                                        <div class="col-md-5 d-flex mb-md-0 mb-4">
+                                            <img class="solutions-container-item-img" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" src="<?= $src_img ?>" alt="<?= $imagem['alt'] ?>">
+                                        </div>
+                                        <div class="col-md-5 offset-md-1" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
+                                            <h4 class="solutions-container-item-title">
+                                                <?= $titulo ?>
+                                            </h4>
+                                            <p class="solutions-container-item-text"><?= $texto ?></p>
+                                            <?php if ($botao) : ?>
+                                                <a class="bt bt-secondary" href="<?php echo $botao['url']; ?>" target="<?php echo $botao['target']; ?>">
+                                                    <?php echo $botao['title']; ?>
+                                                </a>
+                                            <?php endif ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    <?php endwhile;
+                    endif;
+                    ?>
+
+                    <?php if (have_rows('sharing')) :
+                        while (have_rows('sharing')) : the_row();
+
+                            $titulo = get_sub_field('titulo');
+                            $texto = get_sub_field('texto');
+                            $imagem = get_sub_field('imagem');
+                            $src_img = $imagem['sizes']['crop-512'];
+                            $botao = get_sub_field('botao');
+                    ?>
+                            <div class="solutions-container-item rellax" data-rellax-speed="1" style="z-index: 2;position:relative">
+                                <div class="element-float-box home-3">
+
+                                    <div class="element-float-box-item el-07 rellax" data-rellax-speed="3" style="" data-aos="zoom-out" data-aos-duration="500"></div>
+
+                                    <div class="row d-flex align-items-center">
+                                        <div class="col-md-5 offset-md-1 order-md-1 order-2" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+                                            <h4 class="solutions-container-item-title">
+                                                <?= $titulo ?>
+                                            </h4>
+                                            <p class="solutions-container-item-text"><?= $texto ?></p>
+                                            <?php if ($botao) : ?>
+                                                <a class="bt bt-secondary" href="<?php echo $botao['url']; ?>" target="<?php echo $botao['target']; ?>">
+                                                    <?php echo $botao['title']; ?>
+                                                </a>
+                                            <?php endif ?>
+                                        </div>
+                                        <div class="col-md-5 d-flex offset-md-1 order-md-2 mb-md-0 mb-4 order-1">
+                                            <img class="solutions-container-item-img" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000" src="<?= $src_img ?>" alt="<?= $imagem['alt'] ?>">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    <?php endwhile;
+                    endif;
+                    ?>
+
+                    <?php if (have_rows('4work')) :
+                        while (have_rows('4work')) : the_row();
+
+                            $titulo = get_sub_field('titulo');
+                            $texto = get_sub_field('texto');
+                            $imagem = get_sub_field('imagem');
+                            $src_img = $imagem['sizes']['crop-512'];
+                            $botao = get_sub_field('botao');
+                    ?>
+                            <div class="solutions-container-item rellax" data-rellax-speed="1" style="z-index: 1;position:relative">
+                                <div class="element-float-box home-4">
+                                    <div class="element-float-box-item el-05 rellax" data-rellax-speed="3" style="" data-aos="zoom-out" data-aos-duration="500"></div>
+                                    <div class="element-float-box-item el-02 rellax" data-rellax-speed="-3" style="" data-aos="zoom-out" data-aos-duration="500"></div>
+
+                                    <div class="row d-flex align-items-center">
+                                        <div class="col-md-5 d-flex mb-md-0 mb-4">
+                                            <img class="solutions-container-item-img" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" src="<?= $src_img ?>" alt="<?= $imagem['alt'] ?>">
+                                        </div>
+                                        <div class="col-md-5 offset-md-1" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
+                                            <h4 class="solutions-container-item-title">
+                                                <?= $titulo ?>
+                                            </h4>
+                                            <p class="solutions-container-item-text"><?= $texto ?></p>
+                                            <?php if ($botao) : ?>
+                                                <a class="bt bt-secondary" href="<?php echo $botao['url']; ?>" target="<?php echo $botao['target']; ?>">
+                                                    <?php echo $botao['title']; ?>
+                                                </a>
+                                            <?php endif ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    <?php endwhile;
+                    endif;
+                    ?>
+
                 </div>
-            </div>
-
-            <div class="solutions-container-item rellax" data-rellax-speed="1" style="z-index: 2;position:relative">
-                <div class="element-float-box home-3">
-
-                    <div class="element-float-box-item el-07 rellax" data-rellax-speed="3" style="" data-aos="zoom-out" data-aos-duration="500"></div>
-
-                    <div class="row d-flex align-items-center">
-                        <div class="col-md-5 offset-md-1 order-md-1 order-2" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
-                            <h4 class="solutions-container-item-title">
-                                E-BIKE SHARING
-                            </h4>
-                            <p class="solutions-container-item-text">Nessa modalidade as bikes elétricas proporcionam aos funcionários da sua empresa uma mudança na qualidade de vida com acessos exclusivos à assinatura mensal de uma e-bike. Escolhendo essa solução, cada colaborador realiza o processo de contratação diretamente com a E-Moving.</p>
-                            <a class="bt bt-secondary" href="./sharing.php">Quero saber mais</a>
-                        </div>
-                        <div class="col-md-5 d-flex offset-md-1 order-md-2 mb-md-0 mb-4 order-1">
-                            <img class="solutions-container-item-img" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000" src="<?= get_template_directory_uri() ?>/img/bikes/solution-02.png" alt="solutions">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="solutions-container-item rellax" data-rellax-speed="1" style="z-index: 1;position:relative">
-                <div class="element-float-box home-4">
-                    <div class="element-float-box-item el-05 rellax" data-rellax-speed="3" style="" data-aos="zoom-out" data-aos-duration="500"></div>
-                    <div class="element-float-box-item el-02 rellax" data-rellax-speed="-3" style="" data-aos="zoom-out" data-aos-duration="500"></div>
-
-                    <div class="row d-flex align-items-center">
-                        <div class="col-md-5 d-flex mb-md-0 mb-4">
-                            <img class="solutions-container-item-img" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" src="<?= get_template_directory_uri() ?>/img/bikes/solution-01.png" alt="solutions">
-                        </div>
-                        <div class="col-md-5 offset-md-1" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
-                            <h4 class="solutions-container-item-title">
-                                E-BIKE 4 WORK
-                            </h4>
-                            <p class="solutions-container-item-text">Nessa modalidade as bikes elétricas podem ser utilizadas de maneira individual ou coletiva para uma finalidade em comum como rotas, last mile ou abastecimento. A implementação é feita dentro da empresa e contribui para a redução de custos operacionais, aumenta a produtividade e promove a sustentabilidade com as práticas ESG.</p>
-                            <a class="bt bt-secondary" href="./4work.php">Quero saber mais</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
+    <?php endwhile;
+    endif;
+    ?>
 
     <?php
 
@@ -212,7 +266,7 @@ get_header();
             'img_url' =>  get_template_directory_uri() . '/img/elements/05.svg',
             'img_alt' => 'PREVISÍVEL',
             'title' => 'TRAJETO PREVISÍVEL',
-            'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et placerat leo. Pellentesque egestas nunc pretium tellus ullamcorper luctus.',
+            'text' => 'Substituindo o transporte convencional, você evita trânsito, ganha mais tempo e qualidade de vida.',
         ],
         [
             'img_url' =>  get_template_directory_uri() . '/img/elements/06.svg',
@@ -234,14 +288,13 @@ get_header();
         ?>
     </div>
 
-    <section id="indique" class="contact-form">
+    <section class="contact-form">
+        <div id="indique"></div>
         <div class="element-float-box home-6">
-            <div class="element-float-box-item el-012 rellax" data-rellax-speed="-2" style="" data-aos="zoom-out" data-aos-duration="500"></div>
-            <div class="element-float-box-item el-013 rellax" data-rellax-speed="2" style="" data-aos="zoom-out" data-aos-duration="500"></div>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-8 col-md-10">
-                        <div class="contact-form-content rellax" data-rellax-speed="0">
+                        <div class="contact-form-content">
                             <h4 class="contact-form-content-title" data-aos="zoom-out" data-aos-delay="100" data-aos-duration="1000">Quer utilizar nossa <mark>e-bike?</mark></h4>
                             <p class="contact-form-content-text" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000">Para ser nosso assinante, indique a melhor pessoa da sua empresa para apresentarmos nossa solução corporativa e mediante a contratação do nosso benefício, sua empresa disponibilizará para você uma e-bike</p>
                         </div>
@@ -256,6 +309,8 @@ get_header();
                     </div>
                 </div>
             </div>
+            <div class="element-float-box-item el-012 rellax" data-rellax-speed="-2" style="" data-aos="zoom-out" data-aos-duration="500"></div>
+            <div class="element-float-box-item el-013 rellax" data-rellax-speed="-2" style="" data-aos="zoom-out" data-aos-duration="500"></div>
         </div>
     </section>
 

@@ -23,7 +23,7 @@ get_header();
      */
 
     $default_obj = [
-        'title' => 'E-Bike 4work',
+        'title' => 'E-Bike Benefício',
         'text' => '<p><strong>Mais bem-estar a cada pedalada</strong></p>Um benefício corporativo diferenciado para seus colaboradores e sua empresa, o vale-transporte sustentável é tendência no mercado melhorando o employer branding e apoiando o meio ambiente.',
         'background-image' =>  get_template_directory_uri() . '/img/beneficio.png',
         'background-color' => '#444580',
@@ -156,7 +156,7 @@ Diversos benefícios em um só transporte.';
             'img_url' =>  get_template_directory_uri() . '/img/elements/05.svg',
             'img_alt' => 'PREVISÍVEL',
             'title' => 'TRAJETO PREVISÍVEL',
-            'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et placerat leo. Pellentesque egestas nunc pretium tellus ullamcorper luctus.',
+            'text' => 'Substituindo o transporte convencional, você evita trânsito, ganha mais tempo e qualidade de vida.',
         ],
         [
             'img_url' =>  get_template_directory_uri() . '/img/elements/06.svg',
@@ -180,8 +180,6 @@ Diversos benefícios em um só transporte.';
 
     <section class="contact-form">
         <div class="element-float-box">
-            <div class="element-float-box-item el-05 rellax" data-rellax-speed="-2" style="top:0px;left:0;margin-top:-100px;margin-left: -100px;" data-aos="zoom-out" data-aos-duration="500"></div>
-            <div class="element-float-box-item el-03 rellax" data-rellax-speed="2" style="right:0;top:0;margin-top:200px" data-aos="zoom-out" data-aos-duration="500"></div>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-8 col-md-10">
@@ -200,6 +198,8 @@ Diversos benefícios em um só transporte.';
                     </div>
                 </div>
             </div>
+            <div class="element-float-box-item el-05 rellax" data-rellax-speed="-2" style="top:0px;left:0;margin-top:-100px;margin-left: -100px;" data-aos="zoom-out" data-aos-duration="500"></div>
+            <div class="element-float-box-item el-03 rellax" data-rellax-speed="-2" style="right:0;top:0;margin-top:200px" data-aos="zoom-out" data-aos-duration="500"></div>
         </div>
     </section>
 </div>

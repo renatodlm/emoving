@@ -3,8 +3,16 @@ jQuery(document).ready(function ($) {
     //	window.addEventListener("resize", function() {
     //		"use strict"; window.location.reload(); 
     //	});
+    $('[href="^#*"').click(function(e) {
+        alert('foi')
+    });
+    
+    // $(window).scroll(function () {
+    //     $("html, body").animate({ scrollTop: 0 }, 1500, "easeInOutExpo");
+    //     return !1;
+    // });
 
-    if ($('#wpadminbar')) {
+    if ($('#wpadminbar').length > 0) {
         $('.header').css('margin-top', '32px');
     }
 
@@ -149,4 +157,81 @@ jQuery(document).ready(function ($) {
     });
 
 
+    // Hide Header on on scroll down
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 5;
+    var navbarHeight = $('.navbar').outerHeight();
+
+    $(window).scroll(function (event) {
+        didScroll = true;
+    });
+
+    setInterval(function () {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250);
+
+    function hasScrolled() {
+        var st = $(this).scrollTop();
+
+        // Make sure they scroll more than delta
+        if (Math.abs(lastScrollTop - st) <= delta)
+            return;
+
+        // If they scrolled down and are past the navbar, add class .nav-up.
+        // This is necessary so you never see what is "behind" the navbar.
+        if (st > lastScrollTop && st > navbarHeight) {
+            // Scroll Down
+            $('#header').removeClass('nav-down').addClass('nav-up');
+        } else {
+            // Scroll Up
+            if (st + $(window).height() < $(document).height()) {
+                $('#header').removeClass('nav-up').addClass('nav-down');
+            }
+        }
+
+        lastScrollTop = st;
+    }
+
+    var vheightPass = false;
+    jQuery(window).scroll(function () {
+        var pdsize = jQuery('#header').not('.home-top').height() + 40;
+        var vheight = jQuery(window).height() - 10;
+        if (jQuery(this).scrollTop() >= 200 && !vheightPass) {
+            if (!jQuery('#header').hasClass('transparent')) {
+               // jQuery('body').css('padding-top', pdsize + 'px');
+            }
+            jQuery('#header').hide();
+            jQuery('#header').addClass('fixed-top').fadeIn('fast');
+            vheightPass = true;
+        }
+        if (jQuery(this).scrollTop() <= 100 && vheightPass) {
+            if (!jQuery('#header').hasClass('transparent')) {
+               // jQuery('body').css('padding-top', '0');
+            }
+            jQuery('#header').removeClass('fixed-top').css("display", "");
+            vheightPass = false;
+        }
+    });
+
+    var pdsize = jQuery('#header').not('.home-top').height() + 40;
+    var vheight = jQuery(window).height() - 10;
+    if (jQuery(this).scrollTop() >= 200 && !vheightPass) {
+        if (!jQuery('#header').hasClass('transparent')) {
+            //jQuery('body').css('padding-top', pdsize + 'px');
+        }
+        jQuery('#header').hide();
+        jQuery('#header').addClass('fixed-top').fadeIn('fast');
+        vheightPass = true;
+    }
+    if (jQuery(this).scrollTop() <= 100 && vheightPass) {
+        if (!jQuery('#header').hasClass('transparent')) {
+            //jQuery('body').css('padding-top', '0');
+        }
+        jQuery('#header').removeClass('fixed-top').css("display", "");
+        vheightPass = false;
+    }
 });

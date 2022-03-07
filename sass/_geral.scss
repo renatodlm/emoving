@@ -79,6 +79,7 @@ h5 {
     color: $white;
 }
 
+
 input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]),
 select,
 textarea {
@@ -138,3 +139,42 @@ textarea {
 .wpcf7-response-output{
     border-radius: 15px;
 }
+
+
+.error404 {
+    padding-top: 150px;
+    main {
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        h1 {
+            font-size: 200px;
+            line-height: 150px;
+            margin-bottom: 60px;
+            letter-spacing: 36px;
+            color: $body;
+            text-shadow: 2px 0 0 $white, -2px 0 0 $white, 0 2px 0 $white, 0 -2px 0 $white,
+                1px 1px $white, -1px -1px 0 $white, 1px -1px 0 $white, -1px 1px 0 $white;
+        }
+    }
+    @media screen and (max-width: 576px) {
+        main {
+            padding-top: 60px;
+            padding-bottom: 60px;
+            h1 {
+                font-size: 120px;
+                line-height: 100px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+//@media screen and (max-width: $md) {
+    body [data-aos][data-aos][data-aos-duration][data-aos-delay] {
+        transition-delay: 0ms;
+        transition-duration: 750ms;
+    }
+//}

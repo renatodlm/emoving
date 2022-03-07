@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-xl-3 order-1">
+            <div class="col-lg-3 order-1">
                 <div class="footer-about">
                     <img class="footer-about-img" src="<?= get_template_directory_uri() ?>/img/logo-footer.svg" style="width:158.79px;max-width:100%;height:auto" alt="E-mooving">
                     <p class="footer-about-text">Venha com a E-Moving revolucionar a mobilidade urbana e-reinventar a roda.</p>
@@ -22,7 +22,7 @@
                 </div>
             </div>
 
-            <div class="col-xl-4 order-xl-2 order-3">
+            <div class="col-lg-4 order-lg-2 order-3">
                 <div class="footer-liks">
                     <h4 class="footer-liks-title">Links úteis</h4>
                     <?php
@@ -41,17 +41,22 @@
                     ?>
                 </div>
             </div>
-            <div class="col-xl-4 offset-xl-1 order-xl-3 order-2">
+            <div class="col-lg-4 offset-lg-1 order-lg-3 order-2">
                 <div class="footer-newsletter">
                     <h4 class="footer-newsletter-title">inscreva-se agora!</h4>
-                    <form action="" class="footer-newsletter-form">
-                        <input type="text" placeholder="Digite seu melhor e-mail"><input class="bt bt-primary" type="submit" value="Enviar agora">
-                    </form>
+                    <?= do_shortcode('[contact-form-7 id="30925" title="Newsletter"]'); ?>
                     <ul class="footer-newsletter-social">
                         <?php if (get_field('email', 'option')) : ?>
                             <li class="footer-newsletter-social-item"><a class="footer-newsletter-social-item-link email" href="mailto:<?= get_field('email', 'option') ?>"><?= get_field('email', 'option') ?></a></li>
                         <?php endif;; ?>
-                        <li class="footer-newsletter-social-item"><a class="footer-newsletter-social-item-link whatsapp" href="https://api.whatsapp.com/send/?phone=5511993943475" target="_blank">+55 11 99394-3475</a></li>
+                        <?php
+                        $whatsapp_flutuante = get_field('whatsapp_flutuante', 'option');
+                        $whatsapp = get_field('whatsapp', 'option');
+                        $whatsapp_number = preg_replace('/\D/', '', $whatsapp)
+                        ?>
+                        <?php if ($whatsapp_flutuante && $whatsapp) : ?>
+                            <li class="footer-newsletter-social-item"><a class="footer-newsletter-social-item-link whatsapp" href="https://api.whatsapp.com/send/?phone=<?= $whatsapp_number; ?>" target="_blank"><?= $whatsapp ?></a></li>
+                        <?php endif; ?>
                     </ul>
                     <div class="footer-newsletter-cnpj">
                         E-MOVING - CNPJ: 22.102.480/0001-34

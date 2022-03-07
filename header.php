@@ -11,7 +11,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <header class="header">
+    <header id="header" class="header">
         <div class="container">
             <nav class="navbar navbar-expand-xl navbar-dark">
                 <div class="container-fluid">
@@ -36,10 +36,21 @@
                         ?>
 
                         <ul class="navbar-nav">
-                            <li class="nav-item"><a class="bt bt-secondary" href="<?= get_home_url(); ?>#indique">Indique sua empresa</a></li>
+                            <li class="nav-item"><a class="bt bt-secondary" href="<?= get_home_url(); ?>/#indique">Indique sua empresa</a></li>
                         </ul>
                     </div> <!-- navbar-collapse.// -->
                 </div> <!-- container-fluid.// -->
             </nav>
         </div>
     </header>
+    <?php
+    $whatsapp_flutuante = get_field('whatsapp_flutuante', 'option');
+    $whatsapp = get_field('whatsapp', 'option');
+    $whatsapp_number = preg_replace('/\D/', '', $whatsapp)
+    ?>
+    <?php if ($whatsapp_flutuante && $whatsapp) : ?>
+        <div class="whatsapp-flutuante" data-toggle="tooltip" data-placement="left" title="Fale conosco no Whatsapp">
+            <a href="https://wa.me/<?= $whatsapp_number; ?>" target="_blank">
+            </a>
+        </div>
+    <?php endif; ?>

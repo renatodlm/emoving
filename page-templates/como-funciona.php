@@ -33,7 +33,7 @@ get_header();
     ];
     $button = [
         'text' => 'Agende uma apresentação',
-        'link' => '#'
+        'link' => 'http://localhost/emvbusiness#indique'
     ];
 
     $hero = new Page_Hero;
@@ -285,7 +285,7 @@ get_header();
             'img_url' =>  get_template_directory_uri() . '/img/elements/05.svg',
             'img_alt' => 'PREVISÍVEL',
             'title' => 'TRAJETO PREVISÍVEL',
-            'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et placerat leo. Pellentesque egestas nunc pretium tellus ullamcorper luctus.',
+            'text' => 'Substituindo o transporte convencional, você evita trânsito, ganha mais tempo e qualidade de vida.',
         ],
         [
             'img_url' =>  get_template_directory_uri() . '/img/elements/06.svg',
@@ -357,41 +357,43 @@ get_header();
         ?>
     </div>
 
-    <div class="element-float-box como-funciona-5">
-        <style>
-            .como-funciona-5 .el-02 {
-                right: 0;
-                bottom: 0;
-                margin-right: 50px;
-                margin-bottom: 300px;
-            }
-
-            @media(max-width:1400px) {
+    <?php if (1 == 2) : ?>
+        <div class="element-float-box como-funciona-5">
+            <style>
                 .como-funciona-5 .el-02 {
-                    margin-right: -100px;
+                    right: 0;
+                    bottom: 0;
+                    margin-right: 50px;
+                    margin-bottom: 300px;
                 }
-            }
-        </style>
-        <div class="element-float-box-item el-02 rellax" data-rellax-speed="2" style="" data-aos="zoom-out" data-aos-duration="500"></div>
-        <section class="my-account">
-            <div class="container">
-                <div class="row d-flex justify-content-center align-items-center">
-                    <div class="col-md-6 order-md-1 order-2">
-                        <div class="my-account-content" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
-                            <h3 class="my-account-content-title">Você no <mark>controle</mark> da sua <mark>assinatura!</mark></h3>
-                            <p class="my-account-content-text">Ao se cadastrar e receber a e-bike você terá 100% de acesso à sua assinatura na área MINHA CONTA! Acesse nosso atendimento e nossos serviços por lá! É muito prático!</p>
-                            <a class="bt bt-primary" href="#">Minha conta</a>
+
+                @media(max-width:1400px) {
+                    .como-funciona-5 .el-02 {
+                        margin-right: -100px;
+                    }
+                }
+            </style>
+            <div class="element-float-box-item el-02 rellax" data-rellax-speed="2" style="" data-aos="zoom-out" data-aos-duration="500"></div>
+            <section class="my-account">
+                <div class="container">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col-md-6 order-md-1 order-2">
+                            <div class="my-account-content" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+                                <h3 class="my-account-content-title">Você no <mark>controle</mark> da sua <mark>assinatura!</mark></h3>
+                                <p class="my-account-content-text">Ao se cadastrar e receber a e-bike você terá 100% de acesso à sua assinatura na área MINHA CONTA! Acesse nosso atendimento e nossos serviços por lá! É muito prático!</p>
+                                <a class="bt bt-primary" href="https://e-moving.com.br/minha-conta/">Minha conta</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-5 order-md-2 order-1">
-                        <div class="my-account-img" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
-                            <img src="<?= get_template_directory_uri() ?>/img/mobile.png" alt="minha conta">
+                        <div class="col-md-5 order-md-2 order-1">
+                            <div class="my-account-img" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
+                                <img src="<?= get_template_directory_uri() ?>/img/mobile.png" alt="minha conta">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </div>
+            </section>
+        </div>
+    <?php endif; ?>
 </div>
 
 <?php

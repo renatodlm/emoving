@@ -34,7 +34,7 @@ get_header();
         }
     </style>
 
-    <?php if (!get_query_var('paged')) : ?>
+    <?php if (!get_query_var('paged') && !empty(get_option('sticky_posts'))) : ?>
         <section id="blog-header" class="blog-header">
             <div class="container">
                 <div class="swiper blog-swiper">
@@ -45,6 +45,7 @@ get_header();
                         $args = [
                             'post_type' => 'post',
                             'posts_per_page' => 4,
+                            'post__in' =>  get_option('sticky_posts')
                         ];
                         $loop = new WP_Query($args);
                         if ($loop->have_posts()) :
@@ -64,7 +65,7 @@ get_header();
                                                 <h2 class="blog-header-slider-swiper-item-title"><a href="<?= get_permalink() ?>"><?= get_the_title() ?></a></h2>
                                                 <div class="blog-header-slider-swiper-item-post-info">
                                                     <ul class="blog-item-post-info-tags">
-                                                        <?php $categories = get_categories(); ?>
+                                                        <?php $categories = get_the_category(get_the_ID()); ?>
                                                         <?php foreach ($categories as $category) : ?>
                                                             <li><a href="<?= get_category_link($category->term_id) ?>"><?= $category->name ?></a></li>
                                                         <?php endforeach; ?>
@@ -79,7 +80,7 @@ get_header();
                                 </div>
                         <?php endwhile;
                         endif; ?>
-
+                        <?php wp_reset_postdata(); ?>
                     </div>
                     <!-- If we need pagination -->
                     <div class="swiper-pagination"></div>
@@ -94,12 +95,12 @@ get_header();
             <div class="row">
                 <div class="col-lg-8">
                     <?php
-                    $paged =   (get_query_var('paged')) ?: 1;
+                    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                     $args = [
-                        'post_type' => 'post',
                         'posts_per_page' => 2,
-                        'paged' =>  $paged,
-                        'offset' => 4
+                        'paged' => $paged,
+                        'post_type' => 'post',
+                        'post__not_in' => get_option("sticky_posts"),
                     ];
                     $loop = new WP_Query($args);
                     if ($loop->have_posts()) :
@@ -110,14 +111,14 @@ get_header();
                                     <a href="<?= get_permalink() ?>">
                                         <div class="blog-item-image-box">
                                             <picture>
-                                                <img class="blog-item-image-box-thumbnail" src="<?= get_template_directory_uri() ?>/img//blog-item.png" alt="blog item">
+                                                <img class="blog-item-image-box-thumbnail" src="<?= get_the_post_thumbnail_url() ?>" alt="blog item">
                                             </picture>
                                         </div>
                                     </a>
                                     <h2 class="blog-item-title"><a href="<?= get_permalink() ?>"><?= get_the_title() ?></a></h2>
                                     <div class="blog-item-post-info">
                                         <ul class="blog-item-post-info-tags">
-                                            <?php $categories = get_categories(); ?>
+                                            <?php $categories = get_the_category(get_the_ID()); ?>
                                             <?php foreach ($categories as $category) : ?>
                                                 <li><a href="<?= get_category_link($category->term_id) ?>"><?= $category->name ?></a></li>
                                             <?php endforeach; ?>
@@ -130,39 +131,27 @@ get_header();
                             </div>
                     <?php endwhile;
                     endif; ?>
-                    <ul class="blog-pagination">
-                        <li class="blog-pagination-item"><a href="#"><i class="blog-pagination-item-prev disabled"></i></a></li>
-                        <li class="blog-pagination-item active"><a href="#">1</a></li>
-                        <li class="blog-pagination-item"><a href="#">2</a></li>
-                        <li class="blog-pagination-item">...</li>
-                        <li class="blog-pagination-item"><a href="#">12</a></li>
-                        <li class="blog-pagination-item"><a href="#"><i class="blog-pagination-item-next"></i></a></li>
-                    </ul>
+
+                    <?php
+                    echo new_pagination($loop, $paged) ?>
                 </div>
                 <div class="col-lg-4">
                     <div class="sidebar">
                         <div class="sidebar-item">
                             <div class="search-default">
-                                <form action="" class="search-default-form">
-                                    <input class="search-default-form-input" type="text" placeholder="Pesquisar...">
-                                    <input class="bt bt-primary" type="submit" value="Pesquisar">
-                                </form>
+                                <?php get_search_form(); ?>
                             </div>
                         </div>
                         <div class="sidebar-item">
                             <div class="categories">
                                 <div class="categories-title">Categorias</div>
                                 <ul class="categories-list">
-                                    <li class="categories-list-item"><a class="categories-list-item-link" href="#">Geral</a></li>
-                                    <li class="categories-list-item"><a class="categories-list-item-link" href="#">Mobilidade urbana</a></li>
-                                    <li class="categories-list-item"><a class="categories-list-item-link" href="#">cidade</a></li>
-                                    <li class="categories-list-item"><a class="categories-list-item-link" href="#">Na empresa</a></li>
-                                    <li class="categories-list-item"><a class="categories-list-item-link" href="#">No pedal</a></li>
-                                    <li class="categories-list-item"><a class="categories-list-item-link" href="#">Pessoas</a></li>
-                                    <li class="categories-list-item"><a class="categories-list-item-link" href="#">Por onde estamos</a></li>
-                                    <li class="categories-list-item"><a class="categories-list-item-link" href="#">Qualidade de vida</a></li>
-                                    <li class="categories-list-item"><a class="categories-list-item-link" href="#">Saúde</a></li>
-                                    <li class="categories-list-item"><a class="categories-list-item-link" href="#">Sustentabilidade</a></li>
+                                    <?php
+                                    $categories = get_categories();
+                                    foreach ($categories as $category) :
+                                    ?>
+                                        <li class="categories-list-item"><a class="categories-list-item-link" href="<?= get_category_link($category->term_id) ?>"><?= $category->name ?></a></li>
+                                    <?php endforeach; ?>
                                 </ul>
                             </div>
                         </div>
