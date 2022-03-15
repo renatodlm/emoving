@@ -4,10 +4,61 @@ namespace Classes;
 
 class Page_Hero
 {
-    public static function default($obj, $text)
+
+    public static function default_contato($obj, $text)
     {
         if (!empty($obj) || !empty($text)) :
 ?>
+            <section class="hero-default pg-contato <?php if (!empty($obj['after'])) {
+                                                        echo ' after-true';
+                                                    }
+                                                    if (!empty($obj['before'])) {
+                                                        echo ' before-true';
+                                                    } ?>" style="background-color:<?= $obj['background-color'] ?>;">
+                <?php if (!empty($obj['background-image'])) : ?>
+                    <picture>
+                        <?php if (empty($obj['background-image-mobile'])) : $obj['background-image-mobile'] = $obj['background-image'];
+                        endif; ?>
+                        <source srcset="<?= $obj['background-image-mobile'] ?>" media="(max-width: 1024px)">
+                        <img data-aos="zoom-out" data-aos-delay="0" data-aos-duration="500" class="hero-default-background-image" src="<?= $obj['background-image'] ?>" alt="<?= $obj['title'] ?>">
+                    </picture>
+                <?php endif; ?>
+                <div class="container">
+                    <?php if (!empty($obj)) : ?>
+                        <div class="hero-default-content rellax" data-rellax-speed="1">
+                            <div class="row justify-content-center">
+                                <div class="col-xl-5 col-lg-6 col-md-8">
+                                    <h1 class="hero-default-content-title" data-aos="zoom-out" data-aos-delay="100" data-aos-duration="1000"><?= $obj['title'] ?></h1>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-xl-4 col-lg-6 col-md-8">
+                                    <div class="hero-default-content-text" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000"><?= $obj['text'] ?></div>
+                                    <?php if (!empty($obj['link'])) : ?>
+                                        <a class="hero-default-content-link" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000" href="<?= $obj['link'] ?>"><i class="hero-default-content-link-icon"></i></a>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        </div>
+                    <?php
+                    endif;
+                    if (!empty($text)) : ?>
+                        <div class="row justify-content-center">
+                            <div class="col-xl-6 col-lg-8 col-md-10">
+                                <div class="hero-default-text" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000"><?= $text ?></div>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </section>
+        <?php
+        endif;
+    }
+
+    public static function default($obj, $text)
+    {
+        if (!empty($obj) || !empty($text)) :
+        ?>
             <section class="hero-default <?php if (!empty($obj['after'])) {
                                                 echo ' after-true';
                                             }
@@ -44,7 +95,7 @@ class Page_Hero
                     if (!empty($text)) : ?>
                         <div class="row justify-content-center">
                             <div class="col-xl-6 col-lg-8 col-md-10">
-                                <p class="hero-default-text" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000"><?= $text ?></p>
+                                <div class="hero-default-text" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000"><?= $text ?></div>
                             </div>
                         </div>
                     <?php endif; ?>

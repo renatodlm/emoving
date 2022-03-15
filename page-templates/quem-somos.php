@@ -297,6 +297,29 @@ get_header();
                             </div>
                         </div>
 
+
+                        <div class="history-col history-col-right">
+                            <div class="history-item history-item-right">
+                                <div class="history-item-img"><img src="<?= get_template_directory_uri() ?>/img/history/2021.png" alt="2021">
+                                    <div id="js-point-l-line-right-3"></div>
+                                </div>
+                                <div class="history-item-title">2021</div>
+                                <div class="history-item-text">Mudança para B2B e Prêmio Mobilidade Estadão.</div>
+                            </div>
+                        </div>
+
+                        <div id="l-line-left-3" style="margin-top:2450px"></div>
+                        <div id="r-line-right-3" style="margin-top:2850px"></div>
+
+                        <div class="history-col history-col-left">
+                            <div class="history-item history-item-left">
+                                <div class="history-item-img"><img src="<?= get_template_directory_uri() ?>/img/history/2022.png" alt="2022">
+                                    <div id="js-point-l-line-left-4"></div>
+                                </div>
+                                <div class="history-item-title">2022</div>
+                                <div class="history-item-text">Investimento Multilaser.</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

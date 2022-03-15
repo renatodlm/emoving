@@ -98,6 +98,7 @@ get_header();
                                 <mark>E-Moving!</mark>
                             </h3>
                             <p class="videos-text">A primeira empresa de assinatura de bicicletas elétricas do Brasil! Nascemos em 2015 para transformar a mobilidade urbana e levar mais qualidade de vida para as pessoas. Junte-se a nós!</p>
+                            <a class="bt bt-primary mt-5 mx-auto d-block" style="width: fit-content;" href="https://e-moving.com.br/a-emoving/">Nossa história</a>
                         </div>
                     </div>
                 </div>
@@ -143,7 +144,7 @@ get_header();
         ]
     ];
     $services_list = new Services_List;
-    echo $services_list::get_primary_list($infos, $query);
+    echo $services_list::get_primary_list_pg_como_funciona($infos, $query);
 
 
     /**
@@ -186,6 +187,7 @@ get_header();
     <section class="e-bikes">
         <div class="container">
             <div class="row justify-content-center">
+                <?php /* ?>
                 <div class="col-xl-10">
                     <div class="element-float-box e-bikes-1">
                         <style>
@@ -217,7 +219,8 @@ get_header();
                         </div>
                     </div>
                 </div>
-                <div class="element-float-box e-bikes-2">
+                <?php */ ?>
+                <div cass="element-float-box e-bikes-2">
                     <style>
                         .e-bikes-2 .el-04 {
                             left: 0;
@@ -232,7 +235,7 @@ get_header();
                         <div class="e-bikes-item-box">
                             <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000">
                                 <div class="col-xl-9 px-xl-0">
-                                    <img class="e-bikes-item-box-img" src="<?= get_template_directory_uri() ?>/img/bikes/Bike-comfort.png" alt="Comfort">
+                                    <img class="e-bikes-item-box-img" src="<?= get_template_directory_uri() ?>/img/bikes/Bike-comfort2.png" alt="Comfort">
                                 </div>
                             </div>
                         </div>
@@ -273,7 +276,7 @@ get_header();
             'img_url' =>  get_template_directory_uri() . '/img/elements/03.svg',
             'img_alt' => 'SEGURANÇA',
             'title' => 'SEGURANÇA',
-            'text' => 'Solicite uma proposta e contrate um plano de acordo com as suas necessidades.',
+            'text' => 'Transporte individual com proteção contra roubo já incluso em todos os planos.',
         ],
         [
             'img_url' =>  get_template_directory_uri() . '/img/elements/04.svg',

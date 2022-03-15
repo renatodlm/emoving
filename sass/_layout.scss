@@ -163,7 +163,8 @@
 }
 
 .hero-default {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     display: flex;
     align-items: center;
     position: relative;
@@ -176,6 +177,10 @@
     margin-right: auto;
     max-width: 2160px;
     max-height: 1080px;
+    &.pg-contato {
+        min-height: 60vh;
+        margin-bottom: -300px;
+    }
     @media (max-width: $md) {
         height: auto;
     }
@@ -610,6 +615,7 @@
     padding: 200px 0 200px 0;
     text-align: center;
     position: relative;
+    z-index: 9;
     @media (max-width: $md) {
         padding-top: 100px;
         padding-bottom: 100px;

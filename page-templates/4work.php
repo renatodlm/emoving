@@ -24,14 +24,13 @@ get_header();
     $default_obj = [
         'title' => 'E-Bike 4work',
         'text' => 'Uma solução pensada para melhorar seus indicadores operacionais, a redução de custos, aumento da produtividade e promovendo a sustentabilidade com as práticas ESG. ',
-        'background-image' =>  get_template_directory_uri() . '/img/4work.png',
+        'background-image' =>  get_template_directory_uri() . '/img/4work.jpg',
         'background-color' => '#444580',
         'before' => false,
         'after' => true,
         'link' => '#junte-sua-energia'
     ];
-    $text = 'Plano de assinatura mensal de bicicleta elétrica. Simples assim!
-Diversos benefícios em um só transporte.';
+    $text = 'Nesta solução, profissionais que atuam como promotores, entregadores, seguranças, entre outros, podem utilizar as e-bikes de forma individual ou coletiva, ideal para longos trajetos ou diversas localizações por dia.';
 
     $hero = new Page_Hero;
     echo $hero::default($default_obj, $text);
@@ -50,8 +49,8 @@ Diversos benefícios em um só transporte.';
         [
             'img_url' =>  get_template_directory_uri() . '/img/elements/calendar-tiem.png',
             'img_alt' => 'top-left',
-            'title' => 'TEMPO TODO COM VOCÊ',
-            'text' => 'Oferecemos três soluções corporativas para encaixar na realidade da sua empresa.',
+            'title' => 'MAIS PRODUTIVIDADE',
+            'text' => 'Mais produtividade e rapidez nos deslocamentos com uma e-bike',
         ],
         [
             'img_url' =>  get_template_directory_uri() . '/img/elements/leva-e-traz.png',
@@ -118,8 +117,8 @@ Diversos benefícios em um só transporte.';
      */
 
     $infos2 = [
-        'title' => 'Por que <mark>escolher</mark> a <p><mark>E-MOVING</mark></p>',
-        'text' => 'Uma solução de mobilidade sustentável que traz benefícios para os colaboradores, para a sua empresa e para o planeta.'
+        'title' => 'Por que <mark>escolher</mark> a <p><mark>E-Moving?</mark></p>',
+        'text' => 'Quer implementar uma forma de mobilidade mais sustentável e econômica na sua empresa? Entre em contato com a nossa equipe!'
     ];
 
     $query2 = [
@@ -141,7 +140,7 @@ Diversos benefícios em um só transporte.';
             'img_url' =>  get_template_directory_uri() . '/img/elements/03.svg',
             'img_alt' => 'SEGURANÇA',
             'title' => 'SEGURANÇA',
-            'text' => 'Solicite uma proposta e contrate um plano de acordo com as suas necessidades.',
+            'text' => 'Transporte individual com proteção contra roubo já incluso em todos os planos.',
         ],
         [
             'img_url' =>  get_template_directory_uri() . '/img/elements/04.svg',
@@ -182,8 +181,8 @@ Diversos benefícios em um só transporte.';
                 <div class="row justify-content-center">
                     <div class="col-xl-8 col-md-10">
                         <div class="contact-form-content rellax" data-rellax-speed="0">
-                            <h4 class="contact-form-content-title" data-aos="zoom-out" data-aos-delay="100" data-aos-duration="1000">Quer utilizar nossa <mark>e-bike?</mark></h4>
-                            <p class="contact-form-content-text" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000">Para ser nosso assinante, indique a melhor pessoa da sua empresa para apresentarmos nossa solução corporativa e mediante a contratação do nosso benefício, sua empresa disponibilizará para você uma e-bike</p>
+                            <h4 class="contact-form-content-title" data-aos="zoom-out" data-aos-delay="100" data-aos-duration="1000">Quer aproveitar os benefícios que as nossas <mark>e-bikes oferecem?</mark></h4>
+                            <p class="contact-form-content-text" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000"> Indique para sua empresa nossas soluções corporativas.</p>
                         </div>
                         <div class="contact-form-form">
                             <?php

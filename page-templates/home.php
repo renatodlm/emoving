@@ -45,8 +45,8 @@ get_header();
      * Como Funciona
      */
     $infos = [
-        'title' => 'Como funciona a <p><mark>assinatura E-MOVING</mark></p>',
-        'text' => '',
+        'title' => 'Como funciona a <p><mark style="color:#FF5D02!important">assinatura E-MOVING</mark></p>',
+        'text' => 'Assinatura de bicicleta elétrica para melhorar o deslocamento e a produtividade da sua empresa. Simples assim!',
         'id' => 'como-funciona'
     ];
 
@@ -67,7 +67,7 @@ get_header();
             'img_url' =>  get_template_directory_uri() . '/img/elements/top-right.png',
             'img_alt' => 'top-left',
             'title' => 'CONTRATE E IMPLEMENTE NA SUA EMPRESA',
-            'text' => 'Uma vez contratado uma de nossas soluções, nós nos responsabilizamos pela divulgação e implementação da nova mobilidade na empresa.',
+            'text' => 'Solicite uma proposta e contrate um plano de acordo com as suas necessidades.',
         ],
         [
             'img_url' =>  get_template_directory_uri() . '/img/elements/bike-02.png',
@@ -254,7 +254,7 @@ get_header();
             'img_url' =>  get_template_directory_uri() . '/img/elements/03.svg',
             'img_alt' => 'SEGURANÇA',
             'title' => 'SEGURANÇA',
-            'text' => 'Solicite uma proposta e contrate um plano de acordo com as suas necessidades.',
+            'text' => 'Transporte individual com proteção contra roubo já incluso em todos os planos.',
         ],
         [
             'img_url' =>  get_template_directory_uri() . '/img/elements/04.svg',

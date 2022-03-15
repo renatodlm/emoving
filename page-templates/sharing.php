@@ -24,14 +24,13 @@ get_header();
     $default_obj = [
         'title' => 'E-Bike Sharing',
         'text' => '<p><strong>Compartilhando qualidade de vida</strong></p>Um diferencial competitivo no mercado, a mobilidade compartilhada privada melhora o employer branding da empresa proporcionando mais agilidade nos deslocamentos.',
-        'background-image' =>  get_template_directory_uri() . '/img/sharing.png',
+        'background-image' =>  get_template_directory_uri() . '/img/sharing.jpg',
         'background-color' => '#444580',
         'before' => false,
         'after' => true,
         'link' => '#junte-sua-energia'
     ];
-    $text = 'Plano de assinatura mensal de bicicleta elétrica. Simples assim!
-Diversos benefícios em um só transporte.';
+    $text = '<p>Em empresas, as e-bikes podem ser usadas pelos colaboradores para se locomoverem entre espaços internos e externos, como ir de um prédio a outro, ou de um galpão a outro. Ir a reuniões e até mesmo a comércios, como restaurantes para almoço ou quando necessário. </p><p>Em hotéis, as bicicletas elétricas podem ser disponibilizadas para que os visitantes possam se deslocar nas dependências internas e externas. O hóspede poderá desfrutar de um passeio divertido, com pouco esforço físico e ao ar livre. Em condomínios residenciais ou estudantis, as e-bikes podem ficar à disposição dos moradores para atividades diárias, como ir ao mercado, faculdade, e até mesmo como lazer. </p>';
 
     $hero = new Page_Hero;
     echo $hero::default($default_obj, $text);
@@ -48,10 +47,10 @@ Diversos benefícios em um só transporte.';
 
     $query = [
         [
-            'img_url' =>  get_template_directory_uri() . '/img/elements/calendar-tiem.png',
+            'img_url' =>  get_template_directory_uri() . '/img/elements/compartilhar.png',
             'img_alt' => 'top-left',
-            'title' => 'TEMPO TODO COM VOCÊ',
-            'text' => 'Oferecemos três soluções corporativas para encaixar na realidade da sua empresa.',
+            'title' => 'PARA COMPARTILHAR',
+            'text' => 'A e-bike fica a disposição para compartilhamento dentro da sua empresa.',
         ],
         [
             'img_url' =>  get_template_directory_uri() . '/img/elements/leva-e-traz.png',
@@ -119,7 +118,7 @@ Diversos benefícios em um só transporte.';
      */
 
     $infos2 = [
-        'title' => 'Por que <mark>escolher</mark> a <p><mark>E-MOVING</mark></p>',
+        'title' => 'Por que <mark>escolher</mark> a <p><mark>E-Moving?</mark></p>',
         'text' => 'Uma solução de mobilidade sustentável que traz benefícios para os colaboradores, para a sua empresa e para o planeta.'
     ];
 
@@ -142,7 +141,7 @@ Diversos benefícios em um só transporte.';
             'img_url' =>  get_template_directory_uri() . '/img/elements/03.svg',
             'img_alt' => 'SEGURANÇA',
             'title' => 'SEGURANÇA',
-            'text' => 'Solicite uma proposta e contrate um plano de acordo com as suas necessidades.',
+            'text' => 'Transporte individual com proteção contra roubo já incluso em todos os planos.',
         ],
         [
             'img_url' =>  get_template_directory_uri() . '/img/elements/04.svg',
@@ -182,8 +181,8 @@ Diversos benefícios em um só transporte.';
                 <div class="row justify-content-center">
                     <div class="col-xl-8 col-md-10">
                         <div class="contact-form-content rellax" data-rellax-speed="0">
-                            <h4 class="contact-form-content-title" data-aos="zoom-out" data-aos-delay="100" data-aos-duration="1000">Quer utilizar nossa <mark>e-bike?</mark></h4>
-                            <p class="contact-form-content-text" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000">Para ser nosso assinante, indique a melhor pessoa da sua empresa para apresentarmos nossa solução corporativa e mediante a contratação do nosso benefício, sua empresa disponibilizará para você uma e-bike</p>
+                            <h4 class="contact-form-content-title" data-aos="zoom-out" data-aos-delay="100" data-aos-duration="1000">Quer aproveitar os benefícios que as nossas <mark>e-bikes oferecem?</mark></h4>
+                            <p class="contact-form-content-text" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000"> Indique para sua empresa nossas soluções corporativas.</p>
                         </div>
                         <div class="contact-form-form">
                             <?php
