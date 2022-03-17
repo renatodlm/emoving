@@ -23,7 +23,7 @@ class Page_Hero
                         <img data-aos="zoom-out" data-aos-delay="0" data-aos-duration="500" class="hero-default-background-image" src="<?= $obj['background-image'] ?>" alt="<?= $obj['title'] ?>">
                     </picture>
                 <?php endif; ?>
-                <div class="container">
+                <div class="container d-flex flex-wrap h-100">
                     <?php if (!empty($obj)) : ?>
                         <div class="hero-default-content rellax" data-rellax-speed="1">
                             <div class="row justify-content-center">
@@ -43,7 +43,7 @@ class Page_Hero
                     <?php
                     endif;
                     if (!empty($text)) : ?>
-                        <div class="row justify-content-center">
+                        <div class="row justify-content-center mt-auto">
                             <div class="col-xl-6 col-lg-8 col-md-10">
                                 <div class="hero-default-text" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000"><?= $text ?></div>
                             </div>
@@ -73,7 +73,7 @@ class Page_Hero
                         <img data-aos="zoom-out" data-aos-delay="0" data-aos-duration="500" class="hero-default-background-image" src="<?= $obj['background-image'] ?>" alt="<?= $obj['title'] ?>">
                     </picture>
                 <?php endif; ?>
-                <div class="container">
+                <div class="container d-flex flex-wrap h-100">
                     <?php if (!empty($obj)) : ?>
                         <div class="hero-default-content rellax" data-rellax-speed="1">
                             <div class="row justify-content-center">
@@ -93,7 +93,7 @@ class Page_Hero
                     <?php
                     endif;
                     if (!empty($text)) : ?>
-                        <div class="row justify-content-center">
+                        <div class="row justify-content-center mt-auto">
                             <div class="col-xl-6 col-lg-8 col-md-10">
                                 <div class="hero-default-text" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000"><?= $text ?></div>
                             </div>

@@ -56,6 +56,7 @@ echo $hero::default_contato($default_obj, $text);
         </div>
     </div>
 </section>
+<?php /* ?>
 <section class="imprensa">
     <div class="container">
         <div class="row justify-content-center">
@@ -71,6 +72,7 @@ echo $hero::default_contato($default_obj, $text);
         </div>
     </div>
 </section>
+<?php */ ?>
 <?php
 
 get_footer();

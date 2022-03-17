@@ -9,33 +9,9 @@
  * @since 2.0
  */
 
-use Classes\Page_Hero;
-
 get_header();
 ?>
 <div class="main-body">
-    <?php
-    /**
-     * Hero
-     */
-
-    $default_obj = [
-        'title' => 'Blog E-moving',
-        'text' => 'Descubra muito mais.',
-        'background-color' => '#444580',
-        'before' => false,
-        'after' => true,
-        'link' => '#blog-header'
-    ];
-    $text = null;
-
-    $hero = new Page_Hero;
-    ?>
-    <div class="blog-hero">
-        <?php
-        echo $hero::default($default_obj, $text);
-        ?>
-    </div>
     <style>
         .swiper {
             width: 100%;
