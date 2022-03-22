@@ -30,7 +30,7 @@ get_header();
     echo $hero::post($default_obj, $text);
     ?>
     <section id="post-content" class="post-content">
-        <div class="container">
+        <div class="container border-top pt-4">
             <?php the_content(); ?>
         </div>
     </section>

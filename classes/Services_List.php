@@ -168,7 +168,7 @@ class Services_List
                     <div class="row justify-content-center">
                         <div class="col-xl-11">
                             <div class="row d-flex justify-content-center">
-                                <div class="col-xxl-7 col-md-10 rellax" data-rellax-speed="-1">
+                                <div class="col-xxl-7 col-md-10 rellax" data-rellax-speed="1">
                                     <?php if (!empty($infos['title'])) : ?>
                                         <h3 class="service-list-02-title" data-aos="zoom-out" data-aos-delay="100" data-aos-duration="1000">
                                             <?= $infos['title'] ?>

@@ -22,7 +22,11 @@ get_header();
 
     $hero_obj = [
         'title' => 'Seja <mark>bem-vindo</mark> ao <mark>futuro</mark> da <mark>mobilidade</mark> urbana.',
-        'text' => 'Somos a primeira empresa no Brasil de assinatura de bikes elétricas! Nascemos em 2015 para resolver o problema de <strong>Mobilidade Urbana</strong> na cidade de São Paulo e levar mais qualidade de vida para as pessoas. Acreditamos que as bikes elétricas são o modal certo para isso. Temos o compromisso de oferecer uma experiência única, gerando economia de tempo e dinheiro de forma prazerosa e sustentável. Já transformamos a vida de mais de 800 clientes, deixamos de emitir 900 ton. de CO² na atmosfera, o equivalente a 9 Maracanãs repletos de árvores plantadas! Transforme o seu estilo de vida através de uma mobilidade inteligente, junte -se a nós e e-reinvente a sua rotina! <br><br> <strong>Continuamos e-reinventando a roda!</strong>',
+        'text' => 'Nascemos com o objetivo de resolver o problema de mobilidade na cidade de São Paulo e proporcionar melhoria da qualidade de vida das pessoas. Nos dedicamos a tornar os deslocamentos mais fáceis, rápidos e ecológicos. 
+        <br><br>
+        A E-Moving oferece uma experiência única de economia de tempo e dinheiro de forma prazerosa e sustentável. Temos sete anos de presença em ciclofaixas e já transformamos a vida de inúmeros usuários: menos trânsito, menos estresse, mais tempo ao ar livre e zero emissões de CO² na atmosfera. 
+        <br><br>
+        Nós ajudamos sua equipe a se locomover com um propósito! Ofereça deslocamentos mais verdes e ativos, junte-se à nossa missão de transformar a mobilidade.',
         'background-image' =>  get_template_directory_uri() . '/img/quem-somos.png',
         'background-color' => '#444580',
         'before' => false,

@@ -83,8 +83,8 @@ get_header();
         $services_list = new Services_List;
         echo $services_list::get_primary_list($infos, $query);
         ?>
-        <div class="element-float-box-item el-08 rellax" data-rellax-speed="-1" style="" data-aos="zoom-out" data-aos-duration="500"></div>
-        <div class="element-float-box-item el-010 rellax" data-rellax-speed="-3" style="" data-aos="zoom-out" data-aos-duration="500"></div>
+        <div class="element-float-box-item el-08 rellax" data-rellax-speed="1" style="" data-aos="zoom-out" data-aos-duration="500"></div>
+        <div class="element-float-box-item el-010 rellax" data-rellax-speed="-2" style="" data-aos="zoom-out" data-aos-duration="500"></div>
     </div>
     <?php
 
@@ -120,8 +120,8 @@ get_header();
                             <div class="solutions-container-item rellax" data-rellax-speed="1" style="z-index: 3;position:relative">
                                 <div class="element-float-box home-2">
 
-                                    <div class="element-float-box-item el-04 rellax" data-rellax-speed="3" style="" data-aos="zoom-out" data-aos-duration="500"></div>
-                                    <div class="element-float-box-item el-011 rellax" data-rellax-speed="-3" style="" data-aos="zoom-out" data-aos-duration="500"></div>
+                                    <div class="element-float-box-item el-04 rellax" data-rellax-speed="1" style="" data-aos="zoom-out" data-aos-duration="500"></div>
+                                    <div class="element-float-box-item el-011 rellax" data-rellax-speed="-1" style="" data-aos="zoom-out" data-aos-duration="500"></div>
 
                                     <div class="row d-flex align-items-center">
                                         <div class="col-md-5 d-flex mb-md-0 mb-4">
@@ -157,7 +157,7 @@ get_header();
                             <div class="solutions-container-item rellax" data-rellax-speed="1" style="z-index: 2;position:relative">
                                 <div class="element-float-box home-3">
 
-                                    <div class="element-float-box-item el-07 rellax" data-rellax-speed="3" style="" data-aos="zoom-out" data-aos-duration="500"></div>
+                                    <div class="element-float-box-item el-07 rellax" data-rellax-speed="1" style="" data-aos="zoom-out" data-aos-duration="500"></div>
 
                                     <div class="row d-flex align-items-center">
                                         <div class="col-md-5 offset-md-1 order-md-1 order-2" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
@@ -192,8 +192,8 @@ get_header();
                     ?>
                             <div class="solutions-container-item rellax" data-rellax-speed="1" style="z-index: 1;position:relative">
                                 <div class="element-float-box home-4">
-                                    <div class="element-float-box-item el-05 rellax" data-rellax-speed="3" style="" data-aos="zoom-out" data-aos-duration="500"></div>
-                                    <div class="element-float-box-item el-02 rellax" data-rellax-speed="-3" style="" data-aos="zoom-out" data-aos-duration="500"></div>
+                                    <div class="element-float-box-item el-05 rellax" data-rellax-speed="1" style="" data-aos="zoom-out" data-aos-duration="500"></div>
+                                    <div class="element-float-box-item el-02 rellax" data-rellax-speed="2" style="" data-aos="zoom-out" data-aos-duration="500"></div>
 
                                     <div class="row d-flex align-items-center">
                                         <div class="col-md-5 d-flex mb-md-0 mb-4">
@@ -231,7 +231,7 @@ get_header();
      */
 
     $infos2 = [
-        'title' => 'Por que <mark>escolher</mark> a <p><mark>E-MOVING</mark></p>',
+        'title' => 'Por que <mark>escolher</mark> a <p><mark>E-Moving?</mark></p>',
         'text' => 'Uma solução de mobilidade sustentável que traz benefícios para os colaboradores, para a sua empresa e para o planeta.'
     ];
 
@@ -281,7 +281,7 @@ get_header();
 
         </style>
         <div class="element-float-box-item el-08 rellax" data-rellax-speed="-1" style="" data-aos="zoom-out" data-aos-duration="500"></div>
-        <div class="element-float-box-item el-01 rellax" data-rellax-speed="2" style="" data-aos="zoom-out" data-aos-duration="500"></div>
+        <div class="element-float-box-item el-01 rellax" data-rellax-speed="1" style="" data-aos="zoom-out" data-aos-duration="500"></div>
         <?php
         $services_list2 = new Services_List;
         echo $services_list2::get_secondary_list($infos2, $query2);
@@ -295,7 +295,7 @@ get_header();
                 <div class="row justify-content-center">
                     <div class="col-xl-8 col-md-10">
                         <div class="contact-form-content">
-                            <h4 class="contact-form-content-title" data-aos="zoom-out" data-aos-delay="100" data-aos-duration="1000">Quer utilizar nossa <mark>e-bike?</mark></h4>
+                            <h4 class="contact-form-content-title" data-aos="zoom-out" data-aos-delay="100" data-aos-duration="1000">Quer aproveitar os benefícios que as nossas <mark>e-bikes oferecem?</mark></h4>
                             <p class="contact-form-content-text" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000">Para ser nosso assinante, indique a melhor pessoa da sua empresa para apresentarmos nossa solução corporativa e mediante a contratação do nosso benefício, sua empresa disponibilizará para você uma e-bike</p>
                         </div>
                         <div class="contact-form-form">
@@ -310,7 +310,7 @@ get_header();
                 </div>
             </div>
             <div class="element-float-box-item el-012 rellax" data-rellax-speed="-2" style="" data-aos="zoom-out" data-aos-duration="500"></div>
-            <div class="element-float-box-item el-013 rellax" data-rellax-speed="-2" style="" data-aos="zoom-out" data-aos-duration="500"></div>
+            <div class="element-float-box-item el-013 rellax" data-rellax-speed="-1" style="" data-aos="zoom-out" data-aos-duration="500"></div>
         </div>
     </section>
 

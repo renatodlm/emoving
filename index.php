@@ -59,6 +59,8 @@ get_header();
                         <?php wp_reset_postdata(); ?>
                     </div>
                     <!-- If we need pagination -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
@@ -73,7 +75,7 @@ get_header();
                     <?php
                     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                     $args = [
-                        'posts_per_page' => 2,
+                        'posts_per_page' => 4,
                         'paged' => $paged,
                         'post_type' => 'post',
                         'post__not_in' => get_option("sticky_posts"),

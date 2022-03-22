@@ -79,7 +79,6 @@ h5 {
     color: $white;
 }
 
-
 input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]),
 select,
 textarea {
@@ -136,10 +135,9 @@ textarea {
     text-align: left;
 }
 
-.wpcf7-response-output{
+.wpcf7-response-output {
     border-radius: 15px;
 }
-
 
 .error404 {
     padding-top: 150px;
@@ -153,8 +151,8 @@ textarea {
             margin-bottom: 60px;
             letter-spacing: 36px;
             color: $body;
-            text-shadow: 2px 0 0 $white, -2px 0 0 $white, 0 2px 0 $white, 0 -2px 0 $white,
-                1px 1px $white, -1px -1px 0 $white, 1px -1px 0 $white, -1px 1px 0 $white;
+            text-shadow: 2px 0 0 $white, -2px 0 0 $white, 0 2px 0 $white, 0 -2px 0 $white, 1px 1px $white,
+                -1px -1px 0 $white, 1px -1px 0 $white, -1px 1px 0 $white;
         }
     }
     @media screen and (max-width: 576px) {
@@ -173,8 +171,45 @@ textarea {
 }
 
 //@media screen and (max-width: $md) {
-    body [data-aos][data-aos][data-aos-duration][data-aos-delay] {
-        transition-delay: 0ms;
-        transition-duration: 750ms;
-    }
+body [data-aos][data-aos][data-aos-duration][data-aos-delay] {
+    transition-delay: 0ms;
+    transition-duration: 750ms;
+}
 //}
+.post-content {
+    p,
+    span,
+    b {
+        color: $white;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $white;
+    }
+}
+
+.blog-swiper {
+    .swiper-button-prev,
+    .swiper-rtl .swiper-button-next {
+        &::after {
+            color: $white;
+        }
+        @media (max-width: $md) {
+            display: none !important;
+        }
+    }
+
+    .swiper-button-next,
+    .swiper-rtl .swiper-button-prev {
+        &::after {
+            color: $white;
+        }
+        @media (max-width: $md) {
+            display: none !important;
+        }
+    }
+}
