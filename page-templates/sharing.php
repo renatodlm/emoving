@@ -23,7 +23,7 @@ get_header();
 
     $default_obj = [
         'title' => 'E-Bike Sharing',
-        'text' => '<p><strong>Compartilhando qualidade de vida</strong></p>Um diferencial competitivo no mercado, a mobilidade compartilhada privada melhora o employer branding da empresa proporcionando mais agilidade nos deslocamentos.',
+        'text' => '<p><strong>Compartilhando qualidade de vida!</strong></p>Um diferencial competitivo no mercado, a mobilidade compartilhada privada melhora o employer branding da empresa proporcionando mais agilidade nos deslocamentos.',
         'background-image' =>  get_template_directory_uri() . '/img/sharing.jpg',
         'background-color' => '#444580',
         'before' => false,
@@ -182,7 +182,9 @@ get_header();
                     <div class="col-xl-8 col-md-10">
                         <div class="contact-form-content rellax" data-rellax-speed="0">
                             <h4 class="contact-form-content-title" data-aos="zoom-out" data-aos-delay="100" data-aos-duration="1000">Quer aproveitar os benefícios que as nossas <mark>e-bikes oferecem?</mark></h4>
-                            <p class="contact-form-content-text" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000"> Indique para sua empresa nossas soluções corporativas.</p>
+                            <p class="contact-form-content-text" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000">Quer aproveitar os benefícios que as nossas e-bikes oferecem?
+                                <br>Indique para sua empresa nossas soluções corporativas.
+                            </p>
                         </div>
                         <div class="contact-form-form">
                             <?php

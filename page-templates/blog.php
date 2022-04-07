@@ -195,7 +195,7 @@ get_header();
                             <div class="search-default">
                                 <form action="" class="search-default-form">
                                     <input class="search-default-form-input" type="text" placeholder="Pesquisar...">
-                                    <input class="bt bt-primary" type="submit" value="Pesquisar">
+                                    <input class="bt bt-primary" type="submit" value="">
                                 </form>
                             </div>
                         </div>

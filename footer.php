@@ -3,8 +3,18 @@
         <div class="row">
             <div class="col-lg-3 order-1">
                 <div class="footer-about">
-                    <img class="footer-about-img" src="<?= get_template_directory_uri() ?>/img/logo-footer.svg" style="width:158.79px;max-width:100%;height:auto" alt="E-mooving">
-                    <p class="footer-about-text">Venha com a E-Moving revolucionar a mobilidade urbana e-reinventar a roda.</p>
+
+                    <picture>
+                        <?php if (get_field('logo_alternativo', 'option')) :
+                            $logo_mobile = get_field('logo_alternativo', 'option');
+                            $src_logo_mobil = $logo_mobile['url'];
+                        ?>
+                            <source media="(max-width: 768px)" srcset="<?= $src_logo_mobil ?>">
+                        <?php endif; ?>
+                        <img class="footer-about-img" src="<?= get_template_directory_uri() ?>/img/logo-footer.svg" alt="E-mooving">
+                    </picture>
+                    <!-- <img class="footer-about-img" src="" style="width:158.79px;max-width:100%;height:auto" alt="E-mooving"> -->
+                    <p class="footer-about-text text-center text-md-start">Vamos juntos transformar a mobilidade urbana!</p>
                     <ul class="footer-about-social">
                         <?php if (get_field('facebook', 'option')) : ?>
                             <li class="footer-about-social-item"> <a href="<?= get_field('facebook', 'option') ?>" target="_blank"><img class="footer-about-social-item-icon facebook" src="<?= get_template_directory_uri() ?>/img/Icons/facebook-line.svg" alt="facebook"></a></li>
@@ -22,7 +32,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 order-lg-2 order-3">
+            <div class="col-lg-4 order-lg-2 order-3 d-md-block d-none">
                 <div class="footer-liks">
                     <h4 class="footer-liks-title">Links úteis</h4>
                     <?php
@@ -41,10 +51,12 @@
                     ?>
                 </div>
             </div>
-            <div class="col-lg-4 offset-lg-1 order-lg-3 order-2">
+            <div class="col-lg-4 offset-lg-1 order-lg-3 order-3">
                 <div class="footer-newsletter">
-                    <h4 class="footer-newsletter-title">inscreva-se agora!</h4>
-                    <?= do_shortcode('[contact-form-7 id="30925" title="Newsletter"]'); ?>
+                    <div class="footer-newsletter-content">
+                        <h4 class="footer-newsletter-title">inscreva-se agora!</h4>
+                        <?= do_shortcode('[contact-form-7 id="30925" title="Newsletter"]'); ?>
+                    </div>
                     <ul class="footer-newsletter-social">
                         <?php if (get_field('email', 'option')) : ?>
                             <li class="footer-newsletter-social-item"><a class="footer-newsletter-social-item-link email" href="mailto:<?= get_field('email', 'option') ?>"><?= get_field('email', 'option') ?></a></li>

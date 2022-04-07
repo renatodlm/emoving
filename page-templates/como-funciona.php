@@ -33,7 +33,7 @@ get_header();
     ];
     $button = [
         'text' => 'Agende uma apresentação',
-        'link' => 'http://localhost/emvbusiness#indique'
+        'link' => get_home_url() . '#indique'
     ];
 
     $hero = new Page_Hero;
@@ -122,25 +122,25 @@ get_header();
             'img_url' =>  get_template_directory_uri() . '/img/elements/indique.png',
             'img_alt' => 'top-left',
             'title' => 'INDIQUE SUA EMPRESA',
-            'text' => 'Oferecemos três soluções corporativas que irão melhorar a realidade de mobilidade de cada empresa e colaborador',
+            'text' => 'Oferecemos três soluções corporativas que irão melhorar a realidade de mobilidade de cada empresa e colaborador.',
         ],
         [
             'img_url' =>  get_template_directory_uri() . '/img/elements/card.png',
             'img_alt' => 'top-left',
-            'title' => 'RECEBIMENTO DA E-BIKE',
-            'text' => 'Após cadastro realizado, o colaborador ou empresa agendará um dia e horário para receber ou retirar a nossa e-bike',
+            'title' => 'CONTRATO FECHADO',
+            'text' => 'Com o contrato fechado, agora chegou a hora de fazer parte da E-Moving.',
         ],
         [
             'img_url' =>  get_template_directory_uri() . '/img/elements/recebimento.png',
             'img_alt' => 'top-left',
             'title' => 'RECEBIMENTO DA E-BIKE',
-            'text' => 'Após cadastro realizado, o colaborador ou empresa agendará um dia e horário para receber ou retirar a nossa e-bike',
+            'text' => 'Após cadastro realizado, o colaborador ou empresa agendará um dia e horário para receber ou retirar a nossa e-bike.',
         ],
         [
             'img_url' =>  get_template_directory_uri() . '/img/elements/bike-02.png',
             'img_alt' => 'top-left',
             'title' => 'APROVEITE SUA E-BIKE',
-            'text' => 'Ao receber a e-bike, empresa e/ou colaborador aproveitarão seu trajeto diáriode forma mais eficiente e nos auxiliando na missão de reduzir o CO²',
+            'text' => 'Ao receber a e-bike, empresa e/ou colaborador aproveitarão seu trajeto diáriode forma mais eficiente e nos auxiliando na missão de reduzir o CO².',
         ]
     ];
     $services_list = new Services_List;
@@ -187,39 +187,6 @@ get_header();
     <section class="e-bikes">
         <div class="container">
             <div class="row justify-content-center">
-                <?php /* ?>
-                <div class="col-xl-10">
-                    <div class="element-float-box e-bikes-1">
-                        <style>
-                            .e-bikes-1 .el-010 {
-                                left: 0;
-                                bottom: 0;
-                                margin-left: -300px;
-                                margin-bottom: 300px
-                            }
-
-                            .e-bikes-1 .el-03 {
-                                right: 0;
-                                bottom: 0;
-                                margin-bottom: -50px;
-                                margin-right: -400px
-                            }
-                        </style>
-                        <div class="element-float-box-item el-010 rellax" data-rellax-speed="2" style="" data-aos="zoom-out" data-aos-duration="500"></div>
-                        <div class="element-float-box-item el-03 rellax" data-rellax-speed="2" style="" data-aos="zoom-out" data-aos-duration="500"></div>
-                        <div class="e-bikes-item">
-                            <div class="e-bikes-item-title" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">Bolt</div>
-                            <div class="e-bikes-item-box">
-                                <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
-                                    <div class="col-xl-10 px-xl-0">
-                                        <img class="e-bikes-item-box-img" src="<?= get_template_directory_uri() ?>/img/bikes/Bike-Bolt.png" alt="Bolt">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <?php */ ?>
                 <div cass="element-float-box e-bikes-2">
                     <style>
                         .e-bikes-2 .el-04 {
@@ -231,6 +198,10 @@ get_header();
                     </style>
                     <div class="element-float-box-item el-04 rellax" data-rellax-speed="2" style="" data-aos="zoom-out" data-aos-duration="500"></div>
                     <div class="e-bikes-item mb-5">
+                        <div class="vire-mobile">
+                            <div class="vire-mobile-icon"><img src="<?= get_template_directory_uri(); ?>/img/vire.svg" alt="vire"></div>
+                            <p class="vire-mobile-text">Vire seu smartphone para ver estas informações</p>
+                        </div>
                         <div class="e-bikes-item-title" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">Comfort</div>
                         <div class="e-bikes-item-box">
                             <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000">

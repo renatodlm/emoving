@@ -24,7 +24,7 @@ get_header();
 
     $default_obj = [
         'title' => 'E-Bike Benefício',
-        'text' => '<p><strong>Mais bem-estar a cada pedalada</strong></p>Um benefício corporativo diferenciado para seus colaboradores e sua empresa, o vale-transporte sustentável é tendência no mercado melhorando o employer branding e apoiando o meio ambiente.',
+        'text' => '<p><strong>Mais bem-estar a cada pedalada!</strong></p>Um benefício corporativo diferenciado para seus colaboradores e sua empresa, o vale-transporte sustentável é tendência no mercado melhorando o employer branding e apoiando o meio ambiente.',
         'background-image' =>  get_template_directory_uri() . '/img/beneficio.png',
         'background-color' => '#444580',
         'before' => false,
@@ -54,7 +54,7 @@ get_header();
             'img_url' =>  get_template_directory_uri() . '/img/elements/people.png',
             'img_alt' => 'top-left',
             'title' => 'BENEFÍCIO DO COLABORADOR',
-            'text' => 'A e-bike fica o tempo todo com o colaborador para ele usá-la como preferir',
+            'text' => 'A e-bike fica o tempo todo com o colaborador para ser usada quando e onde preferir.',
         ],
         [
             'img_url' =>  get_template_directory_uri() . '/img/elements/leva-e-traz.png',
@@ -110,7 +110,7 @@ get_header();
     ?>
     <div class="element-float-box">
         <div class="element-float-box-item el-011 rellax" data-rellax-speed="2" style="top:0px;right:0;margin-top:100px;margin-right: 0px;" data-aos="zoom-out" data-aos-duration="500"></div>
-        <div class="element-float-box-item el-04 rellax" data-rellax-speed="-2" style="left:0;bottom:0;margin-left:-200px;margin-bottom:-300px" data-aos="zoom-out" data-aos-duration="500"></div>
+        <div class="element-float-box-item el-04 rellax" data-rellax-speed="2" style="left:0;bottom:0;margin-left:-200px;margin-bottom:-300px" data-aos="zoom-out" data-aos-duration="500"></div>
         <?php
         echo $call_action::get_call_action($text, $button);
         ?>
@@ -187,7 +187,9 @@ get_header();
                     <div class="col-xl-8 col-md-10">
                         <div class="contact-form-content rellax" data-rellax-speed="0">
                             <h4 class="contact-form-content-title" data-aos="zoom-out" data-aos-delay="100" data-aos-duration="1000">Quer aproveitar os benefícios que as nossas <mark>e-bikes oferecem?</mark></h4>
-                            <p class="contact-form-content-text" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000"> Indique para sua empresa nossas soluções corporativas.</p>
+                            <p class="contact-form-content-text" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000">Quer aproveitar os benefícios que as nossas e-bikes oferecem?
+                                <br>Indique para sua empresa nossas soluções corporativas.
+                            </p>
                         </div>
                         <div class="contact-form-form">
                             <?php

@@ -13,12 +13,22 @@
 <body <?php body_class(); ?>>
     <header id="header" class="header">
         <div class="container">
-            <nav class="navbar navbar-expand-xl navbar-dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="<?= get_home_url() ?>"><img src="<?= get_template_directory_uri() ?>/img/logo.svg" alt="E-moving"></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <div class="container-fluid px-2">
+                    <a class="navbar-brand" href="<?= get_home_url() ?>">
+                        <picture>
+                            <?php if (get_field('logo_alternativo', 'option')) :
+                                $logo_mobile = get_field('logo_alternativo', 'option');
+                                $src_logo_mobil = $logo_mobile['url'];
+                            ?>
+                                <source media="(max-width: 768px)" srcset="<?= $src_logo_mobil ?>">
+                            <?php endif; ?>
+                            <img src="<?= get_template_directory_uri() ?>/img/logo.svg" alt="E-moving">
+                        </picture>
+                    </a>
+                    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
-                    </button>
+                    </button> -->
                     <div class="collapse navbar-collapse" id="main_nav">
                         <?php
                         wp_nav_menu(
@@ -35,11 +45,25 @@
                         );
                         ?>
 
-                        <ul class="navbar-nav">
+                        <ul class="navbar-nav d-xxl-block d-none">
                             <li class="nav-item"><a class="bt bt-secondary" href="<?= get_home_url(); ?>/#indique">Indique sua empresa</a></li>
                         </ul>
                     </div> <!-- navbar-collapse.// -->
                 </div> <!-- container-fluid.// -->
+            </nav>
+
+            <nav id="nav-menu-container">
+                <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location'    => 'menu_header',
+                        'menu_class'      => 'nav-menu',
+                        'container'       => '',
+                        'container_class' => '',
+                        'container_id'    => '',
+                    )
+                );
+                ?>
             </nav>
         </div>
     </header>

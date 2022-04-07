@@ -94,7 +94,7 @@ class Page_Hero
                     endif;
                     if (!empty($text)) : ?>
                         <div class="row justify-content-center mt-auto">
-                            <div class="col-xl-6 col-lg-8 col-md-10">
+                            <div class="col-xl-8 col-lg-10 col-md-12">
                                 <div class="hero-default-text" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000"><?= $text ?></div>
                             </div>
                         </div>
@@ -183,12 +183,12 @@ class Page_Hero
                 <?php endif; ?>
                 <div class="container">
                     <?php if (!empty($obj)) : ?>
-                        <div class="row justify-content-md-center justify-content-end">
-                            <div class="col-xxl-6 col-lg-7 col-md-10 <?php if (!empty($obj['image'])) : ?>col-9<?php endif; ?>">
+                        <div class="row justify-content-md-center justify-content-center">
+                            <div class="col-xxl-6 col-lg-7 col-md-10 <?php if (!empty($obj['image'])) : ?>col-12<?php endif; ?>">
                                 <div class="hero-home-content rellax" data-rellax-speed="1">
                                     <?php if (!empty($obj['image'])) : ?>
                                         <div class="hero-home-content-img rellax" data-rellax-horizontal-speed="7   " data-rellax-vertical-scroll-axis="x" data-aos-delay="300" data-aos-duration="1000">
-                                            <img data-aos="fade-left" src="<?= $obj['image'] ?>" alt="<?= $obj['title'] ?>">
+                                            <img class="d-md-block d-none" data-aos="fade-left" src="<?= $obj['image'] ?>" alt="<?= $obj['title'] ?>">
                                         </div>
                                     <?php endif; ?>
                                     <h1 class="hero-home-content-title" data-aos="zoom-out" data-aos-delay="100" data-aos-duration="1000"><?= $obj['title'] ?></h1>

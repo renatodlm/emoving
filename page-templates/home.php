@@ -24,7 +24,7 @@ get_header();
      */
 
     $hero_obj = [
-        'title' => 'Unimos <mark>mobilidade</mark> e <mark>qualidade</mark> de vida',
+        'title' => 'Unimos <mark>mobilidade</mark> e <mark>qualidade</mark> de vida!',
         'text' => 'O primeiro benefício corporativo de <mark>mobilidade sustentável</mark> pensado para os seus colaboradores.',
         'image' =>  get_template_directory_uri() . '/img/bikes/bike-01.png',
         'background-image' =>  get_template_directory_uri() . '/img/hero.png',
@@ -61,7 +61,7 @@ get_header();
             'img_url' =>  get_template_directory_uri() . '/img/elements/calendar.png',
             'img_alt' => 'top-left',
             'title' => 'AGENDE UMA APRESENTAÇÃO',
-            'text' => 'Solicite uma proposta e contrate um plano de acordo com as suas necessidades.',
+            'text' => 'Saiba mais sobre nossos modelos de assinatura e exponha suas demandas.',
         ],
         [
             'img_url' =>  get_template_directory_uri() . '/img/elements/top-right.png',
@@ -296,7 +296,9 @@ get_header();
                     <div class="col-xl-8 col-md-10">
                         <div class="contact-form-content">
                             <h4 class="contact-form-content-title" data-aos="zoom-out" data-aos-delay="100" data-aos-duration="1000">Quer aproveitar os benefícios que as nossas <mark>e-bikes oferecem?</mark></h4>
-                            <p class="contact-form-content-text" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000">Para ser nosso assinante, indique a melhor pessoa da sua empresa para apresentarmos nossa solução corporativa e mediante a contratação do nosso benefício, sua empresa disponibilizará para você uma e-bike</p>
+                            <p class="contact-form-content-text" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000">Quer aproveitar os benefícios que as nossas e-bikes oferecem?
+                                <br>Indique para sua empresa nossas soluções corporativas.
+                            </p>
                         </div>
                         <div class="contact-form-form">
                             <?php

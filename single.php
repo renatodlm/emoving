@@ -4,8 +4,37 @@ use Classes\Page_Hero;
 
 get_header();
 ?>
-<div class="main-body">
-
+<div class="main-body single-post-custom">
+    <section class="filtro-blog no-margin-bottom">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="filtro-blog-title"><i class="filtro-blog-title-icon"></i>Filtro</div>
+                <div class="filtro-blog-content">
+                    <div class="sidebar-item">
+                        <div class="search-default">
+                            <?php get_search_form(); ?>
+                        </div>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="categories">
+                            <div class="categories-title">Categorias</div>
+                            <ul class="categories-list">
+                                <?php
+                                $categories = get_categories();
+                                foreach ($categories as $category) :
+                                    global $wp;
+                                ?>
+                                    <li class="categories-list-item"><a class="categories-list-item-link <?php if (get_the_archive_title() == $category->name) {
+                                                                                                                echo 'cat-active';
+                                                                                                            } ?>" href="<?= get_category_link($category->term_id) ?>"><?= $category->name ?></a></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <?php
 
     /**

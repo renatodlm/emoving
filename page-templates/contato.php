@@ -12,51 +12,54 @@
 use Classes\Page_Hero;
 
 get_header();
-
-/**
- * Hero
- */
-
-$default_obj = [
-    'title' => '',
-    'text' => '',
-    'background-image' =>  get_template_directory_uri() . '/img/contato.jpg',
-    'background-color' => '#444580',
-    'before' => false,
-    'after' => true,
-    'link' => ''
-];
-$text = null;
-
-$hero = new Page_Hero;
-echo $hero::default_contato($default_obj, $text);
-
-
 ?>
-<section id="contato" class="contact-form">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-xl-7 col-md-10 mb-5">
-                <div class="contact-form-content">
-                    <h4 class="contact-form-content-title">Preencha o formulário e fale com a gente</h4>
-                    <p class="contact-form-content-text">Vamos juntos transformar a mobilidade urbana!</p>
-                </div>
-            </div>
-            <div class="col-xl-8 col-md-10">
+<div class="main-body">
+    <?php
 
-                <div class="contact-form-form">
-                    <?php
-                    $shortcode = get_field('shortcode');
-                    if (!empty($shortcode)) {
-                        echo do_shortcode($shortcode);
-                    }
-                    ?>
+    /**
+     * Hero
+     */
+
+    $default_obj = [
+        'title' => '',
+        'text' => '',
+        'background-image' =>  get_template_directory_uri() . '/img/contato.jpg',
+        'background-color' => '#444580',
+        'before' => false,
+        'after' => true,
+        'link' => ''
+    ];
+    $text = null;
+
+    $hero = new Page_Hero;
+    echo $hero::default_contato($default_obj, $text);
+
+
+    ?>
+    <section id="contato" class="contact-form">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-7 col-md-10 mb-5">
+                    <div class="contact-form-content">
+                        <h4 class="contact-form-content-title">Preencha o formulário e fale com a gente</h4>
+                        <p class="contact-form-content-text">Vamos juntos transformar a mobilidade urbana!</p>
+                    </div>
+                </div>
+                <div class="col-xl-8 col-md-10">
+
+                    <div class="contact-form-form">
+                        <?php
+                        $shortcode = get_field('shortcode');
+                        if (!empty($shortcode)) {
+                            echo do_shortcode($shortcode);
+                        }
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<?php /* ?>
+    </section>
+    <?php /* ?>
 <section class="imprensa">
     <div class="container">
         <div class="row justify-content-center">
@@ -73,6 +76,7 @@ echo $hero::default_contato($default_obj, $text);
     </div>
 </section>
 <?php */ ?>
+</div>
 <?php
 
 get_footer();
