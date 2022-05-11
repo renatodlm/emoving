@@ -5,11 +5,25 @@
     width: 100%;
     top: 0;
     left: 0;
+    transition: 0.3s ease;
+    @media (max-width: $md) {
+        background-color: $body;
+        padding: 10px 0;
+    }
+    &.fixed-top {
+        padding: 10px 0;
+        position: fixed;
+        background-color: rgba($body, 0.9);
+        box-shadow: 0 0px 8px rgba(0, 0, 0, 0.07);
+    }
     .navbar-nav {
         .nav-item {
             padding: 0 30px;
             position: relative;
             transition: all ease 0.3s;
+            @media (max-width: $xl) {
+                margin-bottom: 15px;
+            }
             &::before {
                 content: " ";
                 position: absolute;
@@ -18,6 +32,9 @@
                 background-color: $white;
                 top: calc(50% - 8.5px);
                 right: 0;
+                @media (max-width: $xl) {
+                    display: none;
+                }
             }
             &:last-child {
                 margin-right: 0;
@@ -30,6 +47,7 @@
                 @extend %font-18;
                 display: flex;
                 transition: all ease 0.3s;
+                align-items: center;
             }
             &:hover,
             &:focus {
@@ -53,6 +71,14 @@
                 padding-bottom: 20px;
                 width: 100%;
                 transition: all ease 0.3s;
+                @media (max-width: $xl) {
+                    width: fit-content;
+                    padding-top: 56px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    padding-bottom: 15px;
+                    margin-left: -15px;
+                }
                 li {
                     text-align: center;
                     .dropdown-item {
@@ -139,4 +165,454 @@
     width: 24px;
     height: 6.01px;
     transform: rotate(-90deg);
+}
+
+.navbar-brand {
+    max-width: 60%;
+    @media (max-width: $md) {
+        img {
+            width: 150px;
+            max-width: 100%;
+        }
+    }
+}
+
+.dropdown-menu {
+    .nav-item {
+        &::before {
+            display: none !important;
+            content: "" !important;
+        }
+    }
+}
+
+// @media (max-width: 1199px) {
+//     #main_nav {
+//         margin-top: 15px;
+//         transition: 0s;
+//         background-color: $primary;
+//         padding: 20px 15px;
+//         border-radius: 15px;
+//     }
+// }
+
+.navbar-toggler[aria-expanded="true"] {
+    .navbar-toggler-icon {
+        background-image: url(../img/close-white.svg);
+        background-repeat: no-repeat;
+        background-size: 16px;
+        background-position: center;
+    }
+}
+
+.nav-up {
+    top: -120px;
+}
+
+.whatsapp-flutuante {
+    z-index: 9999;
+    background-image: url(../img/whatsapp.png);
+    background-size: cover;
+    background-position: center center;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    transition: opacity 0.5s;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.4));
+    a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
+    i {
+        color: $white;
+        font-size: 21px;
+        line-height: 21px;
+    }
+    &:hover {
+        opacity: 0.6;
+    }
+    @media screen and (max-width: $sm) {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+
+/* Nav Menu Essentials */
+
+.nav-menu,
+.nav-menu * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu ul {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    z-index: 99;
+}
+
+.nav-menu li {
+    position: relative;
+    white-space: nowrap;
+}
+
+.nav-menu > li {
+    float: left;
+}
+
+.nav-menu li:hover > ul,
+.nav-menu li.sfHover > ul {
+    display: block;
+}
+
+.nav-menu ul ul {
+    top: 0;
+    left: 100%;
+}
+
+.nav-menu ul li {
+    min-width: 180px;
+}
+
+/* Nav Menu Arrows */
+
+.sf-arrows .sf-with-ul {
+    padding-right: 30px;
+}
+
+.sf-arrows .sf-with-ul:after {
+    content: " ";
+    position: absolute;
+    right: 12px;
+    top: 7px;
+    background-image: url(../img/menu/drop-down-arrow.svg);
+    background-repeat: no-repeat;
+    background-size: 15px 10px;
+    background-position: center;
+    width: 15px;
+    height: 10px;
+}
+
+.sf-arrows ul .sf-with-ul:after {
+    content: " ";
+    background-image: (url(../img/menu/right-white.svg));
+    background-repeat: no-repeat;
+    background-size: 15px 10px;
+    background-position: center;
+    width: 15px;
+    height: 10px;
+    right: 5px;
+    margin-top: 7px;
+}
+
+/* Nav Meu Container */
+
+#nav-menu-container {
+    float: right;
+    margin: 0;
+    display: none;
+}
+
+/* Nav Meu Styling */
+
+.nav-menu a {
+    padding: 0 10px 0px 0px;
+    text-decoration: none;
+    display: inline-block;
+    color: $white;
+    font-weight: 300;
+    font-size: 15px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {
+    .nav-menu a {
+        padding: 0 10px 0px 0px;
+        text-decoration: none;
+        display: inline-block;
+        color: $white;
+        font-weight: 300;
+        font-size: 12px;
+        text-transform: uppercase;
+        outline: none;
+    }
+}
+
+.nav-menu li:hover > a,
+.nav-menu > .menu-active > a {
+    color: $white;
+}
+
+.nav-menu > li:not(:first-child) {
+    margin-left: 5px;
+}
+
+.nav-menu ul {
+    background: $primary;
+}
+
+.nav-menu ul li {
+    transition: 0.3s;
+}
+
+.nav-menu ul li a {
+    padding: 10px;
+    color: $white;
+    transition: 0.3s;
+    display: block;
+    font-size: 18px;
+    line-height: 1.2;
+    text-transform: none;
+}
+
+.nav-menu ul li:hover > a {
+    color: $white;
+    background-color: $primary;
+}
+
+.nav-menu ul li:hover {
+    background-color: $primary;
+}
+.nav-menu ul li:not(:last-child) {
+    border-bottom: 1px solid $white;
+}
+.nav-menu ul ul {
+    margin: 0;
+}
+
+/* Mobile Nav Toggle */
+
+#mobile-nav-toggle {
+    position: absolute;
+    z-index: 9999;
+    top: 25px;
+    right: 40px;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    display: none;
+    transition: all 0.3s;
+    outline: none;
+    cursor: pointer;
+}
+
+#mobile-nav-toggle i {
+    color: $white;
+}
+
+/* Mobile Nav Styling */
+
+#mobile-nav {
+    position: fixed;
+    top: 0;
+    padding-top: 18px;
+    bottom: 0;
+    z-index: 9998;
+    background-color: $primary;
+    left: -20vw;
+    width: 20vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: 0.3s;
+}
+
+#mobile-nav {
+    & .btn-agendamento {
+        margin-top: 30px;
+        float: left;
+        margin-left: 15px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 601px) {
+    #mobile-nav {
+        left: -50vw;
+        width: 50vw;
+    }
+}
+@media (max-width: 600px) {
+    #mobile-nav {
+        left: -70vw;
+        width: 70vw;
+    }
+}
+
+#mobile-nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#mobile-nav ul li {
+    position: relative;
+}
+
+#mobile-nav ul li a {
+    color: $white;
+    font-size: 18px;
+    line-height: 1.2;
+    overflow: hidden;
+    padding: 10px 22px 10px 15px;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    outline: none;
+}
+
+#mobile-nav ul li a:hover {
+    color: $secondary_4;
+}
+
+#mobile-nav ul li li {
+    padding-left: 15px;
+}
+
+#mobile-nav ul li.menu-active a {
+    color: $secondary_4;
+}
+
+#mobile-nav ul .menu-has-children i {
+    position: absolute;
+    right: 0;
+    z-index: 9998;
+    padding: 15px;
+    cursor: pointer;
+    color: $white;
+}
+
+#mobile-nav ul .menu-has-children i.fa-chevron-up {
+    color: $secondary_4;
+}
+
+#mobile-nav ul .menu-has-children li a {
+    text-transform: none;
+}
+
+#mobile-nav ul .menu-item-active {
+    color: $secondary_4;
+    background-color: $primary;
+}
+
+#mobile-body-overly {
+    width: 100%;
+    height: 100%;
+    z-index: 9997;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgba($purple_dark, 0.6);
+    display: none;
+}
+
+/* Mobile Nav body classes */
+
+body.mobile-nav-active {
+    overflow: hidden;
+}
+
+body.mobile-nav-active #mobile-nav {
+    left: 0;
+}
+
+body.mobile-nav-active #mobile-nav-toggle {
+    color: $white;
+}
+
+@media (min-width: 1024px) {
+    #nav-menu-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: $md) {
+    #nav-menu-container {
+        display: none;
+    }
+
+    #mobile-nav-toggle {
+        display: inline;
+    }
+}
+
+#mobile-nav-toggle {
+    & i.menu__mobile--bars {
+        background-image: (url(../img/menu/menu-button.svg));
+        background-repeat: no-repeat;
+        background-size: 30px 24px;
+        background-position: center;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+    }
+    & i {
+        background-image: (url(../img/menu/close-white.svg));
+        background-repeat: no-repeat;
+        background-size: 20px;
+        background-position: center;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+    }
+}
+.sub-menu {
+    display: none;
+}
+.ul__sub-menu--active {
+    background-color: rgba($purple_dark, 0.4) !important;
+}
+
+.ul__sub-menu--active .ul__sub-menu--active {
+    background-color: $secondary_4 !important;
+}
+
+.ul__sub-menu--active .ul__sub-menu--active .ul__sub-menu--active {
+    background-color: rgba($purple_dark, 0.4) !important;
+}
+
+.ul__sub-menu--active .ul__sub-menu--active .ul__sub-menu--active .ul__sub-menu--active {
+    background-color: $secondary_4 !important;
+}
+
+.fa-chevron-down {
+    top: -1px;
+    background-image: (url(../img/menu/drop-down.svg));
+    background-repeat: no-repeat;
+    background-size: 15px 10px;
+    background-position: center;
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    z-index: 9999;
+}
+.fa-chevron-up {
+    top: -1px;
+    background-image: (url(../img/menu/drop-down.svg));
+    background-repeat: no-repeat;
+    background-size: 15px 10px;
+    background-position: center;
+    transform: rotate(-180deg);
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    z-index: 9999;
+}
+
+.position-fixed {
+    position: fixed !important;
 }

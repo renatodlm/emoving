@@ -1,63 +1,90 @@
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-xl-3">
+            <div class="col-lg-3 order-1">
                 <div class="footer-about">
-                    <img class="footer-about-img" src="./img/logo-footer.svg" style="width:158.79px;max-width:100%;height:auto" alt="E-mooving">
-                    <p class="footer-about-text">Venha com a E-Moving revolucionar a mobilidade urbana e-reinventar a roda.</p>
-                    <ul class="footer-about-social">
-                        <li class="footer-about-social-item"><img class="footer-about-social-item-icon facebook" src="./img/Icons/facebook-line.svg" alt="facebook"></li>
-                        <li class="footer-about-social-item"><img class="footer-about-social-item-icon instagram" src="./img/Icons/instagram.svg" alt="instagram"></li>
-                        <li class="footer-about-social-item"><img class="footer-about-social-item-icon youtube" src="./img/Icons/youtube.svg" alt="youtube"></li>
-                        <li class="footer-about-social-item"><img class="footer-about-social-item-icon linkedin" src="./img/Icons/linkedin.svg" alt="linkedin"></li>
-                    </ul>
+                    <picture>
+                        <?php if (get_field('logo_alternativo', 'option')) :
+                            $logo_mobile = get_field('logo_alternativo', 'option');
+                            $src_logo_mobil = $logo_mobile['url'];
+                        ?>
+                            <source media="(max-width: 768px)" srcset="<?= $src_logo_mobil ?>">
+                        <?php endif; ?>
+                        <img class="footer-about-img" src="<?= get_template_directory_uri() ?>/img/logo-footer.svg" alt="E-mooving">
+                    </picture>
+                    <p class="footer-about-text text-center text-md-start"><?= get_field('footer_slogan', 'option') ?></p>
+                    <?php
+
+                    /**
+                     * Social Share
+                     */
+                    get_template_part('template-parts/content',  'social-share');
+                    ?>
                 </div>
             </div>
 
-            <div class="col-xl-4">
+            <div class="col-lg-4 order-lg-2 order-3 d-md-block d-none">
                 <div class="footer-liks">
-                    <h4 class="footer-liks-title">Links úteis</h4>
-                    <ul class="footer-liks-menu">
-                        <li class="footer-liks-menu-item"><a class="footer-liks-menu-item-link" href="#">Home</a></li>
-                        <li class="footer-liks-menu-item"><a class="footer-liks-menu-item-link" href="#">Blog</a></li>
-                        <li class="footer-liks-menu-item"><a class="footer-liks-menu-item-link" href="#">Termos e Condições</a></li>
-                        <li class="footer-liks-menu-item"><a class="footer-liks-menu-item-link" href="#">Intranet</a></li>
-                        <li class="footer-liks-menu-item"><a class="footer-liks-menu-item-link" href="#">Minha conta</a></li>
-                        <li class="footer-liks-menu-item"><a class="footer-liks-menu-item-link" href="#">Mapa do Site</a></li>
-                        <li class="footer-liks-menu-item"><a class="footer-liks-menu-item-link" href="#">Como funciona</a></li>
-                        <li class="footer-liks-menu-item"><a class="footer-liks-menu-item-link" href="#">Quem somos</a></li>
-                        <li class="footer-liks-menu-item"><a class="footer-liks-menu-item-link" href="#">E-bike 4 work</a></li>
-                        <li class="footer-liks-menu-item"><a class="footer-liks-menu-item-link" href="#">E-bike sharing</a></li>
-                        <li class="footer-liks-menu-item"><a class="footer-liks-menu-item-link" href="#">E-bike benefício</a></li>
-                    </ul>
+                    <h4 class="footer-liks-title"><?= __('Links úteis', 'emoving'); ?></h4>
+                    <?php
+                    wp_nav_menu(
+                        array(
+                            'theme_location'    => 'menu_uteis',
+                            'depth'             => 2,
+                            'container'         => 'ul',
+                            'container_class'   => 'navbar-nav ms-auto',
+                            'container_id'      => 'menu-collapse',
+                            'menu_class'        => 'footer-liks-menu',
+                            'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                            'walker'            => new WP_Bootstrap_Navwalker(),
+                        )
+                    );
+                    ?>
                 </div>
             </div>
-            <div class="col-xl-4 offset-1">
+            <div class="col-lg-4 offset-lg-1 order-lg-3 order-3">
                 <div class="footer-newsletter">
-                    <h4 class="footer-newsletter-title">inscreva-se agora!</h4>
-                    <form action="" class="footer-newsletter-form">
-                        <input type="text" placeholder="Digite seu melhor e-mail"><input class="bt bt-primary" type="submit" value="Enviar agora">
-                    </form>
+
+                    <?php $shortcode_newslleter = get_field('footer_newslleter', 'option');
+                    if ($shortcode_newslleter) : ?>
+                        <div class="footer-newsletter-content">
+                            <h4 class="footer-newsletter-title"><?= __('inscreva-se agora!', 'emoving'); ?></h4>
+                            <?php
+                            echo do_shortcode($shortcode_newslleter);
+                            ?>
+
+                        </div>
+                    <?php
+                    endif;
+                    ?>
+
                     <ul class="footer-newsletter-social">
-                        <li class="footer-newsletter-social-item"><a class="footer-newsletter-social-item-link email" href="">ola@e-moving.com.br</a></li>
-                        <li class="footer-newsletter-social-item"><a class="footer-newsletter-social-item-link whatsapp" href="#">+55 11 99394-3475</a></li>
+                        <?php if (!empty(get_field('email', 'option'))) : ?>
+                            <li class="footer-newsletter-social-item"><a class="footer-newsletter-social-item-link email" href="mailto:<?= get_field('email', 'option') ?>"><?= get_field('email', 'option') ?></a></li>
+                        <?php endif;; ?>
+                        <?php
+                        $whatsapp_flutuante = get_field('whatsapp_flutuante', 'option');
+                        $whatsapp = get_field('whatsapp', 'option');
+                        if (!empty($whatsapp)) :
+                            $whatsapp_number = preg_replace('/\D/', '', $whatsapp);
+                        endif;
+                        ?>
+                        <?php if (!empty($whatsapp_flutuante) && !empty($whatsapp)) : ?>
+                            <li class="footer-newsletter-social-item"><a class="footer-newsletter-social-item-link whatsapp" href="https://api.whatsapp.com/send/?phone=<?= $whatsapp_number; ?>" target="_blank"><?= $whatsapp ?></a></li>
+                        <?php endif; ?>
                     </ul>
-                    <div class="footer-newsletter-cnpj">
-                        E-MOVING - CNPJ: 22.102.480/0001-34
-                    </div>
+
+                    <?php if (!empty(get_field('footer_copy_text', 'option'))) : ?>
+                        <div class="footer-newsletter-cnpj">
+                            <?= get_field('footer_copy_text', 'option'); ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
     </div>
 </footer>
-
+<?php wp_footer(); ?>
 </body>
-<!-- jQuery 3.6.0 -->
-<script src="./vendor/jquery/jquery-3.6.0.min.js"></script>
-<!-- Boostrap JS Bundle -->
-<script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-<!-- Main JavaScript -->
-<script src="./js/main.js"></script>
 
 </html>

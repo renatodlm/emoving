@@ -1,8 +1,15 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: $font-primary;
     background-color: $body;
     overflow-x: hidden;
     color: $white;
+}
+.main-body {
+    overflow: hidden;
+    transition: filter 0.3s ease;
 }
 
 ::selection {
@@ -116,7 +123,132 @@ textarea {
     }
 }
 
+.body-blur {
+    filter: blur(4px);
+}
+
 .swiper {
     width: 100%;
     height: auto;
+}
+
+.wpcf7-spinner {
+    position: absolute;
+    top: calc(50% + 12px);
+}
+.contact-form-form {
+    text-align: left;
+}
+
+.wpcf7-response-output {
+    border-radius: 15px;
+}
+
+.error404 {
+    padding-top: 150px;
+    main {
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        h1 {
+            font-size: 200px;
+            line-height: 150px;
+            margin-bottom: 60px;
+            letter-spacing: 36px;
+            color: $body;
+            text-shadow: 2px 0 0 $white, -2px 0 0 $white, 0 2px 0 $white, 0 -2px 0 $white, 1px 1px $white,
+                -1px -1px 0 $white, 1px -1px 0 $white, -1px 1px 0 $white;
+        }
+    }
+    @media screen and (max-width: 576px) {
+        main {
+            padding-top: 60px;
+            padding-bottom: 60px;
+            h1 {
+                font-size: 120px;
+                line-height: 100px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+//@media screen and (max-width: $md) {
+body [data-aos][data-aos][data-aos-duration][data-aos-delay] {
+    transition-delay: 0ms;
+    transition-duration: 0ms;
+}
+//}
+.post-content {
+    p,
+    span,
+    b {
+        color: $white;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $white;
+    }
+}
+
+.blog-swiper {
+    .swiper-button-prev,
+    .swiper-rtl .swiper-button-next {
+        &::after {
+            color: $white;
+        }
+        @media (max-width: $md) {
+            background-image: url(../img/slide/prev.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 24px;
+            height: 24px;
+            top: 100%;
+            right: 70px;
+            left: unset !important;
+            &::after {
+                display: none;
+            }
+            &:focus,
+            &:hover {
+                background-image: url(../img/slide/prev-active.svg);
+            }
+        }
+    }
+
+    .swiper-button-next,
+    .swiper-rtl .swiper-button-prev {
+        &::after {
+            color: $white;
+        }
+        @media (max-width: $md) {
+            background-image: url(../img/slide/next.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 24px;
+            height: 24px;
+            top: 100%;
+            right: 15px;
+            &::after {
+                display: none;
+            }
+            &:focus,
+            &:hover {
+                background-image: url(../img/slide/next-active.svg);
+            }
+        }
+    }
+    @media (max-width: $md) {
+        .swiper-pagination {
+            width: fit-content !important;
+        }
+    }
 }
