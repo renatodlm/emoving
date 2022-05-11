@@ -1106,6 +1106,17 @@
             margin: 0 !important;
         }
     }
+    &.categories {
+        .swiper {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.swiper.index-page {
+    width: 100%;
+    height: auto;
 }
 
 .blog {

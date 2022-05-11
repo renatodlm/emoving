@@ -3,17 +3,10 @@
 get_header();
 ?>
 <div class="main-body">
-    <style>
-        .swiper {
-            width: 100%;
-            height: auto;
-        }
-    </style>
-
     <section class="filtro-blog">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="filtro-blog-title"><i class="filtro-blog-title-icon"></i>Filtro</div>
+                <div class="filtro-blog-title"><i class="filtro-blog-title-icon"></i><?= __('Filtro', 'emoving'); ?></div>
                 <div class="filtro-blog-content">
                     <div class="sidebar-item">
                         <div class="search-default">
@@ -22,7 +15,7 @@ get_header();
                     </div>
                     <div class="sidebar-item">
                         <div class="categories">
-                            <div class="categories-title">Categorias</div>
+                            <div class="categories-title"><?= __('Categorias', 'emoving') ?></div>
                             <ul class="categories-list">
                                 <?php
                                 $categories = get_categories();
@@ -43,7 +36,7 @@ get_header();
     <?php if (!get_query_var('paged') && !empty(get_option('sticky_posts'))) : ?>
         <section id="blog-header" class="blog-header">
             <div class="container">
-                <div class="swiper blog-swiper">
+                <div class="swiper blog-swiper index-page">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
@@ -148,7 +141,7 @@ get_header();
                         </div>
                         <div class="sidebar-item">
                             <div class="categories">
-                                <div class="categories-title">Categorias</div>
+                                <div class="categories-title"><?= __('Categorias', 'emoving') ?></div>
                                 <ul class="categories-list">
                                     <?php
                                     $categories = get_categories();

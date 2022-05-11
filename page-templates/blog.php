@@ -12,207 +12,154 @@
 get_header();
 ?>
 <div class="main-body">
-    <style>
-        .swiper {
-            width: 100%;
-            height: auto;
-        }
-    </style>
-
-    <section id="blog-header" class="blog-header">
+    <section class="filtro-blog">
         <div class="container">
-            <div class="swiper blog-swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <div class="swiper-slide">
-                            <div class="swiper-slide">
-                                <div class="blog-header-slider-swiper-item">
-                                    <a href="./single.php">
-                                        <div class="blog-header-slider-swiper-item-image-box">
-                                            <picture>
-                                                <img class="blog-header-slider-swiper-item-image-box-thumbnail" src="<?= get_template_directory_uri() ?>/img/blog-destaque.png" alt="blog item">
-                                            </picture>
-                                        </div>
-                                    </a>
-                                    <h2 class="blog-header-slider-swiper-item-title"><a href="./single.php">Ciclismo seguro: tudo o que você precisa para pedalar em segurança</a></h2>
-                                    <div class="blog-header-slider-swiper-item-post-info">
-                                        <ul class="blog-header-slider-swiper-item-post-info-tags">
-                                            <li><a href="#">Mobilidade urbana</a></li>
-                                            <li><a href="#">Na cidade</a></li>
-                                        </ul>
-                                        <div class="blog-header-slider-swiper-item-post-info-date">
-                                            21/01/2022
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="row justify-content-center">
+                <div class="filtro-blog-title"><i class="filtro-blog-title-icon"></i><?= __('Filtro', 'emoving'); ?></div>
+                <div class="filtro-blog-content">
+                    <div class="sidebar-item">
+                        <div class="search-default">
+                            <?php get_search_form(); ?>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide">
-                            <div class="swiper-slide">
-                                <div class="blog-header-slider-swiper-item">
-                                    <a href="./single.php">
-                                        <div class="blog-header-slider-swiper-item-image-box">
-                                            <picture>
-                                                <img class="blog-header-slider-swiper-item-image-box-thumbnail" src="<?= get_template_directory_uri() ?>/img/blog-destaque.png" alt="blog item">
-                                            </picture>
-                                        </div>
-                                    </a>
-                                    <h2 class="blog-header-slider-swiper-item-title"><a href="./single.php">Ciclismo seguro: tudo o que você precisa para pedalar em segurança</a></h2>
-                                    <div class="blog-header-slider-swiper-item-post-info">
-                                        <ul class="blog-header-slider-swiper-item-post-info-tags">
-                                            <li><a href="#">Mobilidade urbana</a></li>
-                                            <li><a href="#">Na cidade</a></li>
-                                        </ul>
-                                        <div class="blog-header-slider-swiper-item-post-info-date">
-                                            21/01/2022
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="sidebar-item">
+                        <div class="categories">
+                            <div class="categories-title"><?= __('Categorias', 'emoving') ?></div>
+                            <ul class="categories-list">
+                                <?php
+                                $categories = get_categories();
+                                foreach ($categories as $category) :
+                                    global $wp;
+                                ?>
+                                    <li class="categories-list-item"><a class="categories-list-item-link <?php if (get_the_archive_title() == $category->name) {
+                                                                                                                echo 'cat-active';
+                                                                                                            } ?>" href="<?= get_category_link($category->term_id) ?>"><?= $category->name ?></a></li>
+                                <?php endforeach; ?>
+                            </ul>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide">
-                            <div class="swiper-slide">
-                                <div class="blog-header-slider-swiper-item">
-                                    <a href="./single.php">
-                                        <div class="blog-header-slider-swiper-item-image-box">
-                                            <picture>
-                                                <img class="blog-header-slider-swiper-item-image-box-thumbnail" src="<?= get_template_directory_uri() ?>/img/blog-destaque.png" alt="blog item">
-                                            </picture>
-                                        </div>
-                                    </a>
-                                    <h2 class="blog-header-slider-swiper-item-title"><a href="./single.php">Ciclismo seguro: tudo o que você precisa para pedalar em segurança</a></h2>
-                                    <div class="blog-header-slider-swiper-item-post-info">
-                                        <ul class="blog-header-slider-swiper-item-post-info-tags">
-                                            <li><a href="#">Mobilidade urbana</a></li>
-                                            <li><a href="#">Na cidade</a></li>
-                                        </ul>
-                                        <div class="blog-header-slider-swiper-item-post-info-date">
-                                            21/01/2022
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide">
-                            <div class="swiper-slide">
-                                <div class="blog-header-slider-swiper-item">
-                                    <a href="./single.php">
-                                        <div class="blog-header-slider-swiper-item-image-box">
-                                            <picture>
-                                                <img class="blog-header-slider-swiper-item-image-box-thumbnail" src="<?= get_template_directory_uri() ?>/img/blog-destaque.png" alt="blog item">
-                                            </picture>
-                                        </div>
-                                    </a>
-                                    <h2 class="blog-header-slider-swiper-item-title"><a href="./single.php">Ciclismo seguro: tudo o que você precisa para pedalar em segurança</a></h2>
-                                    <div class="blog-header-slider-swiper-item-post-info">
-                                        <ul class="blog-header-slider-swiper-item-post-info-tags">
-                                            <li><a href="#">Mobilidade urbana</a></li>
-                                            <li><a href="#">Na cidade</a></li>
-                                        </ul>
-                                        <div class="blog-header-slider-swiper-item-post-info-date">
-                                            21/01/2022
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
             </div>
         </div>
-
     </section>
+    <?php if (!get_query_var('paged') && !empty(get_option('sticky_posts'))) : ?>
+        <section id="blog-header" class="blog-header">
+            <div class="container">
+                <div class="swiper blog-swiper index-page">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <?php
+                        $args = [
+                            'post_type' => 'post',
+                            'posts_per_page' => 4,
+                            'post__in' =>  get_option('sticky_posts')
+                        ];
+                        $loop = new WP_Query($args);
+                        if ($loop->have_posts()) :
+                            while ($loop->have_posts()) : $loop->the_post();
+                        ?>
+                                <div class="swiper-slide">
+                                    <div class="blog-header-slider-swiper-item">
+                                        <a href="<?= get_permalink() ?>">
+                                            <div class="blog-header-slider-swiper-item-image-box">
+                                                <picture>
+                                                    <img class="blog-header-slider-swiper-item-image-box-thumbnail" src="<?= get_the_post_thumbnail_url() ?>" alt="<?= get_the_title() ?>">
+                                                </picture>
+                                            </div>
+                                        </a>
+                                        <h2 class="blog-header-slider-swiper-item-title"><a href="<?= get_permalink() ?>"><?= get_the_title() ?></a></h2>
+                                        <div class="blog-header-slider-swiper-item-post-info">
+                                            <ul class="blog-item-post-info-tags">
+                                                <?php $categories = get_the_category(get_the_ID()); ?>
+                                                <?php foreach ($categories as $category) : ?>
+                                                    <li><a href="<?= get_category_link($category->term_id) ?>"><?= $category->name ?></a></li>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                            <div class="blog-header-slider-swiper-item-post-info-date">
+                                                <?= get_the_date('d/m/Y') ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        <?php endwhile;
+                        endif; ?>
+                        <?php wp_reset_postdata(); ?>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+        </section>
+    <?php endif; ?>
 
     <section class="blog">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <div class="blog-item">
-                        <article title="title">
-                            <a href="./single.php">
-                                <div class="blog-item-image-box">
-                                    <picture>
-                                        <img class="blog-item-image-box-thumbnail" src="<?= get_template_directory_uri() ?>/img//blog-item.png" alt="blog item">
-                                    </picture>
-                                </div>
-                            </a>
-                            <h2 class="blog-item-title"><a href="./single.php">Ciclismo seguro: tudo o que você precisa para pedalar em segurança</a></h2>
-                            <div class="blog-item-post-info">
-                                <ul class="blog-item-post-info-tags">
-                                    <li><a href="#">Mobilidade urbana</a></li>
-                                    <li><a href="#">Na cidade</a></li>
-                                </ul>
-                                <div class="blog-item-post-info-date">
-                                    21/01/2022
-                                </div>
+                    <?php
+                    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                    $args = [
+                        'posts_per_page' => 4,
+                        'paged' => $paged,
+                        'post_type' => 'post',
+                        'post__not_in' => get_option("sticky_posts"),
+                    ];
+                    $loop = new WP_Query($args);
+                    if ($loop->have_posts()) :
+                        while ($loop->have_posts()) : $loop->the_post();
+                    ?>
+                            <div class="blog-item">
+                                <article title="<?= get_the_title(); ?>">
+                                    <a href="<?= get_permalink() ?>">
+                                        <div class="blog-item-image-box">
+                                            <picture>
+                                                <img class="blog-item-image-box-thumbnail" src="<?= get_the_post_thumbnail_url() ?>" alt="blog item">
+                                            </picture>
+                                        </div>
+                                    </a>
+                                    <h2 class="blog-item-title"><a href="<?= get_permalink() ?>"><?= get_the_title() ?></a></h2>
+                                    <div class="blog-item-post-info">
+                                        <ul class="blog-item-post-info-tags">
+                                            <?php $categories = get_the_category(get_the_ID()); ?>
+                                            <?php foreach ($categories as $category) : ?>
+                                                <li><a href="<?= get_category_link($category->term_id) ?>"><?= $category->name ?></a></li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                        <div class="blog-item-post-info-date">
+                                            <?= get_the_date('d/m/Y') ?>
+                                        </div>
+                                    </div>
+                                </article>
                             </div>
-                        </article>
-                    </div>
-                    <div class="blog-item">
-                        <article title="title">
-                            <a href="./single.php">
-                                <div class="blog-item-image-box">
-                                    <picture>
-                                        <img class="blog-item-image-box-thumbnail" src="<?= get_template_directory_uri() ?>/img//blog-item.png" alt="blog item">
-                                    </picture>
-                                </div>
-                            </a>
-                            <h2 class="blog-item-title"><a href="./single.php">Ciclismo seguro: tudo o que você precisa para pedalar em segurança</a></h2>
-                            <div class="blog-item-post-info">
-                                <ul class="blog-item-post-info-tags">
-                                    <li><a href="#">Mobilidade urbana</a></li>
-                                    <li><a href="#">Na cidade</a></li>
-                                </ul>
-                                <div class="blog-item-post-info-date">
-                                    21/01/2022
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <ul class="blog-pagination">
-                        <li class="blog-pagination-item"><a href="#"><i class="blog-pagination-item-prev disabled"></i></a></li>
-                        <li class="blog-pagination-item active"><a href="#">1</a></li>
-                        <li class="blog-pagination-item"><a href="#">2</a></li>
-                        <li class="blog-pagination-item">...</li>
-                        <li class="blog-pagination-item"><a href="#">12</a></li>
-                        <li class="blog-pagination-item"><a href="#"><i class="blog-pagination-item-next"></i></a></li>
-                    </ul>
+                    <?php endwhile;
+                    endif; ?>
+
+                    <?php
+                    echo new_pagination($loop, $paged) ?>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 d-md-block d-none">
                     <div class="sidebar">
                         <div class="sidebar-item">
                             <div class="search-default">
-                                <form action="" class="search-default-form">
-                                    <input class="search-default-form-input" type="text" placeholder="Pesquisar...">
-                                    <input class="bt bt-primary" type="submit" value="">
-                                </form>
+                                <?php get_search_form(); ?>
                             </div>
                         </div>
                         <div class="sidebar-item">
                             <div class="categories">
-                                <div class="categories-title">Categorias</div>
+                                <div class="categories-title"><?= __('Categorias', 'emoving') ?></div>
                                 <ul class="categories-list">
-                                    <li class="categories-list-item"><a class="categories-list-item-link" href="#">Geral</a></li>
-                                    <li class="categories-list-item"><a class="categories-list-item-link" href="#">Mobilidade urbana</a></li>
-                                    <li class="categories-list-item"><a class="categories-list-item-link" href="#">cidade</a></li>
-                                    <li class="categories-list-item"><a class="categories-list-item-link" href="#">Na empresa</a></li>
-                                    <li class="categories-list-item"><a class="categories-list-item-link" href="#">No pedal</a></li>
-                                    <li class="categories-list-item"><a class="categories-list-item-link" href="#">Pessoas</a></li>
-                                    <li class="categories-list-item"><a class="categories-list-item-link" href="#">Por onde estamos</a></li>
-                                    <li class="categories-list-item"><a class="categories-list-item-link" href="#">Qualidade de vida</a></li>
-                                    <li class="categories-list-item"><a class="categories-list-item-link" href="#">Saúde</a></li>
-                                    <li class="categories-list-item"><a class="categories-list-item-link" href="#">Sustentabilidade</a></li>
+                                    <?php
+                                    $categories = get_categories();
+                                    foreach ($categories as $category) :
+                                    ?>
+                                        <li class="categories-list-item"><a class="categories-list-item-link <?php if (get_the_archive_title() == $category->name) {
+                                                                                                                    echo 'cat-active';
+                                                                                                                } ?>" href="<?= get_category_link($category->term_id) ?>"><?= $category->name ?></a></li>
+                                    <?php endforeach; ?>
                                 </ul>
                             </div>
                         </div>

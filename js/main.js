@@ -1,7 +1,5 @@
 jQuery(document).ready(function ($) {
 
-
-
     // Mobile Navigation
     if ($('#nav-menu-container').length) {
         var $mobile_nav = $('#nav-menu-container').clone().prop({

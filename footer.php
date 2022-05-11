@@ -3,7 +3,6 @@
         <div class="row">
             <div class="col-lg-3 order-1">
                 <div class="footer-about">
-
                     <picture>
                         <?php if (get_field('logo_alternativo', 'option')) :
                             $logo_mobile = get_field('logo_alternativo', 'option');
@@ -13,28 +12,20 @@
                         <?php endif; ?>
                         <img class="footer-about-img" src="<?= get_template_directory_uri() ?>/img/logo-footer.svg" alt="E-mooving">
                     </picture>
-                    <!-- <img class="footer-about-img" src="" style="width:158.79px;max-width:100%;height:auto" alt="E-mooving"> -->
-                    <p class="footer-about-text text-center text-md-start">Vamos juntos transformar a mobilidade urbana!</p>
-                    <ul class="footer-about-social">
-                        <?php if (get_field('facebook', 'option')) : ?>
-                            <li class="footer-about-social-item"> <a href="<?= get_field('facebook', 'option') ?>" target="_blank"><img class="footer-about-social-item-icon facebook" src="<?= get_template_directory_uri() ?>/img/Icons/facebook-line.svg" alt="facebook"></a></li>
-                        <?php endif; ?>
-                        <?php if (get_field('instagram', 'option')) : ?>
-                            <li class="footer-about-social-item"><a href="<?= get_field('instagram', 'option') ?>" target="_blank"><img class="footer-about-social-item-icon instagram" src="<?= get_template_directory_uri() ?>/img/Icons/instagram.svg" alt="instagram"></a></li>
-                        <?php endif; ?>
-                        <?php if (get_field('youtube', 'option')) : ?>
-                            <li class="footer-about-social-item"><a href="<?= get_field('youtube', 'option') ?>" target="_blank"><img class="footer-about-social-item-icon youtube" src="<?= get_template_directory_uri() ?>/img/Icons/youtube.svg" alt="youtube"></a></li>
-                        <?php endif; ?>
-                        <?php if (get_field('linkedin', 'option')) : ?>
-                            <li class="footer-about-social-item"><a href="<?= get_field('linkedin', 'option') ?>" target="_blank"><img class="footer-about-social-item-icon linkedin" src="<?= get_template_directory_uri() ?>/img/Icons/linkedin.svg" alt="linkedin"></a></li>
-                        <?php endif; ?>
-                    </ul>
+                    <p class="footer-about-text text-center text-md-start"><?= get_field('footer_slogan', 'option') ?></p>
+                    <?php
+
+                    /**
+                     * Social Share
+                     */
+                    get_template_part('template-parts/content',  'social-share');
+                    ?>
                 </div>
             </div>
 
             <div class="col-lg-4 order-lg-2 order-3 d-md-block d-none">
                 <div class="footer-liks">
-                    <h4 class="footer-liks-title">Links úteis</h4>
+                    <h4 class="footer-liks-title"><?= __('Links úteis', 'emoving'); ?></h4>
                     <?php
                     wp_nav_menu(
                         array(
@@ -53,26 +44,41 @@
             </div>
             <div class="col-lg-4 offset-lg-1 order-lg-3 order-3">
                 <div class="footer-newsletter">
-                    <div class="footer-newsletter-content">
-                        <h4 class="footer-newsletter-title">inscreva-se agora!</h4>
-                        <?= do_shortcode('[contact-form-7 id="30925" title="Newsletter"]'); ?>
-                    </div>
+
+                    <?php $shortcode_newslleter = get_field('footer_newslleter', 'option');
+                    if ($shortcode_newslleter) : ?>
+                        <div class="footer-newsletter-content">
+                            <h4 class="footer-newsletter-title"><?= __('inscreva-se agora!', 'emoving'); ?></h4>
+                            <?php
+                            echo do_shortcode($shortcode_newslleter);
+                            ?>
+
+                        </div>
+                    <?php
+                    endif;
+                    ?>
+
                     <ul class="footer-newsletter-social">
-                        <?php if (get_field('email', 'option')) : ?>
+                        <?php if (!empty(get_field('email', 'option'))) : ?>
                             <li class="footer-newsletter-social-item"><a class="footer-newsletter-social-item-link email" href="mailto:<?= get_field('email', 'option') ?>"><?= get_field('email', 'option') ?></a></li>
                         <?php endif;; ?>
                         <?php
                         $whatsapp_flutuante = get_field('whatsapp_flutuante', 'option');
                         $whatsapp = get_field('whatsapp', 'option');
-                        $whatsapp_number = preg_replace('/\D/', '', $whatsapp)
+                        if (!empty($whatsapp)) :
+                            $whatsapp_number = preg_replace('/\D/', '', $whatsapp);
+                        endif;
                         ?>
-                        <?php if ($whatsapp_flutuante && $whatsapp) : ?>
+                        <?php if (!empty($whatsapp_flutuante) && !empty($whatsapp)) : ?>
                             <li class="footer-newsletter-social-item"><a class="footer-newsletter-social-item-link whatsapp" href="https://api.whatsapp.com/send/?phone=<?= $whatsapp_number; ?>" target="_blank"><?= $whatsapp ?></a></li>
                         <?php endif; ?>
                     </ul>
-                    <div class="footer-newsletter-cnpj">
-                        E-MOVING - CNPJ: 22.102.480/0001-34
-                    </div>
+
+                    <?php if (!empty(get_field('footer_copy_text', 'option'))) : ?>
+                        <div class="footer-newsletter-cnpj">
+                            <?= get_field('footer_copy_text', 'option'); ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

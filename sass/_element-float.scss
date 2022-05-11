@@ -223,3 +223,193 @@
     }
     //#################################//
 }
+
+//###HOME###//
+
+.como-funciona-1 {
+    .el-010 {
+        top: 0;
+        right: 0;
+        margin-top: 200px;
+        margin-right: 0;
+    }
+    .el-08 {
+        left: 0;
+        bottom: 0;
+        margin-left: -50px;
+        margin-bottom: 200px;
+    }
+}
+@media (max-width: 1400px) {
+    .como-funciona-1 {
+        .el-010 {
+            margin-top: 300px;
+            margin-right: -150px;
+        }
+        .el-08 {
+            margin-left: -150px;
+        }
+    }
+}
+
+.como-funciona-2 {
+    .el-011 {
+        top: 0;
+        right: 0;
+        margin-top: 100px;
+        margin-right: 0;
+    }
+    .el-04 {
+        left: 0;
+        bottom: 0;
+        margin-left: -200px;
+        margin-bottom: -300px;
+    }
+}
+@media (max-width: 1400px) {
+    .como-funciona-2 .el-011 {
+        margin-top: 250px;
+        margin-right: -50px;
+    }
+}
+
+.e-bikes-2 {
+    .el-04 {
+        left: 0;
+        bottom: 0;
+        margin-left: -300px;
+        margin-bottom: -200px;
+    }
+}
+
+.como-funciona-3 {
+    .el-06 {
+        top: 0;
+        left: 0;
+        margin-top: 300px;
+        margin-right: 0;
+    }
+    .el-07 {
+        right: 0;
+        bottom: 0;
+        margin-left: -200px;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 1400px) {
+    .como-funciona-4 {
+        .el-05 {
+            margin-left: -200px;
+        }
+    }
+}
+.como-funciona-4 {
+    .el-05 {
+        left: 0;
+        bottom: 0;
+        margin-left: -100px;
+        margin-bottom: -100px;
+    }
+}
+
+.como-funciona-5 {
+    .el-02 {
+        right: 0;
+        bottom: 0;
+        margin-right: 50px;
+        margin-bottom: 300px;
+        @media (max-width: 1400px) {
+            margin-right: -100px;
+        }
+    }
+}
+
+//Quem somos
+
+.history-1 {
+    .el-010 {
+        top: 0;
+        left: 0;
+        margin-top: 100px;
+        margin-left: 0;
+    }
+    .el-03 {
+        &.el-03-1 {
+            right: 0;
+            top: 0;
+            margin-right: -50px;
+            margin-top: 100px;
+        }
+        &.el-03-2 {
+            right: 0;
+            top: 0;
+            margin-right: -100px;
+            margin-top: 95%;
+        }
+    }
+    .el-05 {
+        left: 0;
+        top: 0;
+        margin-left: -50px;
+        margin-top: 90%;
+    }
+    .el-06 {
+        right: 0;
+        bottom: 0;
+        margin-right: 50px;
+        margin-bottom: 50px;
+    }
+}
+@media (max-width: 1400px) {
+    .history-1 {
+        .el-010 {
+            margin-top: -50px;
+            margin-left: -100px;
+        }
+        .el-03 {
+            &.el-03-1 {
+                right: 0;
+                top: 0;
+                margin-right: -200px;
+                margin-top: 150px;
+            }
+            &.el-03-2 {
+                right: 0;
+                top: 0;
+                margin-right: -200px;
+                margin-top: 125%;
+            }
+        }
+        .el-05 {
+            margin-left: -150px;
+            margin-top: 80%;
+        }
+    }
+}
+
+.quem-somos-1 {
+    .el-010 {
+        top: 0;
+        right: 0;
+        margin-top: 200px;
+        margin-right: 0;
+    }
+    .el-08 {
+        left: 0;
+        bottom: 0;
+        margin-left: -50px;
+        margin-bottom: 200px;
+    }
+}
+@media (max-width: 1400px) {
+    .quem-somos-1 {
+        .el-010 {
+            margin-top: 300px;
+            margin-right: -150px;
+        }
+        .el-08 {
+            margin-left: -150px;
+        }
+    }
+}

@@ -8,10 +8,6 @@
  * @package e-moving
  * @since 2.0
  */
-
-use Classes\Page_Hero;
-use Classes\Services_List;
-
 get_header();
 ?>
 <div class="main-body">
@@ -19,58 +15,14 @@ get_header();
     /**
      * Hero
      */
-
-    $hero_obj = [
-        'title' => 'Seja <mark>bem-vindo</mark> ao <mark>futuro</mark> da <mark>mobilidade</mark> urbana.',
-        'text' => 'Nascemos com o objetivo de resolver o problema de mobilidade na cidade de São Paulo e proporcionar melhoria da qualidade de vida das pessoas. Nos dedicamos a tornar os deslocamentos mais fáceis, rápidos e ecológicos. 
-        <br><br>
-        A E-Moving oferece uma experiência única de economia de tempo e dinheiro de forma prazerosa e sustentável. Temos sete anos de presença em ciclofaixas e já transformamos a vida de inúmeros usuários: menos trânsito, menos estresse, mais tempo ao ar livre e zero emissões de CO² na atmosfera. 
-        <br><br>
-        Nós ajudamos sua equipe a se locomover com um propósito! Ofereça deslocamentos mais verdes e ativos, junte-se à nossa missão de transformar a mobilidade.',
-        'background-image' =>  get_template_directory_uri() . '/img/quem-somos.png',
-        'background-color' => '#444580',
-        'before' => false,
-        'after' => true,
-    ];
-    $button = null;
-
-    $hero = new Page_Hero;
-    echo $hero::quemsomos($hero_obj, $button);
-
+    get_template_part('template-parts/content',  'hero-page-button');
 
     ?>
 
     <div class="element-float-box quem-somos-1">
-        <style>
-            .quem-somos-1 .el-010 {
-                top: 0px;
-                right: 0;
-                margin-top: 200px;
-                margin-right: 0;
-            }
 
-            @media(max-width:1400px) {
-                .quem-somos-1 .el-010 {
-                    margin-top: 300px;
-                    margin-right: -150px;
-                }
-            }
-
-            .quem-somos-1 .el-08 {
-                left: 0;
-                bottom: 0;
-                margin-left: -50px;
-                margin-bottom: 200px;
-            }
-
-            @media(max-width:1400px) {
-                .quem-somos-1 .el-08 {
-                    margin-left: -150px;
-                }
-            }
-        </style>
-        <div class="element-float-box-item el-010 rellax" data-rellax-speed="-2" style="" data-aos="zoom-out" data-aos-duration="500"></div>
-        <div class="element-float-box-item el-08 rellax" data-rellax-speed="-2" style="" data-aos="zoom-out" data-aos-duration="500"></div>
+        <div class="element-float-box-item el-010 rellax" data-rellax-speed="-2" data-aos="zoom-out" data-aos-duration="500"></div>
+        <div class="element-float-box-item el-08 rellax" data-rellax-speed="-2" data-aos="zoom-out" data-aos-duration="500"></div>
         <div id="videos" class="videos">
             <div class="container">
                 <div class="row d-flex justify-content-center">
@@ -102,124 +54,26 @@ get_header();
     </div>
     <?php
 
-
     /**
      * Porque escolher
      */
+    get_template_part('template-parts/content',  'why-choise');
 
-    $infos2 = [
-        'title' => 'Nossos <mark>planos</mark> <p><mark>oferecem</mark>:</p>',
-        'text' => 'Serviços exclusivos para não te deixar na mão!'
-    ];
+    ?>
 
-    $query2 = [
-        [
-            'img_url' =>  get_template_directory_uri() . '/img/elements/02.svg',
-            'img_alt' => 'E-bike o Tempo Todo com Você',
-            'title' => 'E-bike o Tempo Todo com Você',
-        ],
-        [
-            'img_url' =>  get_template_directory_uri() . '/img/elements/010.svg',
-            'img_alt' => 'Atendimento Exclusivo',
-            'title' => 'Atendimento Exclusivo',
-        ],
-        [
-            'img_url' =>  get_template_directory_uri() . '/img/elements/09.svg',
-            'img_alt' => 'SOS para Emergências',
-            'title' => 'SOS para Emergências',
-        ],
-        [
-            'img_url' =>  get_template_directory_uri() . '/img/elements/08.svg',
-            'img_alt' => 'Manutenção',
-            'title' => 'Manutenção',
-        ],
-        [
-            'img_url' =>  get_template_directory_uri() . '/img/elements/07.svg',
-            'img_alt' => 'Proteção contra Roubo',
-            'title' => 'Proteção contra Roubo',
-        ]
-    ];
+    <?php
 
-    $services_list2 = new Services_List;
-    echo $services_list2::get_secondary_list($infos2, $query2);
+    /**
+     * History
+     */
 
     ?>
     <div class="element-float-box history-1">
-        <style>
-            .history-1 .el-010 {
-                top: 0px;
-                left: 0;
-                margin-top: 100px;
-                margin-left: 0px
-            }
-
-            @media(max-width:1400px) {
-                .history-1 .el-010 {
-                    margin-top: -50px;
-                    margin-left: -100px
-                }
-            }
-
-            .history-1 .el-03.el-03-1 {
-                right: 0;
-                top: 0;
-                margin-right: -50px;
-                margin-top: 100px
-            }
-
-            @media(max-width:1400px) {
-                .history-1 .el-03.el-03-1 {
-                    right: 0;
-                    top: 0;
-                    margin-right: -200px;
-                    margin-top: 150px
-                }
-            }
-
-            .history-1 .el-05 {
-                left: 0;
-                top: 0;
-                margin-left: -50px;
-                margin-top: 90%
-            }
-
-            @media(max-width:1400px) {
-                .history-1 .el-05 {
-                    margin-left: -150px;
-                    margin-top: 80%
-                }
-            }
-
-            .history-1 .el-03.el-03-2 {
-                right: 0;
-                top: 0;
-                margin-right: -100px;
-                margin-top: 95%
-            }
-
-            @media(max-width:1400px) {
-                .history-1 .el-03.el-03-2 {
-                    right: 0;
-                    top: 0;
-                    margin-right: -200px;
-                    margin-top: 125%
-                }
-            }
-
-            .history-1 .el-06 {
-                right: 0;
-                bottom: 0;
-                margin-right: 50px;
-                margin-bottom: 50px
-            }
-
-            @media(max-width:1400px) {}
-        </style>
-        <div class="element-float-box-item el-010 rellax" data-rellax-speed="-1" style="" data-aos="zoom-out" data-aos-duration="500"></div>
-        <div class="element-float-box-item el-03 el-03-1 rellax" data-rellax-speed="2" style="" data-aos="zoom-out" data-aos-duration="500"></div>
-        <div class="element-float-box-item el-05 rellax" data-rellax-speed="1" style="" data-aos="zoom-out" data-aos-duration="500"></div>
-        <div class="element-float-box-item el-03 el-03-2 rellax" data-rellax-speed="-2" style="" data-aos="zoom-out" data-aos-duration="500"></div>
-        <div class="element-float-box-item el-06 rellax" data-rellax-speed="2" style="" data-aos="zoom-out" data-aos-duration="500"></div>
+        <div class="element-float-box-item el-010 rellax" data-rellax-speed="-1" data-aos="zoom-out" data-aos-duration="500"></div>
+        <div class="element-float-box-item el-03 el-03-1 rellax" data-rellax-speed="2" data-aos="zoom-out" data-aos-duration="500"></div>
+        <div class="element-float-box-item el-05 rellax" data-rellax-speed="1" data-aos="zoom-out" data-aos-duration="500"></div>
+        <div class="element-float-box-item el-03 el-03-2 rellax" data-rellax-speed="-2" data-aos="zoom-out" data-aos-duration="500"></div>
+        <div class="element-float-box-item el-06 rellax" data-rellax-speed="2" data-aos="zoom-out" data-aos-duration="500"></div>
         <section class="history">
             <div class="container">
                 <h3 class="history-title" data-aos="zoom-out" data-aos-delay="0" data-aos-duration="500">Nossos história</h3>

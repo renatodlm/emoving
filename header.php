@@ -26,9 +26,6 @@
                             <img src="<?= get_template_directory_uri() ?>/img/logo.svg" alt="E-moving">
                         </picture>
                     </a>
-                    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button> -->
                     <div class="collapse navbar-collapse" id="main_nav">
                         <?php
                         wp_nav_menu(

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying 404 pages (not found)
  *
@@ -10,20 +11,20 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div id="primary" class="content-area">
+	<main id="main" class="site-main">
 
-			<div class="container">
-			<h1>404</h1>
-			<h2>Página não encontrada!</h2>
-			<p>Desculpa, a página que está procurando não existe mais, mudou de endereço ou está inativa.</p>
-			<a href="<?php echo esc_url( home_url() );?>">
-				<button class="bt bt-medio bt-primary">Ir para home</button>
+		<div class="container">
+			<h1><?= __('404', 'emoving') ?></h1>
+			<h2><?= __('Página não encontrada!', 'emoving') ?></h2>
+			<p><?= __('Desculpa, a página que está procurando não existe mais, mudou de endereço ou está inativa.', 'emoving') ?></p>
+			<a href="<?php echo esc_url(home_url()); ?>">
+				<button class="bt bt-medio bt-primary"><?= __('Ir para home', 'emoving') ?></button>
 			</a>
-			</div>
+		</div>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</main><!-- #main -->
+</div><!-- #primary -->
 
 <?php
 get_footer();
